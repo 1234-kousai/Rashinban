@@ -155,10 +155,10 @@ export default function Home() {
             <h2 className="text-heading-4 mb-[29px]">About us</h2>
             <p className="text-xl leading-normal mb-[81px]">
               For more than 30 years we have been delivering world-class
-              construction and we've built many lasting relationships along the way.
+              construction and we&apos;ve built many lasting relationships along the way.
               <br />
               <br />
-              We've matured into an industry leader and trusted resource for those
+              We&apos;ve matured into an industry leader and trusted resource for those
               seeking quality, innovation and reliability when building in the U.S.
             </p>
             <Button variant="outline" className="border-2 border-primary bg-white text-primary hover:bg-neutral-50">
@@ -418,7 +418,7 @@ export default function Home() {
                 },
                 {
                   img: "/assets/028a0cef1bf65382382cde195cc45b34a13e4399.png",
-                  title: "Mr. Parkinston's House",
+                  title: "Mr. Parkinston&apos;s House",
                   location: "3517 W. Gray St. Utica, Pennsylvania",
                 },
                 {
@@ -486,7 +486,7 @@ export default function Home() {
             What can us do for you?
           </h2>
           <p className="text-xl text-neutral-800 text-center mb-[46px]">
-            We are ready to work on a project of any complexity, whether it's
+            We are ready to work on a project of any complexity, whether it&apos;s
             commercial or residential.
           </p>
 
