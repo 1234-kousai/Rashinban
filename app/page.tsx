@@ -1,0 +1,622 @@
+import Image from "next/image";
+import Button from "@/components/ui/Button";
+
+export default function Home() {
+  return (
+    <main className="bg-white min-h-screen">
+      {/* Navbar */}
+      <nav className="bg-white h-20 relative overflow-hidden">
+        <div className="max-w-[1440px] mx-auto h-full flex items-center justify-between px-28">
+          {/* Logo */}
+          <div className="flex items-center gap-3">
+            <div className="w-12 h-12 relative">
+              <Image
+                src="/assets/762a4f982c7e562c3187091f9952d7ed888f2920.svg"
+                alt="Logo"
+                width={48}
+                height={48}
+              />
+            </div>
+            <p className="font-bold italic text-[30px] text-primary">
+              The<span className="not-italic">Box</span>
+            </p>
+          </div>
+
+          {/* Nav Items */}
+          <div className="flex gap-[50px] text-lg">
+            <a href="#" className="text-neutral-900 hover:text-primary">
+              Home
+            </a>
+            <a href="#" className="text-neutral-900 hover:text-primary">
+              About Us
+            </a>
+            <a href="#" className="text-neutral-900 hover:text-primary">
+              Projects
+            </a>
+            <a href="#" className="text-neutral-900 hover:text-primary">
+              Services
+            </a>
+            <a href="#" className="font-semibold text-secondary hover:opacity-80">
+              Contact Us
+            </a>
+          </div>
+        </div>
+      </nav>
+
+      {/* Hero Section */}
+      <section className="h-[646px] relative overflow-hidden">
+        <Image
+          src="/assets/522e6a5f380cba7232041d621d835a77aaeaf072.png"
+          alt="Hero Background"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(to right, rgba(255,255,255,0.9) 16.585%, rgba(255,255,255,0) 72.384%)",
+          }}
+        />
+
+        <div className="max-w-[1440px] mx-auto h-full relative px-28">
+          <h1 className="absolute top-[239px] text-heading-1 text-neutral-800 w-[556px]">
+            Building things is our mission.
+          </h1>
+
+          {/* Feature Project */}
+          <div className="absolute bottom-10 right-0 w-[416px]">
+            <div className="bg-[#3559c7] rounded-t p-5 flex flex-col gap-5 items-center text-white text-center">
+              <p className="font-bold text-xl">Feature Projects</p>
+              <p className="text-2xl w-[312px] h-[61px]">
+                The National University of Architecture
+              </p>
+            </div>
+            <div className="flex h-10">
+              <button className="bg-neutral-800 w-1/2 text-white text-lg flex items-center justify-center gap-2">
+                <span>Back</span>
+                <Image
+                  src="/assets/26c9f2977fa59b9ed6318be31aed0536035626f7.svg"
+                  alt="Arrow"
+                  width={26}
+                  height={17}
+                />
+              </button>
+              <button className="bg-neutral-800 w-1/2 text-white text-lg flex items-center justify-center gap-2">
+                <Image
+                  src="/assets/762a4f982c7e562c3187091f9952d7ed888f2920.svg"
+                  alt="Arrow"
+                  width={26}
+                  height={17}
+                />
+                <span>Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Reputation */}
+      <section className="bg-white h-[433px] overflow-hidden">
+        <div className="max-w-[1440px] mx-auto px-28 py-[60px]">
+          <h2 className="text-heading-4 text-neutral-800 text-center mb-[52px]">
+            Our Reputation
+          </h2>
+
+          <div className="grid grid-cols-3 gap-[110px]">
+            {[
+              {
+                icon: "/assets/112e73a57b2e94b8ce3dfdef856ce976d23ca2ea.svg",
+                title: "Best Services",
+                desc: "Nullam senectus porttitor in eget. Eget rutrum leo interdum.",
+              },
+              {
+                icon: "/assets/112e73a57b2e94b8ce3dfdef856ce976d23ca2ea.svg",
+                title: "Best Teams",
+                desc: "Cursus semper tellus volutpat aliquet lacus.",
+              },
+              {
+                icon: "/assets/1314a88b7ebf1eb3d4adc14cc32306b468412fe2.svg",
+                title: "Best Designs",
+                desc: "Ultricies at ipsum nunc, tristique nam lectus.",
+              },
+            ].map((item, i) => (
+              <div
+                key={i}
+                className="bg-white border border-neutral-100 rounded p-5 flex flex-col gap-[18px] items-start"
+              >
+                <div className="w-10 h-10 relative">
+                  <Image src={item.icon} alt={item.title} fill />
+                </div>
+                <h3 className="font-bold text-xl text-neutral-700">{item.title}</h3>
+                <p className="text-neutral-400 text-base w-[254px]">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* About Us */}
+      <section className="bg-white h-[945px] relative overflow-hidden">
+        <div className="max-w-[1440px] mx-auto h-full flex items-center justify-center relative">
+          {/* Image */}
+          <div className="absolute left-[37.5%] -translate-x-1/2 w-[902px] h-[669px] shadow-xl rounded">
+            <Image
+              src="/assets/ba3b33a387a6fb6a79f6ebda83f9824c72dc2d4b.png"
+              alt="About Us"
+              fill
+              className="object-cover rounded"
+            />
+          </div>
+
+          {/* Blue Box */}
+          <div className="absolute right-[10%] top-[147px] bg-primary w-[488px] h-[523px] rounded shadow-xl p-10 text-white">
+            <h2 className="text-heading-4 mb-[29px]">About us</h2>
+            <p className="text-xl leading-normal mb-[81px]">
+              For more than 30 years we have been delivering world-class
+              construction and we've built many lasting relationships along the way.
+              <br />
+              <br />
+              We've matured into an industry leader and trusted resource for those
+              seeking quality, innovation and reliability when building in the U.S.
+            </p>
+            <Button variant="outline" className="border-2 border-primary bg-white text-primary hover:bg-neutral-50">
+              More on Our History
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Services */}
+      <section className="bg-neutral-50 h-[608px] overflow-hidden">
+        <div className="max-w-[1440px] mx-auto px-28 py-11">
+          <h2 className="text-heading-4 text-neutral-800 text-center mb-[34px]">
+            Services
+          </h2>
+
+          <div className="grid grid-cols-3 gap-[105px] mb-[48px]">
+            {[
+              {
+                icon: "/assets/1102ba2e18d71fd823bd6cd489e4e3099ab6f39f.svg",
+                title: "Construction",
+                active: false,
+              },
+              {
+                icon: "/assets/29b696f3e1665259ef6c1a161b5032e552ee0fef.svg",
+                title: "Renovation",
+                active: true,
+              },
+              {
+                icon: "/assets/a1fa079092540e4007d66ceec9f4e2ac609cafde.svg",
+                title: "Consultation",
+                active: false,
+              },
+            ].map((service, i) => (
+              <div
+                key={i}
+                className={`${
+                  service.active ? "bg-primary" : "bg-white"
+                } rounded shadow p-5 h-[181px] flex flex-col items-center justify-center gap-5`}
+              >
+                <div className="w-10 h-10 relative">
+                  <Image src={service.icon} alt={service.title} fill />
+                </div>
+                <div className="w-[60px] h-0.5 bg-neutral-100" />
+                <p
+                  className={`text-xl font-semibold ${
+                    service.active ? "text-white" : "text-primary"
+                  }`}
+                >
+                  {service.title}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <div className="grid grid-cols-3 gap-[105px]">
+            {[
+              {
+                icon: "/assets/e16c90f1b437106be8f191785e435a103c0939d1.svg",
+                title: "Repair Services",
+                active: true,
+              },
+              {
+                icon: "/assets/7f3d8acf43007109c2aa2b24d6526a550f4a2306.svg",
+                title: "Architecture",
+                active: false,
+              },
+              {
+                icon: "/assets/42d4cacd435a23e4b81c12244fe8acbcb2c21efb.svg",
+                title: "Electric",
+                active: true,
+              },
+            ].map((service, i) => (
+              <div
+                key={i}
+                className={`${
+                  service.active ? "bg-primary" : "bg-white"
+                } rounded shadow p-5 h-[181px] flex flex-col items-center justify-center gap-5`}
+              >
+                <div className="w-10 h-10 relative">
+                  <Image src={service.icon} alt={service.title} fill />
+                </div>
+                <div className="w-[60px] h-0.5 bg-neutral-100" />
+                <p
+                  className={`text-xl font-semibold ${
+                    service.active ? "text-white" : "text-primary"
+                  }`}
+                >
+                  {service.title}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Stats */}
+      <section className="bg-white h-[723px] relative overflow-hidden">
+        <div className="max-w-[1440px] mx-auto px-28 py-[60px] relative">
+          {/* Left side stats */}
+          <div className="absolute left-[25%] top-[221px] -translate-x-1/2">
+            <div className="bg-white border border-white rounded p-[30px] w-[361px]">
+              <div className="text-[72px] font-semibold text-neutral-800 leading-none mb-0.5">
+                123
+              </div>
+              <div className="flex items-center gap-3">
+                <div className="w-[7px] h-full bg-secondary" />
+                <p className="text-2xl text-neutral-500">Projects Completed</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="absolute left-[45.833%] top-[122px] -translate-x-1/2">
+            <div className="bg-white border border-white rounded p-[30px] w-[280px]">
+              <div className="text-[72px] font-semibold text-neutral-800 leading-none mb-0.5">
+                84
+              </div>
+              <div className="flex items-center gap-3">
+                <div className="w-[7px] h-full bg-secondary" />
+                <p className="text-2xl text-neutral-500">Happy Clients</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="absolute left-[37.5%] top-[364px] -translate-x-1/2">
+            <div className="bg-white border border-white rounded p-[30px] w-[276px]">
+              <div className="text-[72px] font-semibold text-neutral-800 leading-none mb-0.5">
+                37
+              </div>
+              <div className="flex items-center gap-3">
+                <div className="w-[7px] h-full bg-secondary" />
+                <p className="text-2xl text-neutral-500">Awards Win</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="absolute left-[29.167%] top-[469px] -translate-x-1/2">
+            <div className="bg-white border border-white rounded p-[30px]">
+              <div className="text-[72px] font-semibold text-neutral-800 leading-none mb-0.5">
+                30
+              </div>
+              <div className="flex items-center gap-3">
+                <div className="w-[7px] h-full bg-secondary" />
+                <p className="text-2xl text-neutral-500">Years in Business</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Illustrations */}
+          <Image
+            src="/assets/6e9a91091bc241cbdb3b4d11e910890e1b8fcaef.png"
+            alt="illus"
+            width={79}
+            height={79}
+            className="absolute left-[12.5%] top-[172px] -translate-x-1/2"
+          />
+          <Image
+            src="/assets/45ae3a838060ffdbf7a62dc788fd967a024d4335.png"
+            alt="illus"
+            width={84}
+            height={84}
+            className="absolute left-[37.5%] top-[582px] -translate-x-1/2"
+          />
+          <Image
+            src="/assets/3de872771f4000bb313182245651d05a0d2ddd87.png"
+            alt="illus"
+            width={93}
+            height={93}
+            className="absolute left-1/2 top-[349px] -translate-x-1/2"
+          />
+          <Image
+            src="/assets/98b21396e6c4886178eab4b6bc331d5494931d2e.png"
+            alt="illus"
+            width={97}
+            height={97}
+            className="absolute left-[54.167%] top-[103px] -translate-x-1/2"
+          />
+
+          {/* Right side content */}
+          <div className="absolute right-[16.667%] top-[172px]">
+            <h2 className="text-[60px] font-bold text-primary leading-normal mb-[60px] w-[359px]">
+              30 Years Experience
+            </h2>
+            <p className="text-xl text-neutral-600 w-[330px] mb-[67px]">
+              Our company has been the leading provided construction services to
+              clients throughout the USA since 1988.
+            </p>
+            <Button>Contact Us</Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Free Consultation */}
+      <section className="h-[300px] relative overflow-hidden">
+        <Image
+          src="/assets/f00572a9e4c1d924a7af45ea22ff31a554b4eee0.png"
+          alt="Consultation Background"
+          fill
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-black/70" />
+
+        <div className="max-w-[1440px] mx-auto h-full relative px-28 flex items-center justify-between">
+          <div>
+            <h2 className="text-heading-4 text-white mb-5">
+              Free consultation with exceptional quality
+            </h2>
+            <p className="text-2xl text-white">
+              Just one call away:{" "}
+              <span className="underline">+84 1102 2703</span>
+            </p>
+          </div>
+          <Button variant="outline">Get your consultation</Button>
+        </div>
+      </section>
+
+      {/* Projects */}
+      <section className="bg-white min-h-[1098px] overflow-hidden py-[88px]">
+        <div className="max-w-[1440px] mx-auto px-28">
+          <h2 className="text-heading-4 text-neutral-800 mb-[82px]">Projects</h2>
+
+          <div className="flex gap-[32px]">
+            {/* Menu */}
+            <div className="flex flex-col gap-[48px]">
+              {["All", "Commercial", "Residential", "Other"].map((item, i) => (
+                <div key={i} className="flex items-center gap-4">
+                  <div
+                    className={`w-1 h-7 ${
+                      i === 0 ? "bg-primary" : "bg-transparent"
+                    }`}
+                  />
+                  <p
+                    className={`text-2xl ${
+                      i === 0
+                        ? "font-bold text-primary"
+                        : "font-medium text-neutral-200"
+                    }`}
+                  >
+                    {item}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+            {/* Project Grid */}
+            <div className="flex-1 grid grid-cols-2 gap-8">
+              {[
+                {
+                  img: "/assets/089bf250bdd2caa4b33e7eb864d788a16c95da1e.png",
+                  title: "Wildstone Infra Hotel",
+                  location: "2715 Ash Dr. San Jose, South Dakota",
+                },
+                {
+                  img: "/assets/f042d9f36de69d6d289fec45cc15040db6b8cb7c.png",
+                  title: "Wish Stone Building",
+                  location: "2972 Westheimer Rd. Santa Ana, Illinois",
+                },
+                {
+                  img: "/assets/028a0cef1bf65382382cde195cc45b34a13e4399.png",
+                  title: "Mr. Parkinston's House",
+                  location: "3517 W. Gray St. Utica, Pennsylvania",
+                },
+                {
+                  img: "/assets/efb357ca4521dda2f5a91dd1a02dbc47a02c9f36.png",
+                  title: "Oregano Height",
+                  location: "2464 Royal Ln. Mesa, New Jersey",
+                },
+              ].map((project, i) => (
+                <div key={i} className="rounded overflow-hidden">
+                  <div className="h-[247px] relative">
+                    <Image
+                      src={project.img}
+                      alt={project.title}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="bg-primary text-white p-3">
+                    <h3 className="font-bold text-xl mb-3">{project.title}</h3>
+                    <p className="text-lg">{project.location}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Pagination */}
+          <div className="flex items-center justify-center gap-8 mt-[64px]">
+            <button className="bg-neutral-800 text-white px-5 py-4 h-16 w-[295px] flex items-center justify-center gap-2">
+              <span>Back</span>
+              <Image
+                src="/assets/26c9f2977fa59b9ed6318be31aed0536035626f7.svg"
+                alt="Arrow"
+                width={26}
+                height={17}
+              />
+            </button>
+            <div className="flex gap-4">
+              {[0, 1, 2, 3, 4].map((i) => (
+                <div
+                  key={i}
+                  className={`w-4 h-4 rounded-full ${
+                    i === 0 ? "bg-primary" : "bg-neutral-200"
+                  }`}
+                />
+              ))}
+            </div>
+            <button className="bg-neutral-800 text-white px-5 py-4 h-16 w-[295px] flex items-center justify-center gap-2">
+              <Image
+                src="/assets/762a4f982c7e562c3187091f9952d7ed888f2920.svg"
+                alt="Arrow"
+                width={26}
+                height={17}
+              />
+              <span>Next</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Form */}
+      <section className="bg-neutral-50 h-[632px] overflow-hidden">
+        <div className="max-w-[1440px] mx-auto px-[360px] py-[60px]">
+          <h2 className="text-heading-4 text-neutral-800 text-center mb-4">
+            What can us do for you?
+          </h2>
+          <p className="text-xl text-neutral-800 text-center mb-[46px]">
+            We are ready to work on a project of any complexity, whether it's
+            commercial or residential.
+          </p>
+
+          <form className="space-y-[13px]">
+            <div className="grid grid-cols-2 gap-8">
+              <input
+                type="text"
+                placeholder="Your Name *"
+                className="bg-white border border-neutral-100 rounded px-2 py-2.5 text-lg text-neutral-300"
+              />
+              <input
+                type="email"
+                placeholder="Email *"
+                className="bg-white border border-neutral-100 rounded px-2 py-2.5 text-lg text-neutral-300"
+              />
+            </div>
+            <div className="grid grid-cols-2 gap-8">
+              <select className="bg-white border border-neutral-100 rounded px-2 py-2.5 text-lg text-neutral-300">
+                <option>Reason for Contacting *</option>
+              </select>
+              <input
+                type="tel"
+                placeholder="Phone"
+                className="bg-white border border-neutral-100 rounded px-2 py-2.5 text-lg text-neutral-300"
+              />
+            </div>
+            <textarea
+              placeholder="Message"
+              rows={5}
+              className="w-full bg-white border border-neutral-100 rounded px-2 py-2.5 text-lg text-neutral-300"
+            />
+            <p className="text-base text-neutral-500">
+              <span className="text-red-600">*</span> indicates a required field
+            </p>
+            <div className="flex justify-center pt-5">
+              <Button className="w-1/3">Submit</Button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      {/* Bottom */}
+      <section className="bg-white h-[377px] overflow-hidden">
+        <div className="max-w-[1440px] mx-auto px-28 py-[85px]">
+          <div className="grid grid-cols-2 gap-[200px]">
+            {/* Left */}
+            <div className="space-y-8">
+              <div className="flex items-start gap-3">
+                <p className="font-medium text-xl text-primary">Address:</p>
+                <p className="font-normal text-xl text-neutral-800 capitalize">
+                  6391 Elgin St. Celina, Delaware 10299
+                </p>
+              </div>
+              <div className="flex items-start gap-[34px]">
+                <p className="font-medium text-xl text-primary">Phone:</p>
+                <p className="font-normal text-xl text-neutral-800 capitalize">
+                  +84 1102 2703
+                </p>
+              </div>
+              <div className="flex items-start gap-[41px]">
+                <p className="font-medium text-xl text-primary">Email:</p>
+                <p className="font-normal text-xl text-black">hello@thebox.com</p>
+              </div>
+            </div>
+
+            {/* Right */}
+            <div>
+              <p className="font-medium text-xl text-primary mb-[43px]">
+                Newsletter:
+              </p>
+              <div className="flex gap-0 mb-[83px]">
+                <input
+                  type="email"
+                  placeholder="Your email here"
+                  className="flex-1 bg-white border border-neutral-100 rounded-l px-2 py-2.5 text-lg text-neutral-300"
+                />
+                <Button variant="secondary" className="rounded-l-none">
+                  Subscribe
+                </Button>
+              </div>
+
+              <p className="font-medium text-xl text-primary mb-[43px]">Social:</p>
+              <div className="flex gap-5">
+                <Image
+                  src="/assets/b397103fac4d9f6baa9f8a39671c48f6b7559ef0.svg"
+                  alt="Facebook"
+                  width={40}
+                  height={40}
+                />
+                <Image
+                  src="/assets/b43c10fdeafde04bf0e705eacc6ffff13baf47b2.svg"
+                  alt="LinkedIn"
+                  width={40}
+                  height={40}
+                />
+                <Image
+                  src="/assets/66a534a021d08a5a6e3cc4ee47cd702da15e501b.svg"
+                  alt="Twitter"
+                  width={40}
+                  height={40}
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Logo at bottom */}
+          <div className="absolute bottom-[250px] left-28 flex items-center gap-3">
+            <div className="w-12 h-12 relative">
+              <Image
+                src="/assets/762a4f982c7e562c3187091f9952d7ed888f2920.svg"
+                alt="Logo"
+                width={48}
+                height={48}
+              />
+            </div>
+            <p className="font-bold italic text-[30px] text-primary">
+              The<span className="not-italic">Box</span>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-primary h-[70px]">
+        <div className="max-w-[1440px] mx-auto px-28 h-full flex items-center">
+          <p className="text-white text-base">
+            TheBox Company © 2022. All Rights Reserved
+          </p>
+        </div>
+      </footer>
+    </main>
+  );
+}
