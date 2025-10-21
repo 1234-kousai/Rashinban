@@ -6,9 +6,18 @@ export default function Home() {
     <main className="bg-white min-h-screen">
       {/* Navbar */}
       <nav className="bg-white h-20 relative overflow-hidden">
-        <div className="max-w-[1440px] mx-auto h-full flex items-center justify-between px-28">
-          {/* Logo */}
-          <div className="flex items-center gap-3">
+        <div className="max-w-[1440px] mx-auto h-full flex items-center justify-between px-28 relative">
+          {/* Logo with decoration */}
+          <div className="flex items-center gap-3 relative">
+            {/* Random Symboles decoration - positioned absolutely around logo */}
+            <div className="absolute w-12 h-12 pointer-events-none">
+              <Image src="/assets/41a98b88102502d3c6cec122fddef099043efe8a.svg" alt="" width={19} height={11} className="absolute top-[33px] left-[12px]" />
+              <Image src="/assets/61cb0ed8ecf2cf84821a6eb9cd5e2051c34fc39c.svg" alt="" width={18} height={8} className="absolute top-[13px] left-[12px]" />
+              <Image src="/assets/340dd3ac461322f02a6971897207ec64200d0647.svg" alt="" width={7} height={15} className="absolute top-[28px] left-[9px]" />
+              <Image src="/assets/caa924e875e75de0bd57cb7e4978822d99abab1d.svg" alt="" width={19} height={22} className="absolute top-[22px] left-[12px]" />
+              <Image src="/assets/5b210e843b3a7890bbb5c0f80ddb50eee79df84d.svg" alt="" width={18} height={16} className="absolute top-[13px] left-[8px]" />
+              <Image src="/assets/a2cfc15aa3275c054b181dbf7aa54cd05376dadc.svg" alt="" width={19} height={35} className="absolute top-[22px] left-[6px]" />
+            </div>
             <div className="w-12 h-12 relative">
               <Image
                 src="/assets/762a4f982c7e562c3187091f9952d7ed888f2920.svg"
@@ -17,7 +26,7 @@ export default function Home() {
                 height={48}
               />
             </div>
-            <p className="font-bold italic text-[30px] text-primary">
+            <p className="font-bold italic text-[30px] text-primary leading-none">
               The<span className="not-italic">Box</span>
             </p>
           </div>
@@ -222,7 +231,7 @@ export default function Home() {
                 active: true,
               },
               {
-                icon: "/assets/7f3d8acf43007109c2aa2b24d6526a550f4a2306.svg",
+                icon: "/assets/89211b87752a537161dcc15b405700e48ef12e03.svg",
                 title: "Architecture",
                 active: false,
               },
@@ -458,12 +467,14 @@ export default function Home() {
             </button>
             <div className="flex gap-4">
               {[0, 1, 2, 3, 4].map((i) => (
-                <div
-                  key={i}
-                  className={`w-4 h-4 rounded-full ${
-                    i === 0 ? "bg-primary" : "bg-neutral-200"
-                  }`}
-                />
+                <div key={i} className="w-4 h-4 relative">
+                  <Image
+                    src={i === 0 ? "/assets/48ef74dad202a85e699dba48ca473a230e20028a.svg" : "/assets/8d468749cfd0036d52dda60c49c9cb3777fcb9db.svg"}
+                    alt="Page indicator"
+                    width={16}
+                    height={16}
+                  />
+                </div>
               ))}
             </div>
             <button className="bg-neutral-800 text-white px-5 py-4 h-16 w-[295px] flex items-center justify-center gap-2">
@@ -593,7 +604,16 @@ export default function Home() {
           </div>
 
           {/* Logo at bottom */}
-          <div className="absolute bottom-[250px] left-28 flex items-center gap-3">
+          <div className="flex items-center gap-3 mt-[80px] relative">
+            {/* Random Symboles decoration */}
+            <div className="absolute w-12 h-12 pointer-events-none">
+              <Image src="/assets/41a98b88102502d3c6cec122fddef099043efe8a.svg" alt="" width={19} height={11} className="absolute top-[33px] left-[12px]" />
+              <Image src="/assets/61cb0ed8ecf2cf84821a6eb9cd5e2051c34fc39c.svg" alt="" width={18} height={8} className="absolute top-[13px] left-[12px]" />
+              <Image src="/assets/340dd3ac461322f02a6971897207ec64200d0647.svg" alt="" width={7} height={15} className="absolute top-[28px] left-[9px]" />
+              <Image src="/assets/caa924e875e75de0bd57cb7e4978822d99abab1d.svg" alt="" width={19} height={22} className="absolute top-[22px] left-[12px]" />
+              <Image src="/assets/5b210e843b3a7890bbb5c0f80ddb50eee79df84d.svg" alt="" width={18} height={16} className="absolute top-[13px] left-[8px]" />
+              <Image src="/assets/a2cfc15aa3275c054b181dbf7aa54cd05376dadc.svg" alt="" width={19} height={35} className="absolute top-[22px] left-[6px]" />
+            </div>
             <div className="w-12 h-12 relative">
               <Image
                 src="/assets/762a4f982c7e562c3187091f9952d7ed888f2920.svg"
@@ -602,7 +622,7 @@ export default function Home() {
                 height={48}
               />
             </div>
-            <p className="font-bold italic text-[30px] text-primary">
+            <p className="font-bold italic text-[30px] text-primary leading-none">
               The<span className="not-italic">Box</span>
             </p>
           </div>
