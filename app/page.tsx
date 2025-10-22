@@ -77,13 +77,16 @@ export default function Home() {
           </div>
         </motion.nav>
         {/* Slideshow Background */}
-        <AnimatePresence mode="wait">
+        <AnimatePresence initial={false}>
           <motion.div
             key={currentImageIndex}
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            animate={{ opacity: 1, scale: 1.05 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.6, ease: "easeInOut" }}
+            transition={{
+              opacity: { duration: 1.2, ease: [0.43, 0.13, 0.23, 0.96] },
+              scale: { duration: 5, ease: "linear" }
+            }}
             className="absolute inset-0"
           >
             <Image
