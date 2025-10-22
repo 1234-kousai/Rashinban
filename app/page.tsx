@@ -370,99 +370,146 @@ export default function Home() {
       <section className="bg-white h-[723px] relative overflow-hidden">
         <div className="max-w-[1440px] mx-auto h-full relative">
           {/* Left side stats */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ delay: 0.1, duration: 0.5 }}
-            className="absolute left-[calc(25%+32.5px)] top-[221px] -translate-x-1/2 bg-white border border-white rounded-[4px] p-[30px] w-[361px] flex flex-col gap-[2px]"
-          >
-            <div className="flex flex-col h-[65px] justify-end leading-[0] text-[72px] font-semibold text-neutral-800 w-[115px]">
-              <p className="leading-normal">123</p>
-            </div>
-            <div className="flex gap-3 items-center pl-4 w-[273px]">
-              <div className="w-[7px] h-full bg-secondary" />
-              <p className="text-2xl text-neutral-500 w-[238px]">Projects Completed</p>
-            </div>
-          </motion.div>
+          {/* Stat Box 1: Projects Completed */}
+          <div className="absolute left-[calc(25%+32.5px)] top-[221px] -translate-x-1/2">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ delay: 0.1, duration: 0.6, ease: "easeOut" }}
+              className="bg-white border border-white rounded-[4px] p-[30px] w-[361px] flex flex-col gap-[2px] shadow-sm"
+            >
+              <div className="flex flex-col h-[65px] justify-end leading-[0] text-[72px] font-semibold text-neutral-800 w-[115px]">
+                <p className="leading-normal">123</p>
+              </div>
+              <div className="flex gap-3 items-center pl-4 w-[273px]">
+                <div className="w-[7px] h-full bg-secondary" />
+                <p className="text-2xl text-neutral-500 w-[238px]">Projects Completed</p>
+              </div>
+            </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ delay: 0.2, duration: 0.5 }}
-            className="absolute left-[calc(45.833%-8px)] top-[122px] -translate-x-1/2 bg-white border border-white rounded-[4px] p-[30px] w-[280px] flex flex-col gap-[2px]"
-          >
-            <div className="flex flex-col h-[65px] justify-end leading-[0] text-[72px] font-semibold text-neutral-800 w-[115px]">
-              <p className="leading-normal">84</p>
-            </div>
-            <div className="flex gap-3 items-center pl-4 w-[273px]">
-              <div className="w-[7px] h-full bg-secondary" />
-              <p className="text-2xl text-neutral-500 w-[238px]">Happy Clients</p>
-            </div>
-          </motion.div>
+          {/* Stat Box 2: Happy Clients */}
+          <div className="absolute left-[calc(45.833%-8px)] top-[122px] -translate-x-1/2">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ delay: 0.2, duration: 0.6, ease: "easeOut" }}
+              className="bg-white border border-white rounded-[4px] p-[30px] w-[280px] flex flex-col gap-[2px] shadow-sm"
+            >
+              <div className="flex flex-col h-[65px] justify-end leading-[0] text-[72px] font-semibold text-neutral-800 w-[115px]">
+                <p className="leading-normal">84</p>
+              </div>
+              <div className="flex gap-3 items-center pl-4 w-[273px]">
+                <div className="w-[7px] h-full bg-secondary" />
+                <p className="text-2xl text-neutral-500 w-[238px]">Happy Clients</p>
+              </div>
+            </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ delay: 0.3, duration: 0.5 }}
-            className="absolute left-[calc(37.5%+56px)] top-[364px] -translate-x-1/2 bg-white border border-white rounded-[4px] p-[30px] w-[276px] flex flex-col gap-[2px]"
-          >
-            <div className="flex flex-col h-[65px] justify-end leading-[0] text-[72px] font-semibold text-neutral-800 w-[115px]">
-              <p className="leading-normal">37</p>
-            </div>
-            <div className="flex gap-3 items-center pl-4 w-[273px]">
-              <div className="w-[7px] h-full bg-secondary" />
-              <p className="text-2xl text-neutral-500 w-[238px]">Awards Win</p>
-            </div>
-          </motion.div>
+          {/* Stat Box 3: Awards Win */}
+          <div className="absolute left-[calc(37.5%+56px)] top-[364px] -translate-x-1/2">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ delay: 0.3, duration: 0.6, ease: "easeOut" }}
+              className="bg-white border border-white rounded-[4px] p-[30px] w-[276px] flex flex-col gap-[2px] shadow-sm"
+            >
+              <div className="flex flex-col h-[65px] justify-end leading-[0] text-[72px] font-semibold text-neutral-800 w-[115px]">
+                <p className="leading-normal">37</p>
+              </div>
+              <div className="flex gap-3 items-center pl-4 w-[273px]">
+                <div className="w-[7px] h-full bg-secondary" />
+                <p className="text-2xl text-neutral-500 w-[238px]">Awards Win</p>
+              </div>
+            </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ delay: 0.4, duration: 0.5 }}
-            className="absolute left-[calc(29.167%+7.5px)] top-[469px] -translate-x-1/2 bg-white border border-white rounded-[4px] p-[30px] flex flex-col gap-[2px]"
-          >
-            <div className="flex flex-col h-[65px] justify-end leading-[0] text-[72px] font-semibold text-neutral-800 w-[115px]">
-              <p className="leading-normal">30</p>
-            </div>
-            <div className="flex gap-3 items-center pl-4 w-[273px]">
-              <div className="w-[7px] h-full bg-secondary" />
-              <p className="text-2xl text-neutral-500 w-[238px]">Years in Business</p>
-            </div>
-          </motion.div>
+          {/* Stat Box 4: Years in Business */}
+          <div className="absolute left-[calc(29.167%+7.5px)] top-[469px] -translate-x-1/2">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ delay: 0.4, duration: 0.6, ease: "easeOut" }}
+              className="bg-white border border-white rounded-[4px] p-[30px] flex flex-col gap-[2px] shadow-sm"
+            >
+              <div className="flex flex-col h-[65px] justify-end leading-[0] text-[72px] font-semibold text-neutral-800 w-[115px]">
+                <p className="leading-normal">30</p>
+              </div>
+              <div className="flex gap-3 items-center pl-4 w-[273px]">
+                <div className="w-[7px] h-full bg-secondary" />
+                <p className="text-2xl text-neutral-500 w-[238px]">Years in Business</p>
+              </div>
+            </motion.div>
+          </div>
 
-          {/* Illustrations */}
-          <Image
-            src="/assets/6e9a91091bc241cbdb3b4d11e910890e1b8fcaef.png"
-            alt="illus"
-            width={79}
-            height={79}
-            className="absolute left-[calc(12.5%+38.5px)] top-[172px] -translate-x-1/2"
-          />
-          <Image
-            src="/assets/45ae3a838060ffdbf7a62dc788fd967a024d4335.png"
-            alt="illus"
-            width={84}
-            height={84}
-            className="absolute left-[calc(37.5%+51px)] top-[582px] -translate-x-1/2"
-          />
-          <Image
-            src="/assets/3de872771f4000bb313182245651d05a0d2ddd87.png"
-            alt="illus"
-            width={93}
-            height={93}
-            className="absolute left-[calc(50%-11.5px)] top-[349px] -translate-x-1/2"
-          />
-          <Image
-            src="/assets/98b21396e6c4886178eab4b6bc331d5494931d2e.png"
-            alt="illus"
-            width={97}
-            height={97}
-            className="absolute left-[calc(54.167%-8.5px)] top-[103px] -translate-x-1/2"
-          />
+          {/* Illustrations with animations */}
+          <div className="absolute left-[calc(12.5%+38.5px)] top-[172px] -translate-x-1/2">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ delay: 0.15, duration: 0.5, ease: "easeOut" }}
+            >
+              <Image
+                src="/assets/6e9a91091bc241cbdb3b4d11e910890e1b8fcaef.png"
+                alt="illus"
+                width={79}
+                height={79}
+              />
+            </motion.div>
+          </div>
+
+          <div className="absolute left-[calc(37.5%+51px)] top-[582px] -translate-x-1/2">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ delay: 0.45, duration: 0.5, ease: "easeOut" }}
+            >
+              <Image
+                src="/assets/45ae3a838060ffdbf7a62dc788fd967a024d4335.png"
+                alt="illus"
+                width={84}
+                height={84}
+              />
+            </motion.div>
+          </div>
+
+          <div className="absolute left-[calc(50%-11.5px)] top-[349px] -translate-x-1/2">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ delay: 0.35, duration: 0.5, ease: "easeOut" }}
+            >
+              <Image
+                src="/assets/3de872771f4000bb313182245651d05a0d2ddd87.png"
+                alt="illus"
+                width={93}
+                height={93}
+              />
+            </motion.div>
+          </div>
+
+          <div className="absolute left-[calc(54.167%-8.5px)] top-[103px] -translate-x-1/2">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ delay: 0.25, duration: 0.5, ease: "easeOut" }}
+            >
+              <Image
+                src="/assets/98b21396e6c4886178eab4b6bc331d5494931d2e.png"
+                alt="illus"
+                width={97}
+                height={97}
+              />
+            </motion.div>
+          </div>
 
           {/* Right side content */}
           <motion.div
