@@ -40,24 +40,24 @@ export default function Home() {
           initial={{ y: -100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="absolute top-0 w-full z-20 h-20"
+          className="absolute top-0 w-full z-20 h-20 bg-black/30 backdrop-blur-sm"
         >
           <div className="max-w-[1440px] mx-auto h-full relative">
             {/* Nav Items - right side */}
             <div className="absolute right-28 top-[30px] flex gap-[50px] text-lg leading-normal">
-              <a href="#" className="text-white hover:text-secondary transition-colors">
+              <a href="#" className="text-white hover:text-secondary transition-colors drop-shadow-lg" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>
                 Home
               </a>
-              <a href="#" className="text-white hover:text-secondary transition-colors">
+              <a href="#" className="text-white hover:text-secondary transition-colors drop-shadow-lg" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>
                 About Us
               </a>
-              <a href="#" className="text-white hover:text-secondary transition-colors">
+              <a href="#" className="text-white hover:text-secondary transition-colors drop-shadow-lg" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>
                 Projects
               </a>
-              <a href="#" className="text-white hover:text-secondary transition-colors">
+              <a href="#" className="text-white hover:text-secondary transition-colors drop-shadow-lg" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>
                 Services
               </a>
-              <a href="#" className="font-semibold text-secondary hover:opacity-80">
+              <a href="#" className="font-semibold text-secondary hover:opacity-80 drop-shadow-lg" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>
                 Contact Us
               </a>
             </div>
@@ -71,7 +71,7 @@ export default function Home() {
                 height={48}
                 className="rounded-full"
               />
-              <p className="font-bold text-[30px] text-white leading-normal">
+              <p className="font-bold text-[30px] text-white leading-normal drop-shadow-lg" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>
                 羅針盤
               </p>
             </div>
