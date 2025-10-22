@@ -3,22 +3,30 @@
 import Image from "next/image";
 import Button from "@/components/ui/Button";
 import { motion, AnimatePresence } from "framer-motion";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 
 export default function Home() {
   // Hero slideshow state
-  const heroImages = [
+  const heroImages = useMemo(() => [
     "/assets/1.jpeg",
     "/assets/2.jpeg",
     "/assets/4.jpeg",
-  ];
+  ], []);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  // Auto-advance slideshow every 5 seconds
+  // Preload all images on mount
+  useEffect(() => {
+    heroImages.forEach((src) => {
+      const img = new window.Image();
+      img.src = src;
+    });
+  }, [heroImages]);
+
+  // Auto-advance slideshow every 3 seconds
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentImageIndex((prev) => (prev + 1) % heroImages.length);
-    }, 5000);
+    }, 3000);
 
     return () => clearInterval(timer);
   }, [heroImages.length]);
@@ -79,7 +87,7 @@ export default function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 1 }}
+            transition={{ duration: 0.6, ease: "easeInOut" }}
             className="absolute inset-0"
           >
             <Image
