@@ -188,6 +188,7 @@ export default function Home() {
             {[
               {
                 icon: "/assets/1102ba2e18d71fd823bd6cd489e4e3099ab6f39f.svg",
+                icon2: "/assets/a1fa079092540e4007d66ceec9f4e2ac609cafde.svg",
                 title: "Construction",
                 active: false,
               },
@@ -197,7 +198,7 @@ export default function Home() {
                 active: true,
               },
               {
-                icon: "/assets/a1fa079092540e4007d66ceec9f4e2ac609cafde.svg",
+                icon: "/assets/e16c90f1b437106be8f191785e435a103c0939d1.svg",
                 title: "Consultation",
                 active: false,
               },
@@ -208,8 +209,19 @@ export default function Home() {
                   service.active ? "bg-primary" : "bg-white"
                 } rounded shadow p-5 h-[181px] flex flex-col items-center justify-center gap-5`}
               >
-                <div className="w-10 h-10 relative">
-                  <Image src={service.icon} alt={service.title} fill />
+                <div className="w-10 h-10 relative overflow-hidden">
+                  {/* Blue square decoration */}
+                  <div className="absolute bottom-0 left-0 w-[58.33%] h-[58.33%] bg-[#7595fd]" />
+                  {/* Main icon */}
+                  <div className="absolute inset-[8.33%_12.5%_8.33%_8.34%]">
+                    <Image src={service.icon} alt="" fill className="object-contain" />
+                  </div>
+                  {/* Second icon for Construction */}
+                  {service.icon2 && (
+                    <div className="absolute inset-[62.5%_62.5%_29.17%_29.17%]">
+                      <Image src={service.icon2} alt="" fill className="object-contain" />
+                    </div>
+                  )}
                 </div>
                 <div className="w-[60px] h-0.5 bg-neutral-100" />
                 <p
@@ -226,7 +238,7 @@ export default function Home() {
           <div className="grid grid-cols-3 gap-[105px]">
             {[
               {
-                icon: "/assets/e16c90f1b437106be8f191785e435a103c0939d1.svg",
+                icon: "/assets/7f3d8acf43007109c2aa2b24d6526a550f4a2306.svg",
                 title: "Repair Services",
                 active: true,
               },
@@ -237,6 +249,7 @@ export default function Home() {
               },
               {
                 icon: "/assets/42d4cacd435a23e4b81c12244fe8acbcb2c21efb.svg",
+                icon2: "/assets/c9b66e9544c448c6ad1318821744b0c41797fe19.svg",
                 title: "Electric",
                 active: true,
               },
@@ -247,8 +260,32 @@ export default function Home() {
                   service.active ? "bg-primary" : "bg-white"
                 } rounded shadow p-5 h-[181px] flex flex-col items-center justify-center gap-5`}
               >
-                <div className="w-10 h-10 relative">
-                  <Image src={service.icon} alt={service.title} fill />
+                <div className="w-10 h-10 relative overflow-hidden">
+                  {/* Blue square decoration */}
+                  <div className="absolute bottom-0 left-0 w-[58.33%] h-[58.33%] bg-[#7595fd]" />
+                  {/* Main icon */}
+                  {i === 0 && (
+                    <div className="absolute inset-[16.67%_8.33%]">
+                      <Image src={service.icon} alt="" fill className="object-contain" />
+                    </div>
+                  )}
+                  {i === 1 && (
+                    <div className="absolute inset-[12.5%_26.46%_12.5%_26.5%]">
+                      <Image src={service.icon} alt="" fill className="object-contain" />
+                    </div>
+                  )}
+                  {i === 2 && (
+                    <>
+                      <div className="absolute bottom-[16.67%] left-[41.67%] right-[12.5%] top-1/2">
+                        <Image src={service.icon} alt="" fill className="object-contain" />
+                      </div>
+                      {service.icon2 && (
+                        <div className="absolute bottom-[29.17%] left-[12.5%] right-1/2 top-[16.67%]">
+                          <Image src={service.icon2} alt="" fill className="object-contain" />
+                        </div>
+                      )}
+                    </>
+                  )}
                 </div>
                 <div className="w-[60px] h-0.5 bg-neutral-100" />
                 <p
