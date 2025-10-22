@@ -2,9 +2,27 @@
 
 import Image from "next/image";
 import Button from "@/components/ui/Button";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState, useEffect } from "react";
 
 export default function Home() {
+  // Hero slideshow state
+  const heroImages = [
+    "/assets/1.jpeg",
+    "/assets/2.jpeg",
+    "/assets/4.jpeg",
+  ];
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  // Auto-advance slideshow every 5 seconds
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % heroImages.length);
+    }, 5000);
+
+    return () => clearInterval(timer);
+  }, [heroImages.length]);
+
   return (
     <main className="bg-white">
       {/* Navbar */}
@@ -53,15 +71,28 @@ export default function Home() {
       </motion.nav>
 
       {/* Hero Section */}
-      <section className="h-[646px] relative overflow-hidden block">
-        <Image
-          src="/assets/522e6a5f380cba7232041d621d835a77aaeaf072.png"
-          alt="Hero Background"
-          fill
-          className="object-cover object-center"
-          priority
-          sizes="100vw"
-        />
+      <section className="h-screen relative overflow-hidden block">
+        {/* Slideshow Background */}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={currentImageIndex}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1 }}
+            className="absolute inset-0"
+          >
+            <Image
+              src={heroImages[currentImageIndex]}
+              alt="Hero Background"
+              fill
+              className="object-cover object-center"
+              priority={currentImageIndex === 0}
+              sizes="100vw"
+            />
+          </motion.div>
+        </AnimatePresence>
+
         <div
           className="absolute inset-0"
           style={{
