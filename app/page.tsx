@@ -117,41 +117,6 @@ export default function Home() {
           >
             Building things is our mission.
           </motion.h1>
-
-          {/* Feature Project */}
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6, duration: 0.6 }}
-            className="absolute bottom-10 right-0 w-[416px]"
-          >
-            <div className="bg-[#3559c7] rounded-t-[2px] px-[10px] py-5 pb-[10px] flex flex-col gap-5 items-center text-white text-center h-[150px]">
-              <p className="font-bold text-xl leading-normal">Feature Projects</p>
-              <p className="text-2xl leading-normal w-[312px] h-[61px]">
-                The National University of Architecture
-              </p>
-            </div>
-            <div className="flex h-10">
-              <button className="bg-neutral-800 w-[208px] text-white text-lg flex items-center justify-center gap-[10px] px-5 py-1 overflow-hidden">
-                <span className="leading-normal">Back</span>
-                <Image
-                  src="/assets/26c9f2977fa59b9ed6318be31aed0536035626f7.svg"
-                  alt="Arrow"
-                  width={26}
-                  height={17}
-                />
-              </button>
-              <button className="bg-neutral-800 w-[207px] text-white text-lg flex items-center justify-center gap-[10px] px-5 py-1 overflow-hidden">
-                <Image
-                  src="/assets/762a4f982c7e562c3187091f9952d7ed888f2920.svg"
-                  alt="Arrow"
-                  width={26}
-                  height={17}
-                />
-                <span className="leading-normal">Next</span>
-              </button>
-            </div>
-          </motion.div>
         </div>
 
         {/* Gradient Transition to next section */}
