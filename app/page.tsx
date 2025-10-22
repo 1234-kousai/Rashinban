@@ -65,11 +65,10 @@ export default function Home() {
             {/* Logo - left side */}
             <div className="absolute left-28 top-[22px] flex items-center gap-3">
               <Image
-                src="/assets/compass-logo.jpg"
+                src="/assets/rashinban-logo.png"
                 alt="Rashinban Logo"
                 width={48}
                 height={48}
-                className="rounded-full"
               />
               <p className="font-bold text-[30px] text-white leading-normal drop-shadow-lg" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>
                 羅針盤
