@@ -118,81 +118,83 @@ export default function Home() {
       </section>
 
       {/* Our Reputation */}
-      <section className="bg-white h-[433px] overflow-hidden relative">
-        <div className="max-w-[1440px] mx-auto h-full relative">
+      <section className="bg-white py-[60px] overflow-hidden">
+        <div className="w-full min-w-[1440px]">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.5 }}
-            className="absolute left-[calc(33.333%+104px)] right-[calc(33.333%+105px)] text-center top-[60px] text-heading-4 text-neutral-800 leading-normal z-10"
+            className="text-center text-heading-4 text-neutral-800 leading-normal mb-[92px]"
           >
             Our Reputation
           </motion.h2>
 
-          {/* Left card */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ delay: 0.1, duration: 0.5 }}
-            className="absolute left-[calc(8.333%+96px)] top-[152px] bg-white border-[1.4px] border-solid border-neutral-100 rounded-[4px] pb-10 pt-5 px-5 flex flex-col gap-[18px] items-start w-[292px]"
-          >
-            <div className="w-10 h-10 relative overflow-hidden">
-              <div className="absolute inset-[4.17%]">
-                <Image src="/assets/112e73a57b2e94b8ce3dfdef856ce976d23ca2ea.svg" alt="" fill className="object-contain" />
+          <div className="flex justify-center gap-[63px] px-[120px]">
+            {/* Left card */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ delay: 0.1, duration: 0.5 }}
+              className="bg-white border-[1.4px] border-solid border-neutral-100 rounded-[4px] pb-10 pt-5 px-5 flex flex-col gap-[18px] items-start w-[292px]"
+            >
+              <div className="w-10 h-10 relative overflow-hidden">
+                <div className="absolute inset-[4.17%]">
+                  <Image src="/assets/112e73a57b2e94b8ce3dfdef856ce976d23ca2ea.svg" alt="" fill className="object-contain" />
+                </div>
               </div>
-            </div>
-            <h3 className="font-bold text-xl leading-normal text-neutral-700">Best Services</h3>
-            <p className="text-neutral-400 text-base leading-normal w-[254px]">Nullam senectus porttitor in eget. Eget rutrum leo interdum.</p>
-          </motion.div>
+              <h3 className="font-bold text-xl leading-normal text-neutral-700">Best Services</h3>
+              <p className="text-neutral-400 text-base leading-normal w-[254px]">Nullam senectus porttitor in eget. Eget rutrum leo interdum.</p>
+            </motion.div>
 
-          {/* Center card */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ delay: 0.2, duration: 0.5 }}
-            className="absolute left-1/2 -translate-x-1/2 top-[152px] bg-white border-[1.4px] border-solid border-neutral-100 rounded-[4px] pb-10 pt-5 px-5 flex flex-col gap-[18px] items-start w-[292px]"
-          >
-            <div className="w-10 h-10 relative overflow-hidden">
-              <div className="absolute inset-[4.17%]">
-                <Image src="/assets/112e73a57b2e94b8ce3dfdef856ce976d23ca2ea.svg" alt="" fill className="object-contain" />
+            {/* Center card */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ delay: 0.2, duration: 0.5 }}
+              className="bg-white border-[1.4px] border-solid border-neutral-100 rounded-[4px] pb-10 pt-5 px-5 flex flex-col gap-[18px] items-start w-[292px]"
+            >
+              <div className="w-10 h-10 relative overflow-hidden">
+                <div className="absolute inset-[4.17%]">
+                  <Image src="/assets/112e73a57b2e94b8ce3dfdef856ce976d23ca2ea.svg" alt="" fill className="object-contain" />
+                </div>
               </div>
-            </div>
-            <h3 className="font-bold text-xl leading-normal text-neutral-700">Best Teams</h3>
-            <p className="text-neutral-400 text-base leading-normal w-[254px]">Cursus semper tellus volutpat aliquet lacus. </p>
-          </motion.div>
+              <h3 className="font-bold text-xl leading-normal text-neutral-700">Best Teams</h3>
+              <p className="text-neutral-400 text-base leading-normal w-[254px]">Cursus semper tellus volutpat aliquet lacus. </p>
+            </motion.div>
 
-          {/* Right card */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ delay: 0.3, duration: 0.5 }}
-            className="absolute right-[calc(8.333%+84px)] top-[152px] bg-white border-[1.4px] border-solid border-neutral-100 rounded-[4px] pb-10 pt-5 px-5 flex flex-col gap-[18px] items-start w-[292px]"
-          >
-            <div className="w-10 h-10 relative overflow-hidden">
-              <div className="absolute inset-[9.208%]">
-                <Image src="/assets/1314a88b7ebf1eb3d4adc14cc32306b468412fe2.svg" alt="" fill className="object-contain" />
+            {/* Right card */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ delay: 0.3, duration: 0.5 }}
+              className="bg-white border-[1.4px] border-solid border-neutral-100 rounded-[4px] pb-10 pt-5 px-5 flex flex-col gap-[18px] items-start w-[292px]"
+            >
+              <div className="w-10 h-10 relative overflow-hidden">
+                <div className="absolute inset-[9.208%]">
+                  <Image src="/assets/1314a88b7ebf1eb3d4adc14cc32306b468412fe2.svg" alt="" fill className="object-contain" />
+                </div>
               </div>
-            </div>
-            <h3 className="font-bold text-xl leading-normal text-neutral-700">Best Designs</h3>
-            <p className="text-neutral-400 text-base leading-normal w-[254px]">Ultricies at ipsum nunc, tristique nam lectus.</p>
-          </motion.div>
+              <h3 className="font-bold text-xl leading-normal text-neutral-700">Best Designs</h3>
+              <p className="text-neutral-400 text-base leading-normal w-[254px]">Ultricies at ipsum nunc, tristique nam lectus.</p>
+            </motion.div>
+          </div>
         </div>
       </section>
 
       {/* About Us */}
-      <section className="bg-white h-[945px] relative overflow-hidden">
-        <div className="max-w-[1440px] mx-auto h-full relative">
+      <section className="bg-white py-[138px] overflow-hidden">
+        <div className="w-full min-w-[1440px] relative h-[669px]">
           {/* Image */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
-            className="absolute left-[calc(37.5%+25px)] -translate-x-1/2 top-[calc(50%-64px)] -translate-y-1/2 w-[902px] h-[669px] rounded-[2px] shadow-[0px_20px_24px_-4px_rgba(17,24,39,0.1),0px_8px_8px_-4px_rgba(17,24,39,0.04)]"
+            className="absolute left-[120px] top-0 w-[902px] h-[669px] rounded-[2px] shadow-[0px_20px_24px_-4px_rgba(17,24,39,0.1),0px_8px_8px_-4px_rgba(17,24,39,0.04)]"
           >
             <div className="absolute inset-0 overflow-hidden pointer-events-none rounded-[2px]">
               <Image
@@ -211,7 +213,7 @@ export default function Home() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ delay: 0.2, duration: 0.6 }}
-            className="absolute left-[calc(79.167%-56px)] -translate-x-1/2 top-[147px] bg-primary w-[488px] h-[523px] rounded-[2px] shadow-[0px_20px_24px_-4px_rgba(17,24,39,0.1),0px_8px_8px_-4px_rgba(17,24,39,0.04)] overflow-clip"
+            className="absolute right-[120px] top-[147px] bg-primary w-[488px] h-[523px] rounded-[2px] shadow-[0px_20px_24px_-4px_rgba(17,24,39,0.1),0px_8px_8px_-4px_rgba(17,24,39,0.04)] overflow-clip"
           >
             <p className="absolute left-10 top-[50px] text-heading-4 text-white leading-normal font-bold">About us</p>
             <p className="absolute left-10 top-[129px] text-xl text-white leading-normal w-[388px]">
