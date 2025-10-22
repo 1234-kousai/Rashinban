@@ -238,13 +238,25 @@ export default function Home() {
       {/* Services */}
       <section className="bg-neutral-50 h-[608px] overflow-hidden relative">
         <div className="max-w-[1440px] mx-auto h-full relative">
-          <h2 className="absolute left-[calc(41.667%+44px)] right-[calc(41.667%+45px)] text-center top-11 text-heading-4 text-neutral-800 leading-normal">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.5 }}
+            className="absolute left-[calc(41.667%+44px)] right-[calc(41.667%+45px)] text-center top-11 text-heading-4 text-neutral-800 leading-normal"
+          >
             Services
-          </h2>
+          </motion.h2>
 
           {/* Row 1 */}
           {/* Construction */}
-          <div className="absolute left-[calc(8.333%+96px)] top-[122px] bg-white p-5 rounded shadow-[0px_0px_37px_-2px_rgba(17,24,39,0.05)] h-[181px] w-[271px] flex flex-col items-center justify-center gap-5">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ delay: 0.1, duration: 0.5 }}
+            className="absolute left-[calc(8.333%+96px)] top-[122px] bg-white p-5 rounded shadow-[0px_0px_37px_-2px_rgba(17,24,39,0.05)] h-[181px] w-[271px] flex flex-col items-center justify-center gap-5"
+          >
             <div className="w-10 h-10 relative overflow-hidden">
               <div className="absolute bottom-0 left-0 w-[58.33%] h-[58.33%] bg-[#7595fd]" />
               <div className="absolute inset-[8.33%_12.5%_8.33%_8.34%]">
@@ -256,10 +268,16 @@ export default function Home() {
             </div>
             <div className="w-[60px] h-0.5 bg-neutral-100" />
             <p className="text-xl font-semibold text-primary text-center leading-normal">Construction</p>
-          </div>
+          </motion.div>
 
           {/* Renovation */}
-          <div className="absolute left-[calc(33.333%+105px)] top-[122px] bg-primary p-5 rounded shadow-[0px_0px_37px_-2px_rgba(17,24,39,0.05)] h-[181px] w-[271px] flex flex-col items-center justify-center gap-5">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ delay: 0.2, duration: 0.5 }}
+            className="absolute left-[calc(33.333%+105px)] top-[122px] bg-primary p-5 rounded shadow-[0px_0px_37px_-2px_rgba(17,24,39,0.05)] h-[181px] w-[271px] flex flex-col items-center justify-center gap-5"
+          >
             <div className="w-10 h-10 relative overflow-hidden">
               <div className="absolute bottom-0 left-0 w-[58.33%] h-[58.33%] bg-[#7595fd]" />
               <div className="absolute inset-[8.33%_8.33%_8.33%_12.5%]">
@@ -268,10 +286,16 @@ export default function Home() {
             </div>
             <div className="w-[60px] h-0.5 bg-neutral-100" />
             <p className="text-xl font-semibold text-white text-center leading-normal">Renovation</p>
-          </div>
+          </motion.div>
 
           {/* Consultation */}
-          <div className="absolute left-[calc(66.667%-6px)] top-[122px] bg-white p-5 rounded shadow-[0px_0px_37px_-2px_rgba(17,24,39,0.05)] h-[181px] w-[270px] flex flex-col items-center justify-center gap-5">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ delay: 0.3, duration: 0.5 }}
+            className="absolute left-[calc(66.667%-6px)] top-[122px] bg-white p-5 rounded shadow-[0px_0px_37px_-2px_rgba(17,24,39,0.05)] h-[181px] w-[270px] flex flex-col items-center justify-center gap-5"
+          >
             <div className="w-10 h-10 relative overflow-hidden">
               <div className="absolute bottom-0 left-0 w-[58.33%] h-[58.33%] bg-[#7595fd]" />
               <div className="absolute inset-[10.02%_10.08%_10.06%_10.08%]">
@@ -280,11 +304,17 @@ export default function Home() {
             </div>
             <div className="w-[60px] h-0.5 bg-neutral-100" />
             <p className="text-xl font-semibold text-primary text-center leading-normal">Consultation</p>
-          </div>
+          </motion.div>
 
           {/* Row 2 */}
           {/* Repair Services */}
-          <div className="absolute left-[calc(8.333%+96px)] top-[351px] bg-primary p-5 rounded shadow-[0px_0px_37px_-2px_rgba(17,24,39,0.05)] h-[181px] w-[271px] flex flex-col items-center justify-center gap-5">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ delay: 0.4, duration: 0.5 }}
+            className="absolute left-[calc(8.333%+96px)] top-[351px] bg-primary p-5 rounded shadow-[0px_0px_37px_-2px_rgba(17,24,39,0.05)] h-[181px] w-[271px] flex flex-col items-center justify-center gap-5"
+          >
             <div className="w-10 h-10 relative overflow-hidden">
               <div className="absolute bottom-0 left-0 w-[58.33%] h-[58.33%] bg-[#7595fd]" />
               <div className="absolute inset-[16.67%_8.33%]">
@@ -293,10 +323,16 @@ export default function Home() {
             </div>
             <div className="w-[60px] h-0.5 bg-neutral-100" />
             <p className="text-xl font-semibold text-white text-center leading-normal">Repair Services</p>
-          </div>
+          </motion.div>
 
           {/* Architecture */}
-          <div className="absolute left-[calc(33.333%+105px)] top-[351px] bg-white p-5 rounded shadow-[0px_0px_37px_-2px_rgba(17,24,39,0.05)] h-[181px] w-[271px] flex flex-col items-center justify-center gap-5">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ delay: 0.5, duration: 0.5 }}
+            className="absolute left-[calc(33.333%+105px)] top-[351px] bg-white p-5 rounded shadow-[0px_0px_37px_-2px_rgba(17,24,39,0.05)] h-[181px] w-[271px] flex flex-col items-center justify-center gap-5"
+          >
             <div className="w-10 h-10 relative overflow-hidden">
               <div className="absolute bottom-0 left-0 w-[58.33%] h-[58.33%] bg-[#7595fd]" />
               <div className="absolute inset-[12.5%_26.46%_12.5%_26.5%]">
@@ -305,10 +341,16 @@ export default function Home() {
             </div>
             <div className="w-[60px] h-0.5 bg-neutral-100" />
             <p className="text-xl font-semibold text-primary text-center leading-normal">Architecture</p>
-          </div>
+          </motion.div>
 
           {/* Electric */}
-          <div className="absolute left-[calc(66.667%-6px)] top-[351px] bg-primary p-5 rounded shadow-[0px_0px_37px_-2px_rgba(17,24,39,0.05)] h-[181px] w-[270px] flex flex-col items-center justify-center gap-5">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ delay: 0.6, duration: 0.5 }}
+            className="absolute left-[calc(66.667%-6px)] top-[351px] bg-primary p-5 rounded shadow-[0px_0px_37px_-2px_rgba(17,24,39,0.05)] h-[181px] w-[270px] flex flex-col items-center justify-center gap-5"
+          >
             <div className="w-10 h-10 relative overflow-hidden">
               <div className="absolute bottom-0 left-0 w-[58.33%] h-[58.33%] bg-[#7595fd]" />
               <div className="absolute bottom-[16.67%] left-[41.67%] right-[12.5%] top-1/2">
@@ -320,7 +362,7 @@ export default function Home() {
             </div>
             <div className="w-[60px] h-0.5 bg-neutral-100" />
             <p className="text-xl font-semibold text-white text-center leading-normal">Electric</p>
-          </div>
+          </motion.div>
         </div>
       </section>
 
@@ -328,7 +370,13 @@ export default function Home() {
       <section className="bg-white h-[723px] relative overflow-hidden">
         <div className="max-w-[1440px] mx-auto h-full relative">
           {/* Left side stats */}
-          <div className="absolute left-[calc(25%+32.5px)] top-[221px] -translate-x-1/2 bg-white border border-white rounded-[4px] p-[30px] w-[361px] flex flex-col gap-[2px]">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ delay: 0.1, duration: 0.5 }}
+            className="absolute left-[calc(25%+32.5px)] top-[221px] -translate-x-1/2 bg-white border border-white rounded-[4px] p-[30px] w-[361px] flex flex-col gap-[2px]"
+          >
             <div className="flex flex-col h-[65px] justify-end leading-[0] text-[72px] font-semibold text-neutral-800 w-[115px]">
               <p className="leading-normal">123</p>
             </div>
@@ -336,9 +384,15 @@ export default function Home() {
               <div className="w-[7px] h-full bg-secondary" />
               <p className="text-2xl text-neutral-500 w-[238px]">Projects Completed</p>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="absolute left-[calc(45.833%-8px)] top-[122px] -translate-x-1/2 bg-white border border-white rounded-[4px] p-[30px] w-[280px] flex flex-col gap-[2px]">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ delay: 0.2, duration: 0.5 }}
+            className="absolute left-[calc(45.833%-8px)] top-[122px] -translate-x-1/2 bg-white border border-white rounded-[4px] p-[30px] w-[280px] flex flex-col gap-[2px]"
+          >
             <div className="flex flex-col h-[65px] justify-end leading-[0] text-[72px] font-semibold text-neutral-800 w-[115px]">
               <p className="leading-normal">84</p>
             </div>
@@ -346,9 +400,15 @@ export default function Home() {
               <div className="w-[7px] h-full bg-secondary" />
               <p className="text-2xl text-neutral-500 w-[238px]">Happy Clients</p>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="absolute left-[calc(37.5%+56px)] top-[364px] -translate-x-1/2 bg-white border border-white rounded-[4px] p-[30px] w-[276px] flex flex-col gap-[2px]">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ delay: 0.3, duration: 0.5 }}
+            className="absolute left-[calc(37.5%+56px)] top-[364px] -translate-x-1/2 bg-white border border-white rounded-[4px] p-[30px] w-[276px] flex flex-col gap-[2px]"
+          >
             <div className="flex flex-col h-[65px] justify-end leading-[0] text-[72px] font-semibold text-neutral-800 w-[115px]">
               <p className="leading-normal">37</p>
             </div>
@@ -356,9 +416,15 @@ export default function Home() {
               <div className="w-[7px] h-full bg-secondary" />
               <p className="text-2xl text-neutral-500 w-[238px]">Awards Win</p>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="absolute left-[calc(29.167%+7.5px)] top-[469px] -translate-x-1/2 bg-white border border-white rounded-[4px] p-[30px] flex flex-col gap-[2px]">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ delay: 0.4, duration: 0.5 }}
+            className="absolute left-[calc(29.167%+7.5px)] top-[469px] -translate-x-1/2 bg-white border border-white rounded-[4px] p-[30px] flex flex-col gap-[2px]"
+          >
             <div className="flex flex-col h-[65px] justify-end leading-[0] text-[72px] font-semibold text-neutral-800 w-[115px]">
               <p className="leading-normal">30</p>
             </div>
@@ -366,7 +432,7 @@ export default function Home() {
               <div className="w-[7px] h-full bg-secondary" />
               <p className="text-2xl text-neutral-500 w-[238px]">Years in Business</p>
             </div>
-          </div>
+          </motion.div>
 
           {/* Illustrations */}
           <Image
@@ -399,17 +465,24 @@ export default function Home() {
           />
 
           {/* Right side content */}
-          <p className="absolute right-[496px] translate-x-full text-[60px] font-bold text-primary leading-normal top-[172px] w-[359px]">
-            30 Years Experience
-          </p>
-          <p className="absolute right-[496px] translate-x-full text-xl text-neutral-600 leading-normal top-[352px] w-[330px] h-[74px]">
-            Our company has been the leading provided construction services to clients throughout the USA since 1988.
-          </p>
-          <div className="absolute right-[calc(16.667%+80px)] top-[493px]">
-            <a href="https://www.instagram.com/rashinbantodai/" target="_blank" rel="noopener noreferrer">
-              <Button>Contact Us</Button>
-            </a>
-          </div>
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ delay: 0.5, duration: 0.6 }}
+          >
+            <p className="absolute right-[496px] translate-x-full text-[60px] font-bold text-primary leading-normal top-[172px] w-[359px]">
+              30 Years Experience
+            </p>
+            <p className="absolute right-[496px] translate-x-full text-xl text-neutral-600 leading-normal top-[352px] w-[330px] h-[74px]">
+              Our company has been the leading provided construction services to clients throughout the USA since 1988.
+            </p>
+            <div className="absolute right-[calc(16.667%+80px)] top-[493px]">
+              <a href="https://www.instagram.com/rashinbantodai/" target="_blank" rel="noopener noreferrer">
+                <Button>Contact Us</Button>
+              </a>
+            </div>
+          </motion.div>
         </div>
       </section>
 
@@ -442,7 +515,15 @@ export default function Home() {
       {/* Projects */}
       <section className="bg-white min-h-[1098px] overflow-hidden py-[88px]">
         <div className="max-w-[1440px] mx-auto px-28">
-          <h2 className="text-heading-4 text-neutral-800 mb-[82px]">Projects</h2>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.5 }}
+            className="text-heading-4 text-neutral-800 mb-[82px]"
+          >
+            Projects
+          </motion.h2>
 
           <div className="flex gap-[32px]">
             {/* Menu */}
@@ -491,7 +572,14 @@ export default function Home() {
                   location: "2464 Royal Ln. Mesa, New Jersey",
                 },
               ].map((project, i) => (
-                <div key={i} className="rounded overflow-hidden">
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-100px" }}
+                  transition={{ delay: i * 0.1, duration: 0.5 }}
+                  className="rounded overflow-hidden"
+                >
                   <div className="h-[247px] relative">
                     <Image
                       src={project.img}
@@ -504,7 +592,7 @@ export default function Home() {
                     <h3 className="font-bold text-xl mb-3">{project.title}</h3>
                     <p className="text-lg">{project.location}</p>
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
