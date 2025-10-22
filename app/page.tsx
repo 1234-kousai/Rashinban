@@ -3,7 +3,7 @@ import Button from "@/components/ui/Button";
 
 export default function Home() {
   return (
-    <main className="bg-white min-h-screen">
+    <main className="bg-white">
       {/* Navbar */}
       <nav className="bg-white h-20 relative overflow-hidden">
         <div className="max-w-[1440px] mx-auto h-full relative">
@@ -45,13 +45,14 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="h-[646px] relative overflow-hidden">
+      <section className="h-[646px] relative overflow-hidden block">
         <Image
           src="/assets/522e6a5f380cba7232041d621d835a77aaeaf072.png"
           alt="Hero Background"
           fill
-          className="object-cover"
+          className="object-cover object-center"
           priority
+          sizes="100vw"
         />
         <div
           className="absolute inset-0"
