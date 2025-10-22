@@ -57,7 +57,7 @@ export default function Home() {
               <a href="#" className="text-white hover:text-secondary transition-colors drop-shadow-lg" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>
                 Services
               </a>
-              <a href="#" className="font-semibold text-secondary hover:opacity-80 drop-shadow-lg" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>
+              <a href="https://www.instagram.com/rashinbantodai/" target="_blank" rel="noopener noreferrer" className="font-semibold text-secondary hover:opacity-80 drop-shadow-lg" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>
                 Contact Us
               </a>
             </div>
@@ -406,7 +406,9 @@ export default function Home() {
             Our company has been the leading provided construction services to clients throughout the USA since 1988.
           </p>
           <div className="absolute right-[calc(16.667%+80px)] top-[493px]">
-            <Button>Contact Us</Button>
+            <a href="https://www.instagram.com/rashinbantodai/" target="_blank" rel="noopener noreferrer">
+              <Button>Contact Us</Button>
+            </a>
           </div>
         </div>
       </section>
@@ -431,7 +433,9 @@ export default function Home() {
               <span className="underline">+84 1102 2703</span>
             </p>
           </div>
-          <Button variant="outline">Get your consultation</Button>
+          <a href="https://www.instagram.com/rashinbantodai/" target="_blank" rel="noopener noreferrer">
+            <Button variant="outline">Get your consultation</Button>
+          </a>
         </div>
       </section>
 
@@ -632,24 +636,21 @@ export default function Home() {
 
               <p className="font-medium text-xl text-primary mb-5">Social:</p>
               <div className="flex gap-5">
-                <Image
-                  src="/assets/b397103fac4d9f6baa9f8a39671c48f6b7559ef0.svg"
-                  alt="Facebook"
-                  width={40}
-                  height={40}
-                />
-                <Image
-                  src="/assets/b43c10fdeafde04bf0e705eacc6ffff13baf47b2.svg"
-                  alt="LinkedIn"
-                  width={40}
-                  height={40}
-                />
-                <Image
-                  src="/assets/66a534a021d08a5a6e3cc4ee47cd702da15e501b.svg"
-                  alt="Twitter"
-                  width={40}
-                  height={40}
-                />
+                <a href="https://www.instagram.com/rashinbantodai/" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity">
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="40" height="40" rx="8" fill="url(#instagram-gradient)"/>
+                    <path d="M20 13.5C16.42 13.5 13.5 16.42 13.5 20C13.5 23.58 16.42 26.5 20 26.5C23.58 26.5 26.5 23.58 26.5 20C26.5 16.42 23.58 13.5 20 13.5ZM20 24.5C17.52 24.5 15.5 22.48 15.5 20C15.5 17.52 17.52 15.5 20 15.5C22.48 15.5 24.5 17.52 24.5 20C24.5 22.48 22.48 24.5 20 24.5Z" fill="white"/>
+                    <circle cx="26.8" cy="13.2" r="1.5" fill="white"/>
+                    <path d="M25 9H15C11.69 9 9 11.69 9 15V25C9 28.31 11.69 31 15 31H25C28.31 31 31 28.31 31 25V15C31 11.69 28.31 9 25 9ZM29 25C29 27.21 27.21 29 25 29H15C12.79 29 11 27.21 11 25V15C11 12.79 12.79 11 15 11H25C27.21 11 29 12.79 29 15V25Z" fill="white"/>
+                    <defs>
+                      <linearGradient id="instagram-gradient" x1="0" y1="40" x2="40" y2="0" gradientUnits="userSpaceOnUse">
+                        <stop offset="0%" stopColor="#FD5949"/>
+                        <stop offset="50%" stopColor="#D6249F"/>
+                        <stop offset="100%" stopColor="#285AEB"/>
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </a>
               </div>
             </div>
           </div>
