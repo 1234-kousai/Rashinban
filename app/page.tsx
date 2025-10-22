@@ -60,19 +60,17 @@ export default function Home() {
             </a>
           </div>
 
-          {/* Logo with decoration - left side */}
-          <div className="absolute left-28 top-[22px]">
-            {/* Random Symboles decoration - positioned absolutely */}
-            <div className="absolute w-12 h-12 pointer-events-none">
-              <Image src="/assets/41a98b88102502d3c6cec122fddef099043efe8a.svg" alt="" width={19} height={11} className="absolute top-[33px] left-[12px]" />
-              <Image src="/assets/61cb0ed8ecf2cf84821a6eb9cd5e2051c34fc39c.svg" alt="" width={18} height={8} className="absolute top-[13px] left-[12px]" />
-              <Image src="/assets/340dd3ac461322f02a6971897207ec64200d0647.svg" alt="" width={7} height={15} className="absolute top-[28px] left-[9px]" />
-              <Image src="/assets/caa924e875e75de0bd57cb7e4978822d99abab1d.svg" alt="" width={19} height={22} className="absolute top-[22px] left-[12px]" />
-              <Image src="/assets/5b210e843b3a7890bbb5c0f80ddb50eee79df84d.svg" alt="" width={18} height={16} className="absolute top-[13px] left-[8px]" />
-              <Image src="/assets/a2cfc15aa3275c054b181dbf7aa54cd05376dadc.svg" alt="" width={19} height={35} className="absolute top-[22px] left-[6px]" />
-            </div>
-            <p className="font-bold italic text-[30px] text-primary leading-normal ml-[52px]">
-              The<span className="not-italic">Box</span>
+          {/* Logo - left side */}
+          <div className="absolute left-28 top-[22px] flex items-center gap-3">
+            <Image
+              src="/assets/compass-logo.jpg"
+              alt="Rashinban Logo"
+              width={48}
+              height={48}
+              className="rounded-full"
+            />
+            <p className="font-bold text-[30px] text-primary leading-normal">
+              羅針盤
             </p>
           </div>
         </div>
@@ -154,6 +152,9 @@ export default function Home() {
             </div>
           </motion.div>
         </div>
+
+        {/* Gradient Transition to next section */}
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-white pointer-events-none" />
       </section>
 
       {/* Our Reputation */}
@@ -235,15 +236,12 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="absolute left-[120px] top-0 w-[902px] h-[669px] rounded-[2px] shadow-[0px_20px_24px_-4px_rgba(17,24,39,0.1),0px_8px_8px_-4px_rgba(17,24,39,0.04)]"
           >
-            <div className="absolute inset-0 overflow-hidden pointer-events-none rounded-[2px]">
-              <Image
-                src="/assets/ba3b33a387a6fb6a79f6ebda83f9824c72dc2d4b.png"
-                alt="About Us"
-                width={1148}
-                height={765}
-                className="absolute h-[114.35%] left-[-17.73%] max-w-none top-[-10.02%] w-[127.18%]"
-              />
-            </div>
+            <Image
+              src="/assets/compass-logo.jpg"
+              alt="About Us"
+              fill
+              className="object-cover rounded-[2px]"
+            />
           </motion.div>
 
           {/* Blue Box */}
