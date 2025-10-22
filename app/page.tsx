@@ -125,7 +125,7 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.5 }}
-            className="absolute left-1/2 -translate-x-1/2 text-center top-[60px] text-heading-4 text-neutral-800 leading-normal z-10"
+            className="absolute left-[calc(33.333%+104px)] right-[calc(33.333%+105px)] text-center top-[60px] text-heading-4 text-neutral-800 leading-normal z-10"
           >
             Our Reputation
           </motion.h2>
@@ -136,7 +136,7 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ delay: 0.1, duration: 0.5 }}
-            className="absolute left-[calc(8.333%+96px)] top-[152px] bg-white border-[1.4px] border-solid border-neutral-100 rounded-[4px] p-5 pb-10 pt-5 flex flex-col gap-[18px] items-start w-[292px]"
+            className="absolute left-[calc(8.333%+96px)] top-[152px] bg-white border-[1.4px] border-solid border-neutral-100 rounded-[4px] pb-10 pt-5 px-5 flex flex-col gap-[18px] items-start w-[292px]"
           >
             <div className="w-10 h-10 relative overflow-hidden">
               <div className="absolute inset-[4.17%]">
@@ -153,7 +153,7 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ delay: 0.2, duration: 0.5 }}
-            className="absolute left-1/2 -translate-x-1/2 top-[152px] bg-white border-[1.4px] border-solid border-neutral-100 rounded-[4px] p-5 pb-10 pt-5 flex flex-col gap-[18px] items-start w-[292px]"
+            className="absolute left-1/2 -translate-x-1/2 top-[152px] bg-white border-[1.4px] border-solid border-neutral-100 rounded-[4px] pb-10 pt-5 px-5 flex flex-col gap-[18px] items-start w-[292px]"
           >
             <div className="w-10 h-10 relative overflow-hidden">
               <div className="absolute inset-[4.17%]">
@@ -170,7 +170,7 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ delay: 0.3, duration: 0.5 }}
-            className="absolute right-[calc(8.333%+84px)] top-[152px] bg-white border-[1.4px] border-solid border-neutral-100 rounded-[4px] p-5 pb-10 pt-5 flex flex-col gap-[18px] items-start w-[292px]"
+            className="absolute right-[calc(8.333%+84px)] top-[152px] bg-white border-[1.4px] border-solid border-neutral-100 rounded-[4px] pb-10 pt-5 px-5 flex flex-col gap-[18px] items-start w-[292px]"
           >
             <div className="w-10 h-10 relative overflow-hidden">
               <div className="absolute inset-[9.208%]">
@@ -192,9 +192,9 @@ export default function Home() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
-            className="absolute left-[calc(37.5%+25px)] -translate-x-1/2 top-[calc(50%-64px)] -translate-y-1/2 w-[902px] h-[669px] rounded-[2px] shadow-[0px_20px_24px_-4px_rgba(17,24,39,0.1),0px_8px_8px_-4px_rgba(17,24,39,0.04)] overflow-hidden"
+            className="absolute left-[calc(37.5%+25px)] -translate-x-1/2 top-[calc(50%-64px)] -translate-y-1/2 w-[902px] h-[669px] rounded-[2px] shadow-[0px_20px_24px_-4px_rgba(17,24,39,0.1),0px_8px_8px_-4px_rgba(17,24,39,0.04)]"
           >
-            <div className="absolute inset-0 overflow-hidden rounded-[2px]">
+            <div className="absolute inset-0 overflow-hidden pointer-events-none rounded-[2px]">
               <Image
                 src="/assets/ba3b33a387a6fb6a79f6ebda83f9824c72dc2d4b.png"
                 alt="About Us"
@@ -211,17 +211,15 @@ export default function Home() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ delay: 0.2, duration: 0.6 }}
-            className="absolute left-[calc(79.167%-56px)] -translate-x-1/2 top-[147px] bg-primary w-[488px] h-[523px] rounded-[2px] shadow-[0px_20px_24px_-4px_rgba(17,24,39,0.1),0px_8px_8px_-4px_rgba(17,24,39,0.04)] overflow-hidden"
+            className="absolute left-[calc(79.167%-56px)] -translate-x-1/2 top-[147px] bg-primary w-[488px] h-[523px] rounded-[2px] shadow-[0px_20px_24px_-4px_rgba(17,24,39,0.1),0px_8px_8px_-4px_rgba(17,24,39,0.04)] overflow-clip"
           >
-            <h2 className="absolute left-10 top-[50px] text-heading-4 text-white leading-normal">About us</h2>
+            <p className="absolute left-10 top-[50px] text-heading-4 text-white leading-normal font-bold">About us</p>
             <p className="absolute left-10 top-[129px] text-xl text-white leading-normal w-[388px]">
               For more than 30 years we have been delivering world-class construction and we&apos;ve built many lasting relationships along the way. <br /><br />
               We&apos;ve matured into an industry leader and trusted resource for those seeking quality, innovation and reliability when building in the U.S.
             </p>
-            <div className="absolute left-10 top-[410px]">
-              <div className="bg-white border-2 border-solid border-primary px-5 py-4 rounded-md flex items-center justify-center gap-[10px]">
-                <p className="font-semibold text-lg text-primary text-center leading-normal">More on Our History</p>
-              </div>
+            <div className="absolute left-10 top-[410px] bg-white border-2 border-primary border-solid px-5 py-4 rounded-md flex items-center justify-center gap-[10px]">
+              <p className="font-semibold text-lg text-primary text-center leading-normal">More on Our History</p>
             </div>
           </motion.div>
         </div>
