@@ -6,33 +6,9 @@ export default function Home() {
     <main className="bg-white min-h-screen">
       {/* Navbar */}
       <nav className="bg-white h-20 relative overflow-hidden">
-        <div className="max-w-[1440px] mx-auto h-full flex items-center justify-between px-28 relative">
-          {/* Logo with decoration */}
-          <div className="flex items-center gap-3 relative">
-            {/* Random Symboles decoration - positioned absolutely around logo */}
-            <div className="absolute w-12 h-12 pointer-events-none">
-              <Image src="/assets/41a98b88102502d3c6cec122fddef099043efe8a.svg" alt="" width={19} height={11} className="absolute top-[33px] left-[12px]" />
-              <Image src="/assets/61cb0ed8ecf2cf84821a6eb9cd5e2051c34fc39c.svg" alt="" width={18} height={8} className="absolute top-[13px] left-[12px]" />
-              <Image src="/assets/340dd3ac461322f02a6971897207ec64200d0647.svg" alt="" width={7} height={15} className="absolute top-[28px] left-[9px]" />
-              <Image src="/assets/caa924e875e75de0bd57cb7e4978822d99abab1d.svg" alt="" width={19} height={22} className="absolute top-[22px] left-[12px]" />
-              <Image src="/assets/5b210e843b3a7890bbb5c0f80ddb50eee79df84d.svg" alt="" width={18} height={16} className="absolute top-[13px] left-[8px]" />
-              <Image src="/assets/a2cfc15aa3275c054b181dbf7aa54cd05376dadc.svg" alt="" width={19} height={35} className="absolute top-[22px] left-[6px]" />
-            </div>
-            <div className="w-12 h-12 relative">
-              <Image
-                src="/assets/762a4f982c7e562c3187091f9952d7ed888f2920.svg"
-                alt="Logo"
-                width={48}
-                height={48}
-              />
-            </div>
-            <p className="font-bold italic text-[30px] text-primary leading-none">
-              The<span className="not-italic">Box</span>
-            </p>
-          </div>
-
-          {/* Nav Items */}
-          <div className="flex gap-[50px] text-lg">
+        <div className="max-w-[1440px] mx-auto h-full relative">
+          {/* Nav Items - right side */}
+          <div className="absolute right-28 top-[30px] flex gap-[50px] text-lg leading-normal">
             <a href="#" className="text-neutral-900 hover:text-primary">
               Home
             </a>
@@ -48,6 +24,22 @@ export default function Home() {
             <a href="#" className="font-semibold text-secondary hover:opacity-80">
               Contact Us
             </a>
+          </div>
+
+          {/* Logo with decoration - left side */}
+          <div className="absolute left-28 top-[22px]">
+            {/* Random Symboles decoration - positioned absolutely */}
+            <div className="absolute w-12 h-12 pointer-events-none">
+              <Image src="/assets/41a98b88102502d3c6cec122fddef099043efe8a.svg" alt="" width={19} height={11} className="absolute top-[33px] left-[12px]" />
+              <Image src="/assets/61cb0ed8ecf2cf84821a6eb9cd5e2051c34fc39c.svg" alt="" width={18} height={8} className="absolute top-[13px] left-[12px]" />
+              <Image src="/assets/340dd3ac461322f02a6971897207ec64200d0647.svg" alt="" width={7} height={15} className="absolute top-[28px] left-[9px]" />
+              <Image src="/assets/caa924e875e75de0bd57cb7e4978822d99abab1d.svg" alt="" width={19} height={22} className="absolute top-[22px] left-[12px]" />
+              <Image src="/assets/5b210e843b3a7890bbb5c0f80ddb50eee79df84d.svg" alt="" width={18} height={16} className="absolute top-[13px] left-[8px]" />
+              <Image src="/assets/a2cfc15aa3275c054b181dbf7aa54cd05376dadc.svg" alt="" width={19} height={35} className="absolute top-[22px] left-[6px]" />
+            </div>
+            <p className="font-bold italic text-[30px] text-primary leading-normal ml-[52px]">
+              The<span className="not-italic">Box</span>
+            </p>
           </div>
         </div>
       </nav>
@@ -69,22 +61,22 @@ export default function Home() {
           }}
         />
 
-        <div className="max-w-[1440px] mx-auto h-full relative px-28">
-          <h1 className="absolute top-[239px] text-heading-1 text-neutral-800 w-[556px]">
+        <div className="max-w-[1440px] mx-auto h-full relative">
+          <h1 className="absolute left-[calc(20.833%-188px)] top-[239px] text-[72px] font-semibold leading-normal text-neutral-800 w-[556px]">
             Building things is our mission.
           </h1>
 
           {/* Feature Project */}
           <div className="absolute bottom-10 right-0 w-[416px]">
-            <div className="bg-[#3559c7] rounded-t p-5 flex flex-col gap-5 items-center text-white text-center">
-              <p className="font-bold text-xl">Feature Projects</p>
-              <p className="text-2xl w-[312px] h-[61px]">
+            <div className="bg-[#3559c7] rounded-t-[2px] px-[10px] py-5 pb-[10px] flex flex-col gap-5 items-center text-white text-center h-[150px]">
+              <p className="font-bold text-xl leading-normal">Feature Projects</p>
+              <p className="text-2xl leading-normal w-[312px] h-[61px]">
                 The National University of Architecture
               </p>
             </div>
             <div className="flex h-10">
-              <button className="bg-neutral-800 w-1/2 text-white text-lg flex items-center justify-center gap-2">
-                <span>Back</span>
+              <button className="bg-neutral-800 w-[208px] text-white text-lg flex items-center justify-center gap-[10px] px-5 py-1 overflow-hidden">
+                <span className="leading-normal">Back</span>
                 <Image
                   src="/assets/26c9f2977fa59b9ed6318be31aed0536035626f7.svg"
                   alt="Arrow"
@@ -92,14 +84,14 @@ export default function Home() {
                   height={17}
                 />
               </button>
-              <button className="bg-neutral-800 w-1/2 text-white text-lg flex items-center justify-center gap-2">
+              <button className="bg-neutral-800 w-[207px] text-white text-lg flex items-center justify-center gap-[10px] px-5 py-1 overflow-hidden">
                 <Image
                   src="/assets/762a4f982c7e562c3187091f9952d7ed888f2920.svg"
                   alt="Arrow"
                   width={26}
                   height={17}
                 />
-                <span>Next</span>
+                <span className="leading-normal">Next</span>
               </button>
             </div>
           </div>
@@ -107,196 +99,161 @@ export default function Home() {
       </section>
 
       {/* Our Reputation */}
-      <section className="bg-white h-[433px] overflow-hidden">
-        <div className="max-w-[1440px] mx-auto px-28 py-[60px]">
-          <h2 className="text-heading-4 text-neutral-800 text-center mb-[52px]">
+      <section className="bg-white h-[433px] overflow-hidden relative">
+        <div className="max-w-[1440px] mx-auto h-full relative">
+          <h2 className="absolute left-[calc(33.333%+104px)] right-[calc(33.333%+105px)] text-center top-[60px] text-heading-4 text-neutral-800 leading-normal">
             Our Reputation
           </h2>
 
-          <div className="grid grid-cols-3 gap-[110px]">
-            {[
-              {
-                icon: "/assets/112e73a57b2e94b8ce3dfdef856ce976d23ca2ea.svg",
-                title: "Best Services",
-                desc: "Nullam senectus porttitor in eget. Eget rutrum leo interdum.",
-              },
-              {
-                icon: "/assets/112e73a57b2e94b8ce3dfdef856ce976d23ca2ea.svg",
-                title: "Best Teams",
-                desc: "Cursus semper tellus volutpat aliquet lacus.",
-              },
-              {
-                icon: "/assets/1314a88b7ebf1eb3d4adc14cc32306b468412fe2.svg",
-                title: "Best Designs",
-                desc: "Ultricies at ipsum nunc, tristique nam lectus.",
-              },
-            ].map((item, i) => (
-              <div
-                key={i}
-                className="bg-white border border-neutral-100 rounded p-5 flex flex-col gap-[18px] items-start"
-              >
-                <div className="w-10 h-10 relative">
-                  <Image src={item.icon} alt={item.title} fill />
-                </div>
-                <h3 className="font-bold text-xl text-neutral-700">{item.title}</h3>
-                <p className="text-neutral-400 text-base w-[254px]">{item.desc}</p>
+          {/* Left card */}
+          <div className="absolute left-[calc(8.333%+96px)] top-[152px] bg-white border-[1.4px] border-solid border-neutral-100 rounded p-5 pb-10 pt-5 flex flex-col gap-[18px] items-start w-[292px]">
+            <div className="w-10 h-10 relative overflow-hidden">
+              <div className="absolute inset-[4.17%]">
+                <Image src="/assets/112e73a57b2e94b8ce3dfdef856ce976d23ca2ea.svg" alt="" fill className="object-contain" />
               </div>
-            ))}
+            </div>
+            <h3 className="font-bold text-xl leading-normal text-neutral-700">Best Services</h3>
+            <p className="text-neutral-400 text-base leading-normal w-[254px]">Nullam senectus porttitor in eget. Eget rutrum leo interdum.</p>
+          </div>
+
+          {/* Center card */}
+          <div className="absolute left-1/2 -translate-x-1/2 top-[152px] bg-white border-[1.4px] border-solid border-neutral-100 rounded p-5 pb-10 pt-5 flex flex-col gap-[18px] items-start w-[292px]">
+            <div className="w-10 h-10 relative overflow-hidden">
+              <div className="absolute inset-[4.17%]">
+                <Image src="/assets/112e73a57b2e94b8ce3dfdef856ce976d23ca2ea.svg" alt="" fill className="object-contain" />
+              </div>
+            </div>
+            <h3 className="font-bold text-xl leading-normal text-neutral-700">Best Teams</h3>
+            <p className="text-neutral-400 text-base leading-normal w-[254px]">Cursus semper tellus volutpat aliquet lacus. </p>
+          </div>
+
+          {/* Right card */}
+          <div className="absolute right-[calc(8.333%+84px)] top-[152px] bg-white border-[1.4px] border-solid border-neutral-100 rounded p-5 pb-10 pt-5 flex flex-col gap-[18px] items-start w-[292px]">
+            <div className="w-10 h-10 relative overflow-hidden">
+              <div className="absolute inset-[9.208%]">
+                <Image src="/assets/1314a88b7ebf1eb3d4adc14cc32306b468412fe2.svg" alt="" fill className="object-contain" />
+              </div>
+            </div>
+            <h3 className="font-bold text-xl leading-normal text-neutral-700">Best Designs</h3>
+            <p className="text-neutral-400 text-base leading-normal w-[254px]">Ultricies at ipsum nunc, tristique nam lectus.</p>
           </div>
         </div>
       </section>
 
       {/* About Us */}
       <section className="bg-white h-[945px] relative overflow-hidden">
-        <div className="max-w-[1440px] mx-auto h-full flex items-center justify-center relative">
+        <div className="max-w-[1440px] mx-auto h-full relative">
           {/* Image */}
-          <div className="absolute left-[37.5%] -translate-x-1/2 w-[902px] h-[669px] shadow-xl rounded">
+          <div className="absolute left-[calc(37.5%+25px)] -translate-x-1/2 top-[calc(50%-64px)] -translate-y-1/2 w-[902px] h-[669px] rounded-[2px] shadow-[0px_20px_24px_-4px_rgba(17,24,39,0.1),0px_8px_8px_-4px_rgba(17,24,39,0.04)] overflow-hidden">
             <Image
               src="/assets/ba3b33a387a6fb6a79f6ebda83f9824c72dc2d4b.png"
               alt="About Us"
               fill
-              className="object-cover rounded"
+              className="object-cover"
             />
           </div>
 
           {/* Blue Box */}
-          <div className="absolute right-[10%] top-[147px] bg-primary w-[488px] h-[523px] rounded shadow-xl p-10 text-white">
-            <h2 className="text-heading-4 mb-[29px]">About us</h2>
-            <p className="text-xl leading-normal mb-[81px]">
-              For more than 30 years we have been delivering world-class
-              construction and we&apos;ve built many lasting relationships along the way.
-              <br />
-              <br />
-              We&apos;ve matured into an industry leader and trusted resource for those
-              seeking quality, innovation and reliability when building in the U.S.
+          <div className="absolute left-[calc(79.167%-56px)] -translate-x-1/2 top-[147px] bg-primary w-[488px] h-[523px] rounded-[2px] shadow-[0px_20px_24px_-4px_rgba(17,24,39,0.1),0px_8px_8px_-4px_rgba(17,24,39,0.04)] overflow-hidden">
+            <h2 className="absolute left-10 top-[50px] text-heading-4 text-white leading-normal">About us</h2>
+            <p className="absolute left-10 top-[129px] text-xl text-white leading-normal w-[388px]">
+              For more than 30 years we have been delivering world-class construction and we&apos;ve built many lasting relationships along the way. <br /><br />
+              We&apos;ve matured into an industry leader and trusted resource for those seeking quality, innovation and reliability when building in the U.S.
             </p>
-            <Button variant="outline" className="border-2 border-primary bg-white text-primary hover:bg-neutral-50">
-              More on Our History
-            </Button>
+            <div className="absolute left-10 top-[410px]">
+              <div className="bg-white border-2 border-solid border-primary px-5 py-4 rounded-md flex items-center justify-center gap-[10px]">
+                <p className="font-semibold text-lg text-primary text-center leading-normal">More on Our History</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Services */}
-      <section className="bg-neutral-50 h-[608px] overflow-hidden">
-        <div className="max-w-[1440px] mx-auto px-28 py-11">
-          <h2 className="text-heading-4 text-neutral-800 text-center mb-[34px]">
+      <section className="bg-neutral-50 h-[608px] overflow-hidden relative">
+        <div className="max-w-[1440px] mx-auto h-full relative">
+          <h2 className="absolute left-[calc(41.667%+44px)] right-[calc(41.667%+45px)] text-center top-11 text-heading-4 text-neutral-800 leading-normal">
             Services
           </h2>
 
-          <div className="grid grid-cols-3 gap-[105px] mb-[48px]">
-            {[
-              {
-                icon: "/assets/1102ba2e18d71fd823bd6cd489e4e3099ab6f39f.svg",
-                icon2: "/assets/a1fa079092540e4007d66ceec9f4e2ac609cafde.svg",
-                title: "Construction",
-                active: false,
-              },
-              {
-                icon: "/assets/29b696f3e1665259ef6c1a161b5032e552ee0fef.svg",
-                title: "Renovation",
-                active: true,
-              },
-              {
-                icon: "/assets/e16c90f1b437106be8f191785e435a103c0939d1.svg",
-                title: "Consultation",
-                active: false,
-              },
-            ].map((service, i) => (
-              <div
-                key={i}
-                className={`${
-                  service.active ? "bg-primary" : "bg-white"
-                } rounded shadow p-5 h-[181px] flex flex-col items-center justify-center gap-5`}
-              >
-                <div className="w-10 h-10 relative overflow-hidden">
-                  {/* Blue square decoration */}
-                  <div className="absolute bottom-0 left-0 w-[58.33%] h-[58.33%] bg-[#7595fd]" />
-                  {/* Main icon */}
-                  <div className="absolute inset-[8.33%_12.5%_8.33%_8.34%]">
-                    <Image src={service.icon} alt="" fill className="object-contain" />
-                  </div>
-                  {/* Second icon for Construction */}
-                  {service.icon2 && (
-                    <div className="absolute inset-[62.5%_62.5%_29.17%_29.17%]">
-                      <Image src={service.icon2} alt="" fill className="object-contain" />
-                    </div>
-                  )}
-                </div>
-                <div className="w-[60px] h-0.5 bg-neutral-100" />
-                <p
-                  className={`text-xl font-semibold ${
-                    service.active ? "text-white" : "text-primary"
-                  }`}
-                >
-                  {service.title}
-                </p>
+          {/* Row 1 */}
+          {/* Construction */}
+          <div className="absolute left-[calc(8.333%+96px)] top-[122px] bg-white p-5 rounded shadow-[0px_0px_37px_-2px_rgba(17,24,39,0.05)] h-[181px] w-[271px] flex flex-col items-center justify-center gap-5">
+            <div className="w-10 h-10 relative overflow-hidden">
+              <div className="absolute bottom-0 left-0 w-[58.33%] h-[58.33%] bg-[#7595fd]" />
+              <div className="absolute inset-[8.33%_12.5%_8.33%_8.34%]">
+                <Image src="/assets/1102ba2e18d71fd823bd6cd489e4e3099ab6f39f.svg" alt="" fill className="object-contain" />
               </div>
-            ))}
+              <div className="absolute inset-[62.5%_62.5%_29.17%_29.17%]">
+                <Image src="/assets/a1fa079092540e4007d66ceec9f4e2ac609cafde.svg" alt="" fill className="object-contain" />
+              </div>
+            </div>
+            <div className="w-[60px] h-0.5 bg-neutral-100" />
+            <p className="text-xl font-semibold text-primary text-center leading-normal">Construction</p>
           </div>
 
-          <div className="grid grid-cols-3 gap-[105px]">
-            {[
-              {
-                icon: "/assets/7f3d8acf43007109c2aa2b24d6526a550f4a2306.svg",
-                title: "Repair Services",
-                active: true,
-              },
-              {
-                icon: "/assets/89211b87752a537161dcc15b405700e48ef12e03.svg",
-                title: "Architecture",
-                active: false,
-              },
-              {
-                icon: "/assets/42d4cacd435a23e4b81c12244fe8acbcb2c21efb.svg",
-                icon2: "/assets/c9b66e9544c448c6ad1318821744b0c41797fe19.svg",
-                title: "Electric",
-                active: true,
-              },
-            ].map((service, i) => (
-              <div
-                key={i}
-                className={`${
-                  service.active ? "bg-primary" : "bg-white"
-                } rounded shadow p-5 h-[181px] flex flex-col items-center justify-center gap-5`}
-              >
-                <div className="w-10 h-10 relative overflow-hidden">
-                  {/* Blue square decoration */}
-                  <div className="absolute bottom-0 left-0 w-[58.33%] h-[58.33%] bg-[#7595fd]" />
-                  {/* Main icon */}
-                  {i === 0 && (
-                    <div className="absolute inset-[16.67%_8.33%]">
-                      <Image src={service.icon} alt="" fill className="object-contain" />
-                    </div>
-                  )}
-                  {i === 1 && (
-                    <div className="absolute inset-[12.5%_26.46%_12.5%_26.5%]">
-                      <Image src={service.icon} alt="" fill className="object-contain" />
-                    </div>
-                  )}
-                  {i === 2 && (
-                    <>
-                      <div className="absolute bottom-[16.67%] left-[41.67%] right-[12.5%] top-1/2">
-                        <Image src={service.icon} alt="" fill className="object-contain" />
-                      </div>
-                      {service.icon2 && (
-                        <div className="absolute bottom-[29.17%] left-[12.5%] right-1/2 top-[16.67%]">
-                          <Image src={service.icon2} alt="" fill className="object-contain" />
-                        </div>
-                      )}
-                    </>
-                  )}
-                </div>
-                <div className="w-[60px] h-0.5 bg-neutral-100" />
-                <p
-                  className={`text-xl font-semibold ${
-                    service.active ? "text-white" : "text-primary"
-                  }`}
-                >
-                  {service.title}
-                </p>
+          {/* Renovation */}
+          <div className="absolute left-[calc(33.333%+105px)] top-[122px] bg-primary p-5 rounded shadow-[0px_0px_37px_-2px_rgba(17,24,39,0.05)] h-[181px] w-[271px] flex flex-col items-center justify-center gap-5">
+            <div className="w-10 h-10 relative overflow-hidden">
+              <div className="absolute bottom-0 left-0 w-[58.33%] h-[58.33%] bg-[#7595fd]" />
+              <div className="absolute inset-[8.33%_8.33%_8.33%_12.5%]">
+                <Image src="/assets/29b696f3e1665259ef6c1a161b5032e552ee0fef.svg" alt="" fill className="object-contain" />
               </div>
-            ))}
+            </div>
+            <div className="w-[60px] h-0.5 bg-neutral-100" />
+            <p className="text-xl font-semibold text-white text-center leading-normal">Renovation</p>
+          </div>
+
+          {/* Consultation */}
+          <div className="absolute left-[calc(66.667%-6px)] top-[122px] bg-white p-5 rounded shadow-[0px_0px_37px_-2px_rgba(17,24,39,0.05)] h-[181px] w-[270px] flex flex-col items-center justify-center gap-5">
+            <div className="w-10 h-10 relative overflow-hidden">
+              <div className="absolute bottom-0 left-0 w-[58.33%] h-[58.33%] bg-[#7595fd]" />
+              <div className="absolute inset-[10.02%_10.08%_10.06%_10.08%]">
+                <Image src="/assets/e16c90f1b437106be8f191785e435a103c0939d1.svg" alt="" fill className="object-contain" />
+              </div>
+            </div>
+            <div className="w-[60px] h-0.5 bg-neutral-100" />
+            <p className="text-xl font-semibold text-primary text-center leading-normal">Consultation</p>
+          </div>
+
+          {/* Row 2 */}
+          {/* Repair Services */}
+          <div className="absolute left-[calc(8.333%+96px)] top-[351px] bg-primary p-5 rounded shadow-[0px_0px_37px_-2px_rgba(17,24,39,0.05)] h-[181px] w-[271px] flex flex-col items-center justify-center gap-5">
+            <div className="w-10 h-10 relative overflow-hidden">
+              <div className="absolute bottom-0 left-0 w-[58.33%] h-[58.33%] bg-[#7595fd]" />
+              <div className="absolute inset-[16.67%_8.33%]">
+                <Image src="/assets/7f3d8acf43007109c2aa2b24d6526a550f4a2306.svg" alt="" fill className="object-contain" />
+              </div>
+            </div>
+            <div className="w-[60px] h-0.5 bg-neutral-100" />
+            <p className="text-xl font-semibold text-white text-center leading-normal">Repair Services</p>
+          </div>
+
+          {/* Architecture */}
+          <div className="absolute left-[calc(33.333%+105px)] top-[351px] bg-white p-5 rounded shadow-[0px_0px_37px_-2px_rgba(17,24,39,0.05)] h-[181px] w-[271px] flex flex-col items-center justify-center gap-5">
+            <div className="w-10 h-10 relative overflow-hidden">
+              <div className="absolute bottom-0 left-0 w-[58.33%] h-[58.33%] bg-[#7595fd]" />
+              <div className="absolute inset-[12.5%_26.46%_12.5%_26.5%]">
+                <Image src="/assets/89211b87752a537161dcc15b405700e48ef12e03.svg" alt="" fill className="object-contain" />
+              </div>
+            </div>
+            <div className="w-[60px] h-0.5 bg-neutral-100" />
+            <p className="text-xl font-semibold text-primary text-center leading-normal">Architecture</p>
+          </div>
+
+          {/* Electric */}
+          <div className="absolute left-[calc(66.667%-6px)] top-[351px] bg-primary p-5 rounded shadow-[0px_0px_37px_-2px_rgba(17,24,39,0.05)] h-[181px] w-[270px] flex flex-col items-center justify-center gap-5">
+            <div className="w-10 h-10 relative overflow-hidden">
+              <div className="absolute bottom-0 left-0 w-[58.33%] h-[58.33%] bg-[#7595fd]" />
+              <div className="absolute bottom-[16.67%] left-[41.67%] right-[12.5%] top-1/2">
+                <Image src="/assets/42d4cacd435a23e4b81c12244fe8acbcb2c21efb.svg" alt="" fill className="object-contain" />
+              </div>
+              <div className="absolute bottom-[29.17%] left-[12.5%] right-1/2 top-[16.67%]">
+                <Image src="/assets/c9b66e9544c448c6ad1318821744b0c41797fe19.svg" alt="" fill className="object-contain" />
+              </div>
+            </div>
+            <div className="w-[60px] h-0.5 bg-neutral-100" />
+            <p className="text-xl font-semibold text-white text-center leading-normal">Electric</p>
           </div>
         </div>
       </section>
