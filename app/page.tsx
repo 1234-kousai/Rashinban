@@ -1,11 +1,19 @@
+"use client";
+
 import Image from "next/image";
 import Button from "@/components/ui/Button";
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (
     <main className="bg-white">
       {/* Navbar */}
-      <nav className="bg-white h-20 relative overflow-hidden">
+      <motion.nav
+        initial={{ y: -100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        className="bg-white h-20 relative overflow-hidden"
+      >
         <div className="max-w-[1440px] mx-auto h-full relative">
           {/* Nav Items - right side */}
           <div className="absolute right-28 top-[30px] flex gap-[50px] text-lg leading-normal">
@@ -42,7 +50,7 @@ export default function Home() {
             </p>
           </div>
         </div>
-      </nav>
+      </motion.nav>
 
       {/* Hero Section */}
       <section className="h-[646px] relative overflow-hidden block">
@@ -63,12 +71,22 @@ export default function Home() {
         />
 
         <div className="max-w-[1440px] mx-auto h-full relative">
-          <h1 className="absolute left-[calc(20.833%-188px)] top-[239px] text-[72px] font-semibold leading-normal text-neutral-800 w-[556px]">
+          <motion.h1
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.3, duration: 0.8, ease: "easeOut" }}
+            className="absolute left-[calc(20.833%-188px)] top-[239px] text-[72px] font-semibold leading-normal text-neutral-800 w-[556px]"
+          >
             Building things is our mission.
-          </h1>
+          </motion.h1>
 
           {/* Feature Project */}
-          <div className="absolute bottom-10 right-0 w-[416px]">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6, duration: 0.6 }}
+            className="absolute bottom-10 right-0 w-[416px]"
+          >
             <div className="bg-[#3559c7] rounded-t-[2px] px-[10px] py-5 pb-[10px] flex flex-col gap-5 items-center text-white text-center h-[150px]">
               <p className="font-bold text-xl leading-normal">Feature Projects</p>
               <p className="text-2xl leading-normal w-[312px] h-[61px]">
@@ -95,19 +113,31 @@ export default function Home() {
                 <span className="leading-normal">Next</span>
               </button>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Our Reputation */}
       <section className="bg-white h-[433px] overflow-hidden relative">
         <div className="max-w-[1440px] mx-auto h-full relative">
-          <h2 className="absolute left-[calc(33.333%+104px)] right-[calc(33.333%+105px)] text-center top-[60px] text-heading-4 text-neutral-800 leading-normal z-10">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.5 }}
+            className="absolute left-[calc(33.333%+104px)] right-[calc(33.333%+105px)] text-center top-[60px] text-heading-4 text-neutral-800 leading-normal z-10"
+          >
             Our Reputation
-          </h2>
+          </motion.h2>
 
           {/* Left card */}
-          <div className="absolute left-[calc(8.333%+96px)] top-[152px] bg-white border-[1.4px] border-solid border-neutral-100 rounded p-5 pb-10 pt-5 flex flex-col gap-[18px] items-start w-[292px]">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ delay: 0.1, duration: 0.5 }}
+            className="absolute left-[calc(8.333%+96px)] top-[152px] bg-white border-[1.4px] border-solid border-neutral-100 rounded p-5 pb-10 pt-5 flex flex-col gap-[18px] items-start w-[292px]"
+          >
             <div className="w-10 h-10 relative overflow-hidden">
               <div className="absolute inset-[4.17%]">
                 <Image src="/assets/112e73a57b2e94b8ce3dfdef856ce976d23ca2ea.svg" alt="" fill className="object-contain" />
@@ -115,10 +145,16 @@ export default function Home() {
             </div>
             <h3 className="font-bold text-xl leading-normal text-neutral-700">Best Services</h3>
             <p className="text-neutral-400 text-base leading-normal w-[254px]">Nullam senectus porttitor in eget. Eget rutrum leo interdum.</p>
-          </div>
+          </motion.div>
 
           {/* Center card */}
-          <div className="absolute left-1/2 -translate-x-1/2 top-[152px] bg-white border-[1.4px] border-solid border-neutral-100 rounded p-5 pb-10 pt-5 flex flex-col gap-[18px] items-start w-[292px]">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ delay: 0.2, duration: 0.5 }}
+            className="absolute left-1/2 -translate-x-1/2 top-[152px] bg-white border-[1.4px] border-solid border-neutral-100 rounded p-5 pb-10 pt-5 flex flex-col gap-[18px] items-start w-[292px]"
+          >
             <div className="w-10 h-10 relative overflow-hidden">
               <div className="absolute inset-[4.17%]">
                 <Image src="/assets/112e73a57b2e94b8ce3dfdef856ce976d23ca2ea.svg" alt="" fill className="object-contain" />
@@ -126,10 +162,16 @@ export default function Home() {
             </div>
             <h3 className="font-bold text-xl leading-normal text-neutral-700">Best Teams</h3>
             <p className="text-neutral-400 text-base leading-normal w-[254px]">Cursus semper tellus volutpat aliquet lacus. </p>
-          </div>
+          </motion.div>
 
           {/* Right card */}
-          <div className="absolute right-[calc(8.333%+84px)] top-[152px] bg-white border-[1.4px] border-solid border-neutral-100 rounded p-5 pb-10 pt-5 flex flex-col gap-[18px] items-start w-[292px]">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ delay: 0.3, duration: 0.5 }}
+            className="absolute right-[calc(8.333%+84px)] top-[152px] bg-white border-[1.4px] border-solid border-neutral-100 rounded p-5 pb-10 pt-5 flex flex-col gap-[18px] items-start w-[292px]"
+          >
             <div className="w-10 h-10 relative overflow-hidden">
               <div className="absolute inset-[9.208%]">
                 <Image src="/assets/1314a88b7ebf1eb3d4adc14cc32306b468412fe2.svg" alt="" fill className="object-contain" />
@@ -137,7 +179,7 @@ export default function Home() {
             </div>
             <h3 className="font-bold text-xl leading-normal text-neutral-700">Best Designs</h3>
             <p className="text-neutral-400 text-base leading-normal w-[254px]">Ultricies at ipsum nunc, tristique nam lectus.</p>
-          </div>
+          </motion.div>
         </div>
       </section>
 
@@ -145,17 +187,29 @@ export default function Home() {
       <section className="bg-white h-[945px] relative overflow-hidden">
         <div className="max-w-[1440px] mx-auto h-full relative">
           {/* Image */}
-          <div className="absolute left-[calc(37.5%+25px)] -translate-x-1/2 top-[calc(50%-64px)] -translate-y-1/2 w-[902px] h-[669px] rounded-[2px] shadow-[0px_20px_24px_-4px_rgba(17,24,39,0.1),0px_8px_8px_-4px_rgba(17,24,39,0.04)] overflow-hidden">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6 }}
+            className="absolute left-[calc(37.5%+25px)] -translate-x-1/2 top-[calc(50%-64px)] -translate-y-1/2 w-[902px] h-[669px] rounded-[2px] shadow-[0px_20px_24px_-4px_rgba(17,24,39,0.1),0px_8px_8px_-4px_rgba(17,24,39,0.04)] overflow-hidden"
+          >
             <Image
               src="/assets/ba3b33a387a6fb6a79f6ebda83f9824c72dc2d4b.png"
               alt="About Us"
               fill
               className="object-cover"
             />
-          </div>
+          </motion.div>
 
           {/* Blue Box */}
-          <div className="absolute left-[calc(79.167%-56px)] -translate-x-1/2 top-[147px] bg-primary w-[488px] h-[523px] rounded-[2px] shadow-[0px_20px_24px_-4px_rgba(17,24,39,0.1),0px_8px_8px_-4px_rgba(17,24,39,0.04)] overflow-hidden">
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ delay: 0.2, duration: 0.6 }}
+            className="absolute left-[calc(79.167%-56px)] -translate-x-1/2 top-[147px] bg-primary w-[488px] h-[523px] rounded-[2px] shadow-[0px_20px_24px_-4px_rgba(17,24,39,0.1),0px_8px_8px_-4px_rgba(17,24,39,0.04)] overflow-hidden"
+          >
             <h2 className="absolute left-10 top-[50px] text-heading-4 text-white leading-normal">About us</h2>
             <p className="absolute left-10 top-[129px] text-xl text-white leading-normal w-[388px]">
               For more than 30 years we have been delivering world-class construction and we&apos;ve built many lasting relationships along the way. <br /><br />
@@ -166,7 +220,7 @@ export default function Home() {
                 <p className="font-semibold text-lg text-primary text-center leading-normal">More on Our History</p>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
