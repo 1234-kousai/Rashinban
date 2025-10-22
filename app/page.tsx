@@ -63,16 +63,21 @@ export default function Home() {
             </div>
 
             {/* Logo - left side */}
-            <div className="absolute left-28 top-[22px] flex items-center gap-3">
+            <div className="absolute left-28 top-[18px] flex items-center gap-3">
               <Image
                 src="/assets/rashinban-logo.png"
                 alt="Rashinban Logo"
                 width={48}
                 height={48}
               />
-              <p className="font-bold text-[30px] text-white leading-normal drop-shadow-lg" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>
-                羅針盤
-              </p>
+              <div className="flex flex-col justify-center leading-none">
+                <p className="text-[13px] font-normal text-white/80 mb-[2px] tracking-wide drop-shadow-lg" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.6)' }}>
+                  東京大学
+                </p>
+                <p className="text-[28px] font-bold text-white drop-shadow-lg" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>
+                  羅針盤
+                </p>
+              </div>
             </div>
           </div>
         </motion.nav>
