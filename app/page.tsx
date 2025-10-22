@@ -102,7 +102,7 @@ export default function Home() {
       {/* Our Reputation */}
       <section className="bg-white h-[433px] overflow-hidden relative">
         <div className="max-w-[1440px] mx-auto h-full relative">
-          <h2 className="absolute left-[calc(33.333%+104px)] right-[calc(33.333%+105px)] text-center top-[60px] text-heading-4 text-neutral-800 leading-normal">
+          <h2 className="absolute left-[calc(33.333%+104px)] right-[calc(33.333%+105px)] text-center top-[60px] text-heading-4 text-neutral-800 leading-normal z-10">
             Our Reputation
           </h2>
 
@@ -527,7 +527,7 @@ export default function Home() {
             <p className="text-base text-neutral-500">
               <span className="text-red-600">*</span> indicates a required field
             </p>
-            <div className="flex justify-center pt-5">
+            <div className="flex justify-center pt-5 pb-8">
               <Button className="w-1/3">Submit</Button>
             </div>
           </form>
@@ -574,7 +574,7 @@ export default function Home() {
                 </Button>
               </div>
 
-              <p className="font-medium text-xl text-primary mb-[43px]">Social:</p>
+              <p className="font-medium text-xl text-primary mb-5">Social:</p>
               <div className="flex gap-5">
                 <Image
                   src="/assets/b397103fac4d9f6baa9f8a39671c48f6b7559ef0.svg"
