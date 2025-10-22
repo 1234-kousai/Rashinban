@@ -125,7 +125,7 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.5 }}
-            className="absolute left-[calc(33.333%+104px)] right-[calc(33.333%+105px)] text-center top-[60px] text-heading-4 text-neutral-800 leading-normal z-10"
+            className="absolute left-1/2 -translate-x-1/2 text-center top-[60px] text-heading-4 text-neutral-800 leading-normal z-10"
           >
             Our Reputation
           </motion.h2>
@@ -136,7 +136,7 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ delay: 0.1, duration: 0.5 }}
-            className="absolute left-[calc(8.333%+96px)] top-[152px] bg-white border-[1.4px] border-solid border-neutral-100 rounded p-5 pb-10 pt-5 flex flex-col gap-[18px] items-start w-[292px]"
+            className="absolute left-[calc(8.333%+96px)] top-[152px] bg-white border-[1.4px] border-solid border-neutral-100 rounded-[4px] p-5 pb-10 pt-5 flex flex-col gap-[18px] items-start w-[292px]"
           >
             <div className="w-10 h-10 relative overflow-hidden">
               <div className="absolute inset-[4.17%]">
@@ -153,7 +153,7 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ delay: 0.2, duration: 0.5 }}
-            className="absolute left-1/2 -translate-x-1/2 top-[152px] bg-white border-[1.4px] border-solid border-neutral-100 rounded p-5 pb-10 pt-5 flex flex-col gap-[18px] items-start w-[292px]"
+            className="absolute left-1/2 -translate-x-1/2 top-[152px] bg-white border-[1.4px] border-solid border-neutral-100 rounded-[4px] p-5 pb-10 pt-5 flex flex-col gap-[18px] items-start w-[292px]"
           >
             <div className="w-10 h-10 relative overflow-hidden">
               <div className="absolute inset-[4.17%]">
@@ -170,7 +170,7 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ delay: 0.3, duration: 0.5 }}
-            className="absolute right-[calc(8.333%+84px)] top-[152px] bg-white border-[1.4px] border-solid border-neutral-100 rounded p-5 pb-10 pt-5 flex flex-col gap-[18px] items-start w-[292px]"
+            className="absolute right-[calc(8.333%+84px)] top-[152px] bg-white border-[1.4px] border-solid border-neutral-100 rounded-[4px] p-5 pb-10 pt-5 flex flex-col gap-[18px] items-start w-[292px]"
           >
             <div className="w-10 h-10 relative overflow-hidden">
               <div className="absolute inset-[9.208%]">
@@ -194,12 +194,15 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="absolute left-[calc(37.5%+25px)] -translate-x-1/2 top-[calc(50%-64px)] -translate-y-1/2 w-[902px] h-[669px] rounded-[2px] shadow-[0px_20px_24px_-4px_rgba(17,24,39,0.1),0px_8px_8px_-4px_rgba(17,24,39,0.04)] overflow-hidden"
           >
-            <Image
-              src="/assets/ba3b33a387a6fb6a79f6ebda83f9824c72dc2d4b.png"
-              alt="About Us"
-              fill
-              className="object-cover"
-            />
+            <div className="absolute inset-0 overflow-hidden rounded-[2px]">
+              <Image
+                src="/assets/ba3b33a387a6fb6a79f6ebda83f9824c72dc2d4b.png"
+                alt="About Us"
+                width={1148}
+                height={765}
+                className="absolute h-[114.35%] left-[-17.73%] max-w-none top-[-10.02%] w-[127.18%]"
+              />
+            </div>
           </motion.div>
 
           {/* Blue Box */}
@@ -315,53 +318,45 @@ export default function Home() {
 
       {/* Stats */}
       <section className="bg-white h-[723px] relative overflow-hidden">
-        <div className="max-w-[1440px] mx-auto px-28 py-[60px] relative">
+        <div className="max-w-[1440px] mx-auto h-full relative">
           {/* Left side stats */}
-          <div className="absolute left-[25%] top-[221px] -translate-x-1/2">
-            <div className="bg-white border border-white rounded p-[30px] w-[361px]">
-              <div className="text-[72px] font-semibold text-neutral-800 leading-none mb-0.5">
-                123
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="w-[7px] h-full bg-secondary" />
-                <p className="text-2xl text-neutral-500">Projects Completed</p>
-              </div>
+          <div className="absolute left-[calc(25%+32.5px)] top-[221px] -translate-x-1/2 bg-white border border-white rounded-[4px] p-[30px] w-[361px] flex flex-col gap-[2px]">
+            <div className="flex flex-col h-[65px] justify-end leading-[0] text-[72px] font-semibold text-neutral-800 w-[115px]">
+              <p className="leading-normal">123</p>
+            </div>
+            <div className="flex gap-3 items-center pl-4 w-[273px]">
+              <div className="w-[7px] h-full bg-secondary" />
+              <p className="text-2xl text-neutral-500 w-[238px]">Projects Completed</p>
             </div>
           </div>
 
-          <div className="absolute left-[45.833%] top-[122px] -translate-x-1/2">
-            <div className="bg-white border border-white rounded p-[30px] w-[280px]">
-              <div className="text-[72px] font-semibold text-neutral-800 leading-none mb-0.5">
-                84
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="w-[7px] h-full bg-secondary" />
-                <p className="text-2xl text-neutral-500">Happy Clients</p>
-              </div>
+          <div className="absolute left-[calc(45.833%-8px)] top-[122px] -translate-x-1/2 bg-white border border-white rounded-[4px] p-[30px] w-[280px] flex flex-col gap-[2px]">
+            <div className="flex flex-col h-[65px] justify-end leading-[0] text-[72px] font-semibold text-neutral-800 w-[115px]">
+              <p className="leading-normal">84</p>
+            </div>
+            <div className="flex gap-3 items-center pl-4 w-[273px]">
+              <div className="w-[7px] h-full bg-secondary" />
+              <p className="text-2xl text-neutral-500 w-[238px]">Happy Clients</p>
             </div>
           </div>
 
-          <div className="absolute left-[37.5%] top-[364px] -translate-x-1/2">
-            <div className="bg-white border border-white rounded p-[30px] w-[276px]">
-              <div className="text-[72px] font-semibold text-neutral-800 leading-none mb-0.5">
-                37
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="w-[7px] h-full bg-secondary" />
-                <p className="text-2xl text-neutral-500">Awards Win</p>
-              </div>
+          <div className="absolute left-[calc(37.5%+56px)] top-[364px] -translate-x-1/2 bg-white border border-white rounded-[4px] p-[30px] w-[276px] flex flex-col gap-[2px]">
+            <div className="flex flex-col h-[65px] justify-end leading-[0] text-[72px] font-semibold text-neutral-800 w-[115px]">
+              <p className="leading-normal">37</p>
+            </div>
+            <div className="flex gap-3 items-center pl-4 w-[273px]">
+              <div className="w-[7px] h-full bg-secondary" />
+              <p className="text-2xl text-neutral-500 w-[238px]">Awards Win</p>
             </div>
           </div>
 
-          <div className="absolute left-[29.167%] top-[469px] -translate-x-1/2">
-            <div className="bg-white border border-white rounded p-[30px]">
-              <div className="text-[72px] font-semibold text-neutral-800 leading-none mb-0.5">
-                30
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="w-[7px] h-full bg-secondary" />
-                <p className="text-2xl text-neutral-500">Years in Business</p>
-              </div>
+          <div className="absolute left-[calc(29.167%+7.5px)] top-[469px] -translate-x-1/2 bg-white border border-white rounded-[4px] p-[30px] flex flex-col gap-[2px]">
+            <div className="flex flex-col h-[65px] justify-end leading-[0] text-[72px] font-semibold text-neutral-800 w-[115px]">
+              <p className="leading-normal">30</p>
+            </div>
+            <div className="flex gap-3 items-center pl-4 w-[273px]">
+              <div className="w-[7px] h-full bg-secondary" />
+              <p className="text-2xl text-neutral-500 w-[238px]">Years in Business</p>
             </div>
           </div>
 
@@ -371,39 +366,38 @@ export default function Home() {
             alt="illus"
             width={79}
             height={79}
-            className="absolute left-[12.5%] top-[172px] -translate-x-1/2"
+            className="absolute left-[calc(12.5%+38.5px)] top-[172px] -translate-x-1/2"
           />
           <Image
             src="/assets/45ae3a838060ffdbf7a62dc788fd967a024d4335.png"
             alt="illus"
             width={84}
             height={84}
-            className="absolute left-[37.5%] top-[582px] -translate-x-1/2"
+            className="absolute left-[calc(37.5%+51px)] top-[582px] -translate-x-1/2"
           />
           <Image
             src="/assets/3de872771f4000bb313182245651d05a0d2ddd87.png"
             alt="illus"
             width={93}
             height={93}
-            className="absolute left-1/2 top-[349px] -translate-x-1/2"
+            className="absolute left-[calc(50%-11.5px)] top-[349px] -translate-x-1/2"
           />
           <Image
             src="/assets/98b21396e6c4886178eab4b6bc331d5494931d2e.png"
             alt="illus"
             width={97}
             height={97}
-            className="absolute left-[54.167%] top-[103px] -translate-x-1/2"
+            className="absolute left-[calc(54.167%-8.5px)] top-[103px] -translate-x-1/2"
           />
 
           {/* Right side content */}
-          <div className="absolute right-[16.667%] top-[172px]">
-            <h2 className="text-[60px] font-bold text-primary leading-normal mb-[60px] w-[359px]">
-              30 Years Experience
-            </h2>
-            <p className="text-xl text-neutral-600 w-[330px] mb-[67px]">
-              Our company has been the leading provided construction services to
-              clients throughout the USA since 1988.
-            </p>
+          <p className="absolute right-[496px] translate-x-full text-[60px] font-bold text-primary leading-normal top-[172px] w-[359px]">
+            30 Years Experience
+          </p>
+          <p className="absolute right-[496px] translate-x-full text-xl text-neutral-600 leading-normal top-[352px] w-[330px] h-[74px]">
+            Our company has been the leading provided construction services to clients throughout the USA since 1988.
+          </p>
+          <div className="absolute right-[calc(16.667%+80px)] top-[493px]">
             <Button>Contact Us</Button>
           </div>
         </div>
