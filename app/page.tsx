@@ -71,7 +71,7 @@ export default function Home() {
                 height={48}
               />
               <div className="flex flex-col justify-center leading-none">
-                <p className="text-[13px] font-normal text-white/80 mb-[2px] tracking-wide drop-shadow-lg" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.6)' }}>
+                <p className="text-[15px] font-medium text-white/95 mb-[3px] tracking-wider drop-shadow-lg" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>
                   東京大学
                 </p>
                 <p className="text-[28px] font-bold text-white drop-shadow-lg" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>
