@@ -33,51 +33,50 @@ export default function Home() {
 
   return (
     <main className="bg-white">
-      {/* Navbar */}
-      <motion.nav
-        initial={{ y: -100, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
-        className="bg-white h-20 relative overflow-hidden"
-      >
-        <div className="max-w-[1440px] mx-auto h-full relative">
-          {/* Nav Items - right side */}
-          <div className="absolute right-28 top-[30px] flex gap-[50px] text-lg leading-normal">
-            <a href="#" className="text-neutral-900 hover:text-primary">
-              Home
-            </a>
-            <a href="#" className="text-neutral-900 hover:text-primary">
-              About Us
-            </a>
-            <a href="#" className="text-neutral-900 hover:text-primary">
-              Projects
-            </a>
-            <a href="#" className="text-neutral-900 hover:text-primary">
-              Services
-            </a>
-            <a href="#" className="font-semibold text-secondary hover:opacity-80">
-              Contact Us
-            </a>
-          </div>
-
-          {/* Logo - left side */}
-          <div className="absolute left-28 top-[22px] flex items-center gap-3">
-            <Image
-              src="/assets/compass-logo.jpg"
-              alt="Rashinban Logo"
-              width={48}
-              height={48}
-              className="rounded-full"
-            />
-            <p className="font-bold text-[30px] text-primary leading-normal">
-              羅針盤
-            </p>
-          </div>
-        </div>
-      </motion.nav>
-
       {/* Hero Section */}
       <section className="h-screen relative overflow-hidden block">
+        {/* Navbar */}
+        <motion.nav
+          initial={{ y: -100, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="absolute top-0 w-full z-20 h-20"
+        >
+          <div className="max-w-[1440px] mx-auto h-full relative">
+            {/* Nav Items - right side */}
+            <div className="absolute right-28 top-[30px] flex gap-[50px] text-lg leading-normal">
+              <a href="#" className="text-white hover:text-secondary transition-colors">
+                Home
+              </a>
+              <a href="#" className="text-white hover:text-secondary transition-colors">
+                About Us
+              </a>
+              <a href="#" className="text-white hover:text-secondary transition-colors">
+                Projects
+              </a>
+              <a href="#" className="text-white hover:text-secondary transition-colors">
+                Services
+              </a>
+              <a href="#" className="font-semibold text-secondary hover:opacity-80">
+                Contact Us
+              </a>
+            </div>
+
+            {/* Logo - left side */}
+            <div className="absolute left-28 top-[22px] flex items-center gap-3">
+              <Image
+                src="/assets/compass-logo.jpg"
+                alt="Rashinban Logo"
+                width={48}
+                height={48}
+                className="rounded-full"
+              />
+              <p className="font-bold text-[30px] text-white leading-normal">
+                羅針盤
+              </p>
+            </div>
+          </div>
+        </motion.nav>
         {/* Slideshow Background */}
         <AnimatePresence mode="wait">
           <motion.div
@@ -571,8 +570,8 @@ export default function Home() {
       </section>
 
       {/* Contact Form */}
-      <section className="bg-neutral-50 h-[632px] overflow-hidden">
-        <div className="max-w-[1440px] mx-auto px-[360px] py-[60px]">
+      <section className="bg-neutral-50 py-[60px] pb-[100px] overflow-hidden">
+        <div className="max-w-[1440px] mx-auto px-[360px]">
           <h2 className="text-heading-4 text-neutral-800 text-center mb-4">
             What can us do for you?
           </h2>
@@ -620,8 +619,8 @@ export default function Home() {
       </section>
 
       {/* Bottom */}
-      <section className="bg-white h-[377px] overflow-hidden">
-        <div className="max-w-[1440px] mx-auto px-28 py-[85px]">
+      <section className="bg-white py-[85px] pb-[120px] overflow-hidden">
+        <div className="max-w-[1440px] mx-auto px-28">
           <div className="grid grid-cols-2 gap-[200px]">
             {/* Left */}
             <div className="space-y-8">
