@@ -13,6 +13,7 @@ export default function Home() {
     "/assets/4.jpeg",
   ], []);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isFirstImageLoaded, setIsFirstImageLoaded] = useState(false);
 
   // Preload all images on mount with priority
   useEffect(() => {
@@ -85,6 +86,9 @@ export default function Home() {
           </div>
         </motion.nav>
         {/* Slideshow Background */}
+        {!isFirstImageLoaded && (
+          <div className="absolute inset-0 bg-neutral-200 animate-pulse" />
+        )}
         <AnimatePresence initial={false}>
           <motion.div
             key={currentImageIndex}
@@ -105,6 +109,11 @@ export default function Home() {
               priority
               sizes="100vw"
               quality={90}
+              onLoad={() => {
+                if (currentImageIndex === 0) {
+                  setIsFirstImageLoaded(true);
+                }
+              }}
             />
           </motion.div>
         </AnimatePresence>
