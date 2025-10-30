@@ -90,7 +90,7 @@ export default function Home() {
         {!isFirstImageLoaded && (
           <div className="absolute inset-0 bg-neutral-200 animate-pulse" />
         )}
-        <AnimatePresence initial={false}>
+        <AnimatePresence>
           <motion.div
             key={currentImageIndex}
             initial={{ opacity: 0 }}
