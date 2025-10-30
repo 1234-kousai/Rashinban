@@ -14,11 +14,14 @@ export default function Home() {
   ], []);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  // Preload all images on mount
+  // Preload all images on mount with priority
   useEffect(() => {
     heroImages.forEach((src) => {
-      const img = new window.Image();
-      img.src = src;
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.as = 'image';
+      link.href = src;
+      document.head.appendChild(link);
     });
   }, [heroImages]);
 
@@ -82,14 +85,14 @@ export default function Home() {
           </div>
         </motion.nav>
         {/* Slideshow Background */}
-        <AnimatePresence initial={false}>
+        <AnimatePresence mode="wait" initial={false}>
           <motion.div
             key={currentImageIndex}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1, scale: 1.05 }}
             exit={{ opacity: 0 }}
             transition={{
-              opacity: { duration: 1.2, ease: [0.43, 0.13, 0.23, 0.96] },
+              opacity: { duration: 0.5, ease: "easeInOut" },
               scale: { duration: 5, ease: "linear" }
             }}
             className="absolute inset-0"
@@ -99,8 +102,9 @@ export default function Home() {
               alt="Hero Background"
               fill
               className="object-cover object-center"
-              priority={currentImageIndex === 0}
+              priority
               sizes="100vw"
+              quality={90}
             />
           </motion.div>
         </AnimatePresence>
