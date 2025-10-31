@@ -127,12 +127,12 @@ export default function Home() {
           }}
         />
 
-        <div className="max-w-[1440px] mx-auto h-full relative">
+        <div className="max-w-[1440px] mx-auto h-full relative px-4 sm:px-6 md:px-12 lg:px-20 2xl:px-0">
           <motion.h1
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.3, duration: 0.8, ease: "easeOut" }}
-            className="absolute left-[calc(20.833%-188px)] top-[239px] text-[72px] font-semibold leading-normal text-neutral-800 w-[556px]"
+            className="absolute left-4 sm:left-6 md:left-12 lg:left-16 xl:left-20 2xl:left-[calc(20.833%-188px)] top-32 sm:top-36 md:top-44 lg:top-52 xl:top-56 2xl:top-[239px] text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[64px] 2xl:text-[72px] font-semibold leading-tight lg:leading-normal text-neutral-800 w-[calc(100%-2rem)] sm:w-[380px] md:w-[450px] lg:w-[500px] xl:w-[540px] 2xl:w-[556px]"
           >
             Building things is our mission.
           </motion.h1>
