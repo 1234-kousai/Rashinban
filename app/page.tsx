@@ -288,41 +288,44 @@ export default function Home() {
       </section>
 
       {/* About Us */}
-      <section className="bg-white py-[138px] overflow-hidden">
-        <div className="w-full min-w-[1440px] relative h-[669px]">
-          {/* Image */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6 }}
-            className="absolute left-[120px] top-0 w-[902px] h-[669px] rounded-[2px] shadow-[0px_20px_24px_-4px_rgba(17,24,39,0.1),0px_8px_8px_-4px_rgba(17,24,39,0.04)]"
-          >
-            <Image
-              src="/assets/compass-logo.jpg"
-              alt="About Us"
-              fill
-              className="object-cover rounded-[2px]"
-            />
-          </motion.div>
+      <section className="bg-white py-12 sm:py-16 md:py-20 lg:py-24 2xl:py-[138px] overflow-hidden">
+        <div className="w-full max-w-[1440px] mx-auto relative h-auto min-h-[400px] sm:min-h-[500px] md:min-h-[600px] lg:h-[669px] 2xl:h-[669px] px-4 sm:px-6 md:px-12 lg:px-20 2xl:px-0">
+          {/* Mobile/Tablet: Flex layout, Desktop: Absolute positioned overlapping layout */}
+          <div className="flex flex-col gap-6 md:gap-8 lg:block lg:relative lg:h-full">
+            {/* Image */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.6 }}
+              className="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:absolute lg:left-[120px] lg:top-0 lg:w-[902px] lg:h-[669px] 2xl:left-[120px] 2xl:w-[902px] 2xl:h-[669px] rounded-[2px] shadow-[0px_20px_24px_-4px_rgba(17,24,39,0.1),0px_8px_8px_-4px_rgba(17,24,39,0.04)] relative"
+            >
+              <Image
+                src="/assets/compass-logo.jpg"
+                alt="About Us"
+                fill
+                className="object-cover rounded-[2px]"
+              />
+            </motion.div>
 
-          {/* Blue Box */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ delay: 0.2, duration: 0.6 }}
-            className="absolute right-[120px] top-[147px] bg-primary w-[488px] h-[523px] rounded-[2px] shadow-[0px_20px_24px_-4px_rgba(17,24,39,0.1),0px_8px_8px_-4px_rgba(17,24,39,0.04)] overflow-clip"
-          >
-            <p className="absolute left-10 top-[50px] text-heading-4 text-white leading-normal font-bold">About us</p>
-            <p className="absolute left-10 top-[129px] text-xl text-white leading-normal w-[388px]">
-              For more than 30 years we have been delivering world-class construction and we&apos;ve built many lasting relationships along the way. <br /><br />
-              We&apos;ve matured into an industry leader and trusted resource for those seeking quality, innovation and reliability when building in the U.S.
-            </p>
-            <div className="absolute left-10 top-[410px] bg-white border-2 border-primary border-solid px-5 py-4 rounded-md flex items-center justify-center gap-[10px]">
-              <p className="font-semibold text-lg text-primary text-center leading-normal">More on Our History</p>
-            </div>
-          </motion.div>
+            {/* Blue Box */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ delay: 0.2, duration: 0.6 }}
+              className="w-full h-auto p-6 sm:p-8 md:p-10 lg:absolute lg:right-[120px] lg:top-[147px] lg:w-[488px] lg:h-[523px] lg:p-10 2xl:right-[120px] 2xl:w-[488px] 2xl:h-[523px] bg-primary rounded-[2px] shadow-[0px_20px_24px_-4px_rgba(17,24,39,0.1),0px_8px_8px_-4px_rgba(17,24,39,0.04)] flex flex-col justify-between lg:block"
+            >
+              <h3 className="text-2xl sm:text-3xl md:text-heading-4 lg:text-heading-4 2xl:text-heading-4 text-white leading-normal font-bold lg:absolute lg:left-10 lg:top-[50px] 2xl:left-10 2xl:top-[50px]">About us</h3>
+              <p className="text-base sm:text-lg md:text-xl lg:text-xl 2xl:text-xl text-white leading-normal w-full lg:absolute lg:left-10 lg:top-[129px] lg:w-[388px] 2xl:left-10 2xl:top-[129px] 2xl:w-[388px] mt-4 lg:mt-0">
+                For more than 30 years we have been delivering world-class construction and we&apos;ve built many lasting relationships along the way. <br /><br />
+                We&apos;ve matured into an industry leader and trusted resource for those seeking quality, innovation and reliability when building in the U.S.
+              </p>
+              <div className="bg-white border-2 border-primary border-solid px-4 sm:px-5 py-3 sm:py-4 rounded-md flex items-center justify-center gap-[10px] w-full sm:w-auto lg:absolute lg:left-10 lg:top-[410px] lg:w-auto 2xl:left-10 2xl:top-[410px] mt-6 lg:mt-0">
+                <p className="font-semibold text-base sm:text-lg text-primary text-center leading-normal">More on Our History</p>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
