@@ -744,9 +744,9 @@ export default function Home() {
       </section>
 
       {/* Bottom */}
-      <section className="bg-white py-[85px] pb-[120px] overflow-hidden">
-        <div className="max-w-[1440px] mx-auto px-28">
-          <div className="grid grid-cols-2 gap-[200px]">
+      <section className="bg-white py-12 sm:py-16 md:py-20 lg:py-24 2xl:py-[85px] pb-16 sm:pb-20 md:pb-24 lg:pb-28 2xl:pb-[120px] overflow-hidden">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-12 lg:px-20 2xl:px-28">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 lg:gap-32 2xl:gap-[200px]">
             {/* Left */}
             <div className="space-y-8">
               <div className="flex items-start gap-3">
