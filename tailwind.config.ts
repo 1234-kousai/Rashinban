@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: {
+        '2xl': '1440px', // ← 既存デザインが1440pxなので明示的に設定（デフォルトは1536px）
+      },
       colors: {
         primary: "#2947A9",
         secondary: "#F9995D",
