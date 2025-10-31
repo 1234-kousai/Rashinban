@@ -16,6 +16,9 @@ export default function Home() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isFirstImageLoaded, setIsFirstImageLoaded] = useState(false);
 
+  // Mobile menu state
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   // Preload all images on mount with priority
   useEffect(() => {
     heroImages.forEach((src) => {
@@ -48,8 +51,8 @@ export default function Home() {
           className="absolute top-0 w-full z-20 h-20 bg-black/30 backdrop-blur-sm"
         >
           <div className="max-w-[1440px] mx-auto h-full relative">
-            {/* Nav Items - right side */}
-            <div className="absolute right-28 top-[30px] flex gap-[50px] text-lg leading-normal">
+            {/* Nav Items - right side - Desktop only */}
+            <div className="hidden md:flex absolute right-6 lg:right-20 2xl:right-28 top-[30px] gap-8 lg:gap-10 2xl:gap-[50px] text-base lg:text-lg leading-normal">
               <a href="#" className="text-white hover:text-secondary transition-colors drop-shadow-lg" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>
                 Home
               </a>
@@ -67,24 +70,98 @@ export default function Home() {
               </a>
             </div>
 
+            {/* Hamburger Button - Mobile only */}
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="md:hidden absolute right-4 sm:right-6 top-[26px] z-30 w-8 h-8 flex flex-col justify-center items-center gap-1.5"
+              aria-label="Toggle menu"
+            >
+              <motion.span
+                animate={isMobileMenuOpen ? { rotate: 45, y: 8 } : { rotate: 0, y: 0 }}
+                className="w-6 h-0.5 bg-white drop-shadow-lg"
+              />
+              <motion.span
+                animate={isMobileMenuOpen ? { opacity: 0 } : { opacity: 1 }}
+                className="w-6 h-0.5 bg-white drop-shadow-lg"
+              />
+              <motion.span
+                animate={isMobileMenuOpen ? { rotate: -45, y: -8 } : { rotate: 0, y: 0 }}
+                className="w-6 h-0.5 bg-white drop-shadow-lg"
+              />
+            </button>
+
             {/* Logo - left side */}
-            <div className="absolute left-28 top-[18px] flex items-center gap-3">
+            <div className="absolute left-4 sm:left-6 md:left-12 lg:left-20 2xl:left-28 top-[14px] sm:top-[16px] md:top-[18px] flex items-center gap-2 sm:gap-2.5 md:gap-3">
               <Image
                 src="/assets/rashinban-logo.png"
                 alt="Rashinban Logo"
                 width={48}
                 height={48}
+                className="w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12"
               />
               <div className="flex flex-col justify-center leading-none">
-                <p className="text-[15px] font-medium text-white/95 mb-[3px] tracking-wider drop-shadow-lg" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>
+                <p className="text-[13px] sm:text-[14px] md:text-[15px] font-medium text-white/95 mb-[2px] sm:mb-[2.5px] md:mb-[3px] tracking-wider drop-shadow-lg" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>
                   東京大学
                 </p>
-                <p className="text-[28px] font-bold text-white drop-shadow-lg" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>
+                <p className="text-[22px] sm:text-[25px] md:text-[28px] font-bold text-white drop-shadow-lg" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>
                   羅針盤
                 </p>
               </div>
             </div>
           </div>
+
+          {/* Mobile Menu */}
+          <AnimatePresence>
+            {isMobileMenuOpen && (
+              <motion.div
+                initial={{ opacity: 0, x: "100%" }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: "100%" }}
+                transition={{ duration: 0.3, ease: "easeInOut" }}
+                className="md:hidden fixed inset-0 top-20 bg-neutral-900/95 backdrop-blur-md z-20"
+              >
+                <div className="flex flex-col items-center justify-start pt-12 gap-8">
+                  <a
+                    href="#"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="text-white text-2xl hover:text-secondary transition-colors"
+                  >
+                    Home
+                  </a>
+                  <a
+                    href="#"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="text-white text-2xl hover:text-secondary transition-colors"
+                  >
+                    About Us
+                  </a>
+                  <a
+                    href="#"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="text-white text-2xl hover:text-secondary transition-colors"
+                  >
+                    Projects
+                  </a>
+                  <a
+                    href="#"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="text-white text-2xl hover:text-secondary transition-colors"
+                  >
+                    Services
+                  </a>
+                  <a
+                    href="https://www.instagram.com/rashinbantodai/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="text-secondary text-2xl font-semibold hover:opacity-80 transition-opacity"
+                  >
+                    Contact Us
+                  </a>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </motion.nav>
         {/* Slideshow Background */}
         {!isFirstImageLoaded && (
