@@ -574,21 +574,39 @@ export default function Home() {
       </section>
 
       {/* Projects */}
-      <section className="bg-white min-h-[1098px] overflow-hidden py-[88px]">
-        <div className="max-w-[1440px] mx-auto px-28">
+      <section className="bg-white min-h-0 md:min-h-[800px] lg:min-h-[900px] 2xl:min-h-[1098px] overflow-hidden py-12 sm:py-16 md:py-20 lg:py-24 2xl:py-[88px]">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-12 lg:px-20 2xl:px-28">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.5 }}
-            className="text-heading-4 text-neutral-800 mb-[82px]"
+            className="text-2xl sm:text-3xl md:text-heading-4 2xl:text-heading-4 text-neutral-800 mb-8 sm:mb-12 md:mb-16 lg:mb-20 2xl:mb-[82px]"
           >
             Projects
           </motion.h2>
 
+          {/* Filter Menu - Horizontal scroll on mobile, vertical on desktop */}
+          <div className="mb-6 md:mb-0 overflow-x-auto md:overflow-visible -mx-4 px-4 sm:-mx-6 sm:px-6 md:mx-0 md:px-0">
+            <div className="flex md:hidden gap-4 min-w-max pb-2">
+              {["All", "Commercial", "Residential", "Other"].map((item, i) => (
+                <button
+                  key={i}
+                  className={`px-4 py-2 rounded whitespace-nowrap text-base sm:text-lg ${
+                    i === 0
+                      ? "bg-primary text-white font-bold"
+                      : "bg-neutral-100 text-neutral-600 font-medium"
+                  }`}
+                >
+                  {item}
+                </button>
+              ))}
+            </div>
+          </div>
+
           <div className="flex gap-[32px]">
-            {/* Menu */}
-            <div className="flex flex-col gap-[48px]">
+            {/* Menu - Desktop only */}
+            <div className="hidden md:flex flex-col gap-[48px]">
               {["All", "Commercial", "Residential", "Other"].map((item, i) => (
                 <div key={i} className="flex items-center gap-4">
                   <div
@@ -610,7 +628,7 @@ export default function Home() {
             </div>
 
             {/* Project Grid */}
-            <div className="flex-1 grid grid-cols-2 gap-8">
+            <div className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-7 md:gap-8">
               {[
                 {
                   img: "/assets/089bf250bdd2caa4b33e7eb864d788a16c95da1e.png",
@@ -641,7 +659,7 @@ export default function Home() {
                   transition={{ delay: i * 0.1, duration: 0.5 }}
                   className="rounded overflow-hidden"
                 >
-                  <div className="h-[247px] relative">
+                  <div className="h-[180px] sm:h-[220px] md:h-[247px] relative">
                     <Image
                       src={project.img}
                       alt={project.title}
@@ -650,8 +668,8 @@ export default function Home() {
                     />
                   </div>
                   <div className="bg-primary text-white p-3">
-                    <h3 className="font-bold text-xl mb-3">{project.title}</h3>
-                    <p className="text-lg">{project.location}</p>
+                    <h3 className="font-bold text-lg sm:text-xl mb-2 sm:mb-3">{project.title}</h3>
+                    <p className="text-base sm:text-lg">{project.location}</p>
                   </div>
                 </motion.div>
               ))}
@@ -659,8 +677,8 @@ export default function Home() {
           </div>
 
           {/* Pagination */}
-          <div className="flex items-center justify-center gap-8 mt-[64px]">
-            <button className="bg-neutral-800 text-white px-5 py-4 h-16 w-[295px] flex items-center justify-center gap-2">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 md:gap-8 mt-8 sm:mt-12 md:mt-16 2xl:mt-[64px]">
+            <button className="bg-neutral-800 text-white px-4 sm:px-5 py-3 sm:py-4 h-12 sm:h-14 md:h-16 w-full sm:w-auto sm:min-w-[200px] md:min-w-[250px] lg:min-w-[280px] 2xl:w-[295px] flex items-center justify-center gap-2 text-sm sm:text-base">
               <span>Back</span>
               <Image
                 src="/assets/26c9f2977fa59b9ed6318be31aed0536035626f7.svg"
@@ -669,9 +687,9 @@ export default function Home() {
                 height={17}
               />
             </button>
-            <div className="flex gap-4">
+            <div className="flex gap-3 sm:gap-4">
               {[0, 1, 2, 3, 4].map((i) => (
-                <div key={i} className="w-4 h-4 relative">
+                <div key={i} className="w-3 h-3 sm:w-4 sm:h-4 relative">
                   <Image
                     src={i === 0 ? "/assets/48ef74dad202a85e699dba48ca473a230e20028a.svg" : "/assets/8d468749cfd0036d52dda60c49c9cb3777fcb9db.svg"}
                     alt="Page indicator"
@@ -681,7 +699,7 @@ export default function Home() {
                 </div>
               ))}
             </div>
-            <button className="bg-neutral-800 text-white px-5 py-4 h-16 w-[295px] flex items-center justify-center gap-2">
+            <button className="bg-neutral-800 text-white px-4 sm:px-5 py-3 sm:py-4 h-12 sm:h-14 md:h-16 w-full sm:w-auto sm:min-w-[200px] md:min-w-[250px] lg:min-w-[280px] 2xl:w-[295px] flex items-center justify-center gap-2 text-sm sm:text-base">
               <Image
                 src="/assets/762a4f982c7e562c3187091f9952d7ed888f2920.svg"
                 alt="Arrow"
