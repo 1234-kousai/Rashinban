@@ -678,69 +678,71 @@ export default function Home() {
             </motion.div>
           </div>
 
-          {/* Illustrations with animations - Desktop only */}
-          <div className="hidden 2xl:block absolute left-[calc(12.5%+38.5px)] top-[172px] -translate-x-1/2">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ delay: 0.15, duration: 0.5, ease: "easeOut" }}
-            >
-              <Image
-                src="/assets/6e9a91091bc241cbdb3b4d11e910890e1b8fcaef.png"
-                alt="illus"
-                width={79}
-                height={79}
-              />
-            </motion.div>
-          </div>
+          {/* Illustrations - Desktop only (hidden on mobile/tablet) */}
+          <div className="hidden 2xl:block">
+            <div className="absolute left-[calc(12.5%+38.5px)] top-[172px] -translate-x-1/2">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ delay: 0.15, duration: 0.5, ease: "easeOut" }}
+              >
+                <Image
+                  src="/assets/6e9a91091bc241cbdb3b4d11e910890e1b8fcaef.png"
+                  alt="illus"
+                  width={79}
+                  height={79}
+                />
+              </motion.div>
+            </div>
 
-          <div className="hidden 2xl:block absolute left-[calc(37.5%+51px)] top-[582px] -translate-x-1/2">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ delay: 0.45, duration: 0.5, ease: "easeOut" }}
-            >
-              <Image
-                src="/assets/45ae3a838060ffdbf7a62dc788fd967a024d4335.png"
-                alt="illus"
-                width={84}
-                height={84}
-              />
-            </motion.div>
-          </div>
+            <div className="absolute left-[calc(37.5%+51px)] top-[582px] -translate-x-1/2">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ delay: 0.45, duration: 0.5, ease: "easeOut" }}
+              >
+                <Image
+                  src="/assets/45ae3a838060ffdbf7a62dc788fd967a024d4335.png"
+                  alt="illus"
+                  width={84}
+                  height={84}
+                />
+              </motion.div>
+            </div>
 
-          <div className="hidden 2xl:block absolute left-[calc(50%-11.5px)] top-[349px] -translate-x-1/2">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ delay: 0.35, duration: 0.5, ease: "easeOut" }}
-            >
-              <Image
-                src="/assets/3de872771f4000bb313182245651d05a0d2ddd87.png"
-                alt="illus"
-                width={93}
-                height={93}
-              />
-            </motion.div>
-          </div>
+            <div className="absolute left-[calc(50%-11.5px)] top-[349px] -translate-x-1/2">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ delay: 0.35, duration: 0.5, ease: "easeOut" }}
+              >
+                <Image
+                  src="/assets/3de872771f4000bb313182245651d05a0d2ddd87.png"
+                  alt="illus"
+                  width={93}
+                  height={93}
+                />
+              </motion.div>
+            </div>
 
-          <div className="hidden 2xl:block absolute left-[calc(54.167%-8.5px)] top-[103px] -translate-x-1/2">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ delay: 0.25, duration: 0.5, ease: "easeOut" }}
-            >
-              <Image
-                src="/assets/98b21396e6c4886178eab4b6bc331d5494931d2e.png"
-                alt="illus"
-                width={97}
-                height={97}
-              />
-            </motion.div>
+            <div className="absolute left-[calc(54.167%-8.5px)] top-[103px] -translate-x-1/2">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ delay: 0.25, duration: 0.5, ease: "easeOut" }}
+              >
+                <Image
+                  src="/assets/98b21396e6c4886178eab4b6bc331d5494931d2e.png"
+                  alt="illus"
+                  width={97}
+                  height={97}
+                />
+              </motion.div>
+            </div>
           </div>
         </div>
       </section>
