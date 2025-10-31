@@ -695,8 +695,8 @@ export default function Home() {
       </section>
 
       {/* Contact Form */}
-      <section className="bg-neutral-50 py-[60px] pb-[100px] overflow-hidden">
-        <div className="max-w-[1440px] mx-auto px-[360px]">
+      <section className="bg-neutral-50 py-12 sm:py-14 md:py-16 lg:py-20 2xl:py-[60px] pb-16 sm:pb-20 md:pb-24 lg:pb-28 2xl:pb-[100px] overflow-hidden">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-8 md:px-16 lg:px-32 xl:px-48 2xl:px-[360px]">
           <h2 className="text-heading-4 text-neutral-800 text-center mb-4">
             What can us do for you?
           </h2>
@@ -706,7 +706,7 @@ export default function Home() {
           </p>
 
           <form className="space-y-[13px]">
-            <div className="grid grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
               <input
                 type="text"
                 placeholder="Your Name *"
@@ -718,7 +718,7 @@ export default function Home() {
                 className="bg-white border border-neutral-100 rounded px-2 py-2.5 text-lg text-neutral-300"
               />
             </div>
-            <div className="grid grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
               <select className="bg-white border border-neutral-100 rounded px-2 py-2.5 text-lg text-neutral-300">
                 <option>Reason for Contacting *</option>
               </select>
@@ -737,7 +737,7 @@ export default function Home() {
               <span className="text-red-600">*</span> indicates a required field
             </p>
             <div className="flex justify-center pt-5 pb-8">
-              <Button className="w-1/3">Submit</Button>
+              <Button className="w-full sm:w-2/3 md:w-1/2 lg:w-2/5 2xl:w-1/3">Submit</Button>
             </div>
           </form>
         </div>
