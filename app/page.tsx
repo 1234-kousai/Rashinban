@@ -327,133 +327,134 @@ export default function Home() {
       </section>
 
       {/* Services */}
-      <section className="bg-neutral-50 h-[608px] overflow-hidden relative">
-        <div className="max-w-[1440px] mx-auto h-full relative">
+      <section className="bg-neutral-50 min-h-0 py-12 sm:py-14 md:py-16 lg:py-20 2xl:h-[608px] 2xl:py-0 overflow-hidden relative">
+        <div className="max-w-[1440px] mx-auto h-full relative px-4 sm:px-6 md:px-12 lg:px-20 2xl:px-0">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.5 }}
-            className="absolute left-[calc(41.667%+44px)] right-[calc(41.667%+45px)] text-center top-11 text-heading-4 text-neutral-800 leading-normal"
+            className="relative md:absolute left-0 md:left-[calc(41.667%+44px)] right-0 md:right-[calc(41.667%+45px)] text-center top-0 md:top-11 text-2xl sm:text-3xl md:text-heading-4 2xl:text-heading-4 text-neutral-800 leading-normal mb-8 md:mb-0"
           >
             Services
           </motion.h2>
 
-          {/* Row 1 */}
-          {/* Construction */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ delay: 0.1, duration: 0.5 }}
-            className="absolute left-[calc(8.333%+96px)] top-[122px] bg-white p-5 rounded shadow-[0px_0px_37px_-2px_rgba(17,24,39,0.05)] h-[181px] w-[271px] flex flex-col items-center justify-center gap-5"
-          >
-            <div className="w-10 h-10 relative overflow-hidden">
-              <div className="absolute bottom-0 left-0 w-[58.33%] h-[58.33%] bg-[#7595fd]" />
-              <div className="absolute inset-[8.33%_12.5%_8.33%_8.34%]">
-                <Image src="/assets/1102ba2e18d71fd823bd6cd489e4e3099ab6f39f.svg" alt="" fill className="object-contain" />
+          {/* Services Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 lg:gap-10 2xl:gap-12">
+            {/* Construction */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ delay: 0.1, duration: 0.5 }}
+              className="bg-white p-4 sm:p-5 rounded shadow-[0px_0px_37px_-2px_rgba(17,24,39,0.05)] h-auto sm:h-[160px] md:h-[170px] 2xl:h-[181px] w-full flex flex-col items-center justify-center gap-3 sm:gap-4 2xl:gap-5"
+            >
+              <div className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 relative overflow-hidden">
+                <div className="absolute bottom-0 left-0 w-[58.33%] h-[58.33%] bg-[#7595fd]" />
+                <div className="absolute inset-[8.33%_12.5%_8.33%_8.34%]">
+                  <Image src="/assets/1102ba2e18d71fd823bd6cd489e4e3099ab6f39f.svg" alt="" fill className="object-contain" />
+                </div>
+                <div className="absolute inset-[62.5%_62.5%_29.17%_29.17%]">
+                  <Image src="/assets/a1fa079092540e4007d66ceec9f4e2ac609cafde.svg" alt="" fill className="object-contain" />
+                </div>
               </div>
-              <div className="absolute inset-[62.5%_62.5%_29.17%_29.17%]">
-                <Image src="/assets/a1fa079092540e4007d66ceec9f4e2ac609cafde.svg" alt="" fill className="object-contain" />
-              </div>
-            </div>
-            <div className="w-[60px] h-0.5 bg-neutral-100" />
-            <p className="text-xl font-semibold text-primary text-center leading-normal">Construction</p>
-          </motion.div>
+              <div className="w-[50px] sm:w-[55px] md:w-[60px] h-0.5 bg-neutral-100" />
+              <p className="text-lg sm:text-xl font-semibold text-primary text-center leading-normal">Construction</p>
+            </motion.div>
 
-          {/* Renovation */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ delay: 0.2, duration: 0.5 }}
-            className="absolute left-[calc(33.333%+105px)] top-[122px] bg-primary p-5 rounded shadow-[0px_0px_37px_-2px_rgba(17,24,39,0.05)] h-[181px] w-[271px] flex flex-col items-center justify-center gap-5"
-          >
-            <div className="w-10 h-10 relative overflow-hidden">
-              <div className="absolute bottom-0 left-0 w-[58.33%] h-[58.33%] bg-[#7595fd]" />
-              <div className="absolute inset-[8.33%_8.33%_8.33%_12.5%]">
-                <Image src="/assets/29b696f3e1665259ef6c1a161b5032e552ee0fef.svg" alt="" fill className="object-contain" />
+            {/* Renovation */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ delay: 0.2, duration: 0.5 }}
+              className="bg-primary p-4 sm:p-5 rounded shadow-[0px_0px_37px_-2px_rgba(17,24,39,0.05)] h-auto sm:h-[160px] md:h-[170px] 2xl:h-[181px] w-full flex flex-col items-center justify-center gap-3 sm:gap-4 2xl:gap-5"
+            >
+              <div className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 relative overflow-hidden">
+                <div className="absolute bottom-0 left-0 w-[58.33%] h-[58.33%] bg-[#7595fd]" />
+                <div className="absolute inset-[8.33%_8.33%_8.33%_12.5%]">
+                  <Image src="/assets/29b696f3e1665259ef6c1a161b5032e552ee0fef.svg" alt="" fill className="object-contain" />
+                </div>
               </div>
-            </div>
-            <div className="w-[60px] h-0.5 bg-neutral-100" />
-            <p className="text-xl font-semibold text-white text-center leading-normal">Renovation</p>
-          </motion.div>
+              <div className="w-[50px] sm:w-[55px] md:w-[60px] h-0.5 bg-neutral-100" />
+              <p className="text-lg sm:text-xl font-semibold text-white text-center leading-normal">Renovation</p>
+            </motion.div>
 
-          {/* Consultation */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ delay: 0.3, duration: 0.5 }}
-            className="absolute left-[calc(66.667%-6px)] top-[122px] bg-white p-5 rounded shadow-[0px_0px_37px_-2px_rgba(17,24,39,0.05)] h-[181px] w-[270px] flex flex-col items-center justify-center gap-5"
-          >
-            <div className="w-10 h-10 relative overflow-hidden">
-              <div className="absolute bottom-0 left-0 w-[58.33%] h-[58.33%] bg-[#7595fd]" />
-              <div className="absolute inset-[10.02%_10.08%_10.06%_10.08%]">
-                <Image src="/assets/e16c90f1b437106be8f191785e435a103c0939d1.svg" alt="" fill className="object-contain" />
+            {/* Consultation */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ delay: 0.3, duration: 0.5 }}
+              className="bg-white p-4 sm:p-5 rounded shadow-[0px_0px_37px_-2px_rgba(17,24,39,0.05)] h-auto sm:h-[160px] md:h-[170px] 2xl:h-[181px] w-full flex flex-col items-center justify-center gap-3 sm:gap-4 2xl:gap-5"
+            >
+              <div className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 relative overflow-hidden">
+                <div className="absolute bottom-0 left-0 w-[58.33%] h-[58.33%] bg-[#7595fd]" />
+                <div className="absolute inset-[10.02%_10.08%_10.06%_10.08%]">
+                  <Image src="/assets/e16c90f1b437106be8f191785e435a103c0939d1.svg" alt="" fill className="object-contain" />
+                </div>
               </div>
-            </div>
-            <div className="w-[60px] h-0.5 bg-neutral-100" />
-            <p className="text-xl font-semibold text-primary text-center leading-normal">Consultation</p>
-          </motion.div>
+              <div className="w-[50px] sm:w-[55px] md:w-[60px] h-0.5 bg-neutral-100" />
+              <p className="text-lg sm:text-xl font-semibold text-primary text-center leading-normal">Consultation</p>
+            </motion.div>
 
-          {/* Row 2 */}
-          {/* Repair Services */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ delay: 0.4, duration: 0.5 }}
-            className="absolute left-[calc(8.333%+96px)] top-[351px] bg-primary p-5 rounded shadow-[0px_0px_37px_-2px_rgba(17,24,39,0.05)] h-[181px] w-[271px] flex flex-col items-center justify-center gap-5"
-          >
-            <div className="w-10 h-10 relative overflow-hidden">
-              <div className="absolute bottom-0 left-0 w-[58.33%] h-[58.33%] bg-[#7595fd]" />
-              <div className="absolute inset-[16.67%_8.33%]">
-                <Image src="/assets/7f3d8acf43007109c2aa2b24d6526a550f4a2306.svg" alt="" fill className="object-contain" />
+            {/* Repair Services */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ delay: 0.4, duration: 0.5 }}
+              className="bg-primary p-4 sm:p-5 rounded shadow-[0px_0px_37px_-2px_rgba(17,24,39,0.05)] h-auto sm:h-[160px] md:h-[170px] 2xl:h-[181px] w-full flex flex-col items-center justify-center gap-3 sm:gap-4 2xl:gap-5"
+            >
+              <div className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 relative overflow-hidden">
+                <div className="absolute bottom-0 left-0 w-[58.33%] h-[58.33%] bg-[#7595fd]" />
+                <div className="absolute inset-[16.67%_8.33%]">
+                  <Image src="/assets/7f3d8acf43007109c2aa2b24d6526a550f4a2306.svg" alt="" fill className="object-contain" />
+                </div>
               </div>
-            </div>
-            <div className="w-[60px] h-0.5 bg-neutral-100" />
-            <p className="text-xl font-semibold text-white text-center leading-normal">Repair Services</p>
-          </motion.div>
+              <div className="w-[50px] sm:w-[55px] md:w-[60px] h-0.5 bg-neutral-100" />
+              <p className="text-lg sm:text-xl font-semibold text-white text-center leading-normal">Repair Services</p>
+            </motion.div>
 
-          {/* Architecture */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ delay: 0.5, duration: 0.5 }}
-            className="absolute left-[calc(33.333%+105px)] top-[351px] bg-white p-5 rounded shadow-[0px_0px_37px_-2px_rgba(17,24,39,0.05)] h-[181px] w-[271px] flex flex-col items-center justify-center gap-5"
-          >
-            <div className="w-10 h-10 relative overflow-hidden">
-              <div className="absolute bottom-0 left-0 w-[58.33%] h-[58.33%] bg-[#7595fd]" />
-              <div className="absolute inset-[12.5%_26.46%_12.5%_26.5%]">
-                <Image src="/assets/89211b87752a537161dcc15b405700e48ef12e03.svg" alt="" fill className="object-contain" />
+            {/* Architecture */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ delay: 0.5, duration: 0.5 }}
+              className="bg-white p-4 sm:p-5 rounded shadow-[0px_0px_37px_-2px_rgba(17,24,39,0.05)] h-auto sm:h-[160px] md:h-[170px] 2xl:h-[181px] w-full flex flex-col items-center justify-center gap-3 sm:gap-4 2xl:gap-5"
+            >
+              <div className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 relative overflow-hidden">
+                <div className="absolute bottom-0 left-0 w-[58.33%] h-[58.33%] bg-[#7595fd]" />
+                <div className="absolute inset-[12.5%_26.46%_12.5%_26.5%]">
+                  <Image src="/assets/89211b87752a537161dcc15b405700e48ef12e03.svg" alt="" fill className="object-contain" />
+                </div>
               </div>
-            </div>
-            <div className="w-[60px] h-0.5 bg-neutral-100" />
-            <p className="text-xl font-semibold text-primary text-center leading-normal">Architecture</p>
-          </motion.div>
+              <div className="w-[50px] sm:w-[55px] md:w-[60px] h-0.5 bg-neutral-100" />
+              <p className="text-lg sm:text-xl font-semibold text-primary text-center leading-normal">Architecture</p>
+            </motion.div>
 
-          {/* Electric */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ delay: 0.6, duration: 0.5 }}
-            className="absolute left-[calc(66.667%-6px)] top-[351px] bg-primary p-5 rounded shadow-[0px_0px_37px_-2px_rgba(17,24,39,0.05)] h-[181px] w-[270px] flex flex-col items-center justify-center gap-5"
-          >
-            <div className="w-10 h-10 relative overflow-hidden">
-              <div className="absolute bottom-0 left-0 w-[58.33%] h-[58.33%] bg-[#7595fd]" />
-              <div className="absolute bottom-[16.67%] left-[41.67%] right-[12.5%] top-1/2">
-                <Image src="/assets/42d4cacd435a23e4b81c12244fe8acbcb2c21efb.svg" alt="" fill className="object-contain" />
+            {/* Electric */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ delay: 0.6, duration: 0.5 }}
+              className="bg-primary p-4 sm:p-5 rounded shadow-[0px_0px_37px_-2px_rgba(17,24,39,0.05)] h-auto sm:h-[160px] md:h-[170px] 2xl:h-[181px] w-full flex flex-col items-center justify-center gap-3 sm:gap-4 2xl:gap-5"
+            >
+              <div className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 relative overflow-hidden">
+                <div className="absolute bottom-0 left-0 w-[58.33%] h-[58.33%] bg-[#7595fd]" />
+                <div className="absolute bottom-[16.67%] left-[41.67%] right-[12.5%] top-1/2">
+                  <Image src="/assets/42d4cacd435a23e4b81c12244fe8acbcb2c21efb.svg" alt="" fill className="object-contain" />
+                </div>
+                <div className="absolute bottom-[29.17%] left-[12.5%] right-1/2 top-[16.67%]">
+                  <Image src="/assets/c9b66e9544c448c6ad1318821744b0c41797fe19.svg" alt="" fill className="object-contain" />
+                </div>
               </div>
-              <div className="absolute bottom-[29.17%] left-[12.5%] right-1/2 top-[16.67%]">
-                <Image src="/assets/c9b66e9544c448c6ad1318821744b0c41797fe19.svg" alt="" fill className="object-contain" />
-              </div>
-            </div>
-            <div className="w-[60px] h-0.5 bg-neutral-100" />
-            <p className="text-xl font-semibold text-white text-center leading-normal">Electric</p>
-          </motion.div>
+              <div className="w-[50px] sm:w-[55px] md:w-[60px] h-0.5 bg-neutral-100" />
+              <p className="text-lg sm:text-xl font-semibold text-white text-center leading-normal">Electric</p>
+            </motion.div>
+          </div>
         </div>
       </section>
 
