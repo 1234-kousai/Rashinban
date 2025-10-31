@@ -548,7 +548,7 @@ export default function Home() {
       </section>
 
       {/* Free Consultation */}
-      <section className="h-[300px] relative overflow-hidden">
+      <section className="h-auto py-12 md:py-16 lg:py-20 2xl:h-[300px] 2xl:py-0 relative overflow-hidden">
         <Image
           src="/assets/f00572a9e4c1d924a7af45ea22ff31a554b4eee0.png"
           alt="Consultation Background"
@@ -557,12 +557,12 @@ export default function Home() {
         />
         <div className="absolute inset-0 bg-black/70" />
 
-        <div className="max-w-[1440px] mx-auto h-full relative px-28 flex items-center justify-between">
-          <div>
-            <h2 className="text-heading-4 text-white mb-5">
+        <div className="max-w-[1440px] mx-auto h-full relative px-4 sm:px-6 md:px-12 lg:px-20 2xl:px-28 flex flex-col md:flex-row items-center md:justify-between gap-6 md:gap-0">
+          <div className="text-center md:text-left">
+            <h2 className="text-2xl sm:text-3xl md:text-heading-4 lg:text-heading-4 2xl:text-heading-4 text-white mb-3 sm:mb-4 md:mb-5">
               Free consultation with exceptional quality
             </h2>
-            <p className="text-2xl text-white">
+            <p className="text-lg sm:text-xl md:text-2xl 2xl:text-2xl text-white">
               Just one call away:{" "}
               <span className="underline">+84 1102 2703</span>
             </p>
