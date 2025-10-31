@@ -831,9 +831,9 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-primary h-[70px]">
-        <div className="max-w-[1440px] mx-auto px-28 h-full flex items-center">
-          <p className="text-white text-base">
+      <footer className="bg-primary h-auto py-4 md:py-0 md:h-[70px]">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-12 lg:px-20 2xl:px-28 h-full flex items-center justify-center md:justify-start">
+          <p className="text-white text-sm md:text-base text-center md:text-left">
             TheBox Company © 2022. All Rights Reserved
           </p>
         </div>
