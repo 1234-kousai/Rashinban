@@ -14,7 +14,7 @@ export default function Button({
   onClick,
 }: ButtonProps) {
   const baseStyles =
-    "flex gap-[10px] items-center justify-center px-5 py-4 rounded-md font-semibold text-lg leading-normal transition-all";
+    "flex gap-2 sm:gap-[10px] items-center justify-center px-4 sm:px-5 py-3 sm:py-4 rounded-md font-semibold text-base sm:text-lg leading-normal transition-all";
 
   const variantStyles = {
     primary: "bg-primary text-white hover:bg-primary/90",
