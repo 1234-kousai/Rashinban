@@ -462,169 +462,169 @@ export default function Home() {
       </section>
 
       {/* Stats */}
-      <section className="bg-white h-[723px] relative overflow-hidden">
-        <div className="max-w-[1440px] mx-auto h-full relative">
-          {/* Left side stats */}
-          {/* Stat Box 1: Projects Completed */}
-          <div className="absolute left-[calc(25%+32.5px)] top-[221px] -translate-x-1/2">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ delay: 0.1, duration: 0.6, ease: "easeOut" }}
-              className="bg-white border border-white rounded-[4px] p-[30px] w-[361px] flex flex-col gap-[2px] shadow-sm"
-            >
-              <div className="flex flex-col h-[65px] justify-end leading-[0] text-[72px] font-semibold text-neutral-800 w-[115px]">
-                <p className="leading-normal">123</p>
-              </div>
-              <div className="flex gap-3 items-center pl-4 w-[273px]">
-                <div className="w-[7px] h-full bg-secondary" />
-                <p className="text-2xl text-neutral-500 w-[238px]">Projects Completed</p>
-              </div>
-            </motion.div>
-          </div>
+      <section className="bg-white min-h-0 py-12 sm:py-16 md:py-20 lg:py-24 2xl:h-[723px] 2xl:py-0 relative overflow-hidden">
+        <div className="max-w-[1440px] mx-auto h-full relative px-4 sm:px-6 md:px-12 lg:px-20 2xl:px-0">
+          {/* Mobile/Tablet: Flex layout, Desktop (2xl): Absolute positioned scattered layout */}
+          <div className="flex flex-col gap-8 lg:gap-10 2xl:block 2xl:h-full">
+            {/* Stats Grid - Mobile/Tablet */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8 2xl:contents">
+              {/* Stat Box 1: Projects Completed */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ delay: 0.1, duration: 0.6, ease: "easeOut" }}
+                className="bg-white border border-white rounded-[4px] p-5 sm:p-6 md:p-[30px] 2xl:absolute 2xl:left-[calc(25%+32.5px)] 2xl:top-[221px] 2xl:-translate-x-1/2 w-full 2xl:w-[361px] flex flex-col gap-[2px] shadow-sm"
+              >
+                <div className="flex flex-col h-[50px] sm:h-[55px] md:h-[60px] 2xl:h-[65px] justify-end leading-[0] text-5xl sm:text-6xl md:text-[64px] 2xl:text-[72px] font-semibold text-neutral-800 w-full 2xl:w-[115px]">
+                  <p className="leading-normal">123</p>
+                </div>
+                <div className="flex gap-3 items-center pl-3 sm:pl-3.5 md:pl-4 w-full 2xl:w-[273px]">
+                  <div className="w-[5px] sm:w-[6px] md:w-[7px] h-full bg-secondary" />
+                  <p className="text-lg sm:text-xl md:text-2xl 2xl:text-2xl text-neutral-500 w-full 2xl:w-[238px]">Projects Completed</p>
+                </div>
+              </motion.div>
 
-          {/* Stat Box 2: Happy Clients */}
-          <div className="absolute left-[calc(45.833%-8px)] top-[122px] -translate-x-1/2">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ delay: 0.2, duration: 0.6, ease: "easeOut" }}
-              className="bg-white border border-white rounded-[4px] p-[30px] w-[280px] flex flex-col gap-[2px] shadow-sm"
-            >
-              <div className="flex flex-col h-[65px] justify-end leading-[0] text-[72px] font-semibold text-neutral-800 w-[115px]">
-                <p className="leading-normal">84</p>
-              </div>
-              <div className="flex gap-3 items-center pl-4 w-[273px]">
-                <div className="w-[7px] h-full bg-secondary" />
-                <p className="text-2xl text-neutral-500 w-[238px]">Happy Clients</p>
-              </div>
-            </motion.div>
-          </div>
+              {/* Stat Box 2: Happy Clients */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ delay: 0.2, duration: 0.6, ease: "easeOut" }}
+                className="bg-white border border-white rounded-[4px] p-5 sm:p-6 md:p-[30px] 2xl:absolute 2xl:left-[calc(45.833%-8px)] 2xl:top-[122px] 2xl:-translate-x-1/2 w-full 2xl:w-[280px] flex flex-col gap-[2px] shadow-sm"
+              >
+                <div className="flex flex-col h-[50px] sm:h-[55px] md:h-[60px] 2xl:h-[65px] justify-end leading-[0] text-5xl sm:text-6xl md:text-[64px] 2xl:text-[72px] font-semibold text-neutral-800 w-full 2xl:w-[115px]">
+                  <p className="leading-normal">84</p>
+                </div>
+                <div className="flex gap-3 items-center pl-3 sm:pl-3.5 md:pl-4 w-full 2xl:w-[273px]">
+                  <div className="w-[5px] sm:w-[6px] md:w-[7px] h-full bg-secondary" />
+                  <p className="text-lg sm:text-xl md:text-2xl 2xl:text-2xl text-neutral-500 w-full 2xl:w-[238px]">Happy Clients</p>
+                </div>
+              </motion.div>
 
-          {/* Stat Box 3: Awards Win */}
-          <div className="absolute left-[calc(37.5%+56px)] top-[364px] -translate-x-1/2">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ delay: 0.3, duration: 0.6, ease: "easeOut" }}
-              className="bg-white border border-white rounded-[4px] p-[30px] w-[276px] flex flex-col gap-[2px] shadow-sm"
-            >
-              <div className="flex flex-col h-[65px] justify-end leading-[0] text-[72px] font-semibold text-neutral-800 w-[115px]">
-                <p className="leading-normal">37</p>
-              </div>
-              <div className="flex gap-3 items-center pl-4 w-[273px]">
-                <div className="w-[7px] h-full bg-secondary" />
-                <p className="text-2xl text-neutral-500 w-[238px]">Awards Win</p>
-              </div>
-            </motion.div>
-          </div>
+              {/* Stat Box 3: Awards Win */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ delay: 0.3, duration: 0.6, ease: "easeOut" }}
+                className="bg-white border border-white rounded-[4px] p-5 sm:p-6 md:p-[30px] 2xl:absolute 2xl:left-[calc(37.5%+56px)] 2xl:top-[364px] 2xl:-translate-x-1/2 w-full 2xl:w-[276px] flex flex-col gap-[2px] shadow-sm"
+              >
+                <div className="flex flex-col h-[50px] sm:h-[55px] md:h-[60px] 2xl:h-[65px] justify-end leading-[0] text-5xl sm:text-6xl md:text-[64px] 2xl:text-[72px] font-semibold text-neutral-800 w-full 2xl:w-[115px]">
+                  <p className="leading-normal">37</p>
+                </div>
+                <div className="flex gap-3 items-center pl-3 sm:pl-3.5 md:pl-4 w-full 2xl:w-[273px]">
+                  <div className="w-[5px] sm:w-[6px] md:w-[7px] h-full bg-secondary" />
+                  <p className="text-lg sm:text-xl md:text-2xl 2xl:text-2xl text-neutral-500 w-full 2xl:w-[238px]">Awards Win</p>
+                </div>
+              </motion.div>
 
-          {/* Stat Box 4: Years in Business */}
-          <div className="absolute left-[calc(29.167%+7.5px)] top-[469px] -translate-x-1/2">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ delay: 0.4, duration: 0.6, ease: "easeOut" }}
-              className="bg-white border border-white rounded-[4px] p-[30px] flex flex-col gap-[2px] shadow-sm"
-            >
-              <div className="flex flex-col h-[65px] justify-end leading-[0] text-[72px] font-semibold text-neutral-800 w-[115px]">
-                <p className="leading-normal">30</p>
-              </div>
-              <div className="flex gap-3 items-center pl-4 w-[273px]">
-                <div className="w-[7px] h-full bg-secondary" />
-                <p className="text-2xl text-neutral-500 w-[238px]">Years in Business</p>
-              </div>
-            </motion.div>
-          </div>
-
-          {/* Illustrations with animations */}
-          <div className="absolute left-[calc(12.5%+38.5px)] top-[172px] -translate-x-1/2">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ delay: 0.15, duration: 0.5, ease: "easeOut" }}
-            >
-              <Image
-                src="/assets/6e9a91091bc241cbdb3b4d11e910890e1b8fcaef.png"
-                alt="illus"
-                width={79}
-                height={79}
-              />
-            </motion.div>
-          </div>
-
-          <div className="absolute left-[calc(37.5%+51px)] top-[582px] -translate-x-1/2">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ delay: 0.45, duration: 0.5, ease: "easeOut" }}
-            >
-              <Image
-                src="/assets/45ae3a838060ffdbf7a62dc788fd967a024d4335.png"
-                alt="illus"
-                width={84}
-                height={84}
-              />
-            </motion.div>
-          </div>
-
-          <div className="absolute left-[calc(50%-11.5px)] top-[349px] -translate-x-1/2">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ delay: 0.35, duration: 0.5, ease: "easeOut" }}
-            >
-              <Image
-                src="/assets/3de872771f4000bb313182245651d05a0d2ddd87.png"
-                alt="illus"
-                width={93}
-                height={93}
-              />
-            </motion.div>
-          </div>
-
-          <div className="absolute left-[calc(54.167%-8.5px)] top-[103px] -translate-x-1/2">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ delay: 0.25, duration: 0.5, ease: "easeOut" }}
-            >
-              <Image
-                src="/assets/98b21396e6c4886178eab4b6bc331d5494931d2e.png"
-                alt="illus"
-                width={97}
-                height={97}
-              />
-            </motion.div>
-          </div>
-
-          {/* Right side content */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ delay: 0.5, duration: 0.6 }}
-          >
-            <p className="absolute right-[496px] translate-x-full text-[60px] font-bold text-primary leading-normal top-[172px] w-[359px]">
-              30 Years Experience
-            </p>
-            <p className="absolute right-[496px] translate-x-full text-xl text-neutral-600 leading-normal top-[352px] w-[330px] h-[74px]">
-              Our company has been the leading provided construction services to clients throughout the USA since 1988.
-            </p>
-            <div className="absolute right-[calc(16.667%+80px)] top-[493px]">
-              <a href="https://www.instagram.com/rashinbantodai/" target="_blank" rel="noopener noreferrer">
-                <Button>Contact Us</Button>
-              </a>
+              {/* Stat Box 4: Years in Business */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ delay: 0.4, duration: 0.6, ease: "easeOut" }}
+                className="bg-white border border-white rounded-[4px] p-5 sm:p-6 md:p-[30px] 2xl:absolute 2xl:left-[calc(29.167%+7.5px)] 2xl:top-[469px] 2xl:-translate-x-1/2 w-full flex flex-col gap-[2px] shadow-sm"
+              >
+                <div className="flex flex-col h-[50px] sm:h-[55px] md:h-[60px] 2xl:h-[65px] justify-end leading-[0] text-5xl sm:text-6xl md:text-[64px] 2xl:text-[72px] font-semibold text-neutral-800 w-full 2xl:w-[115px]">
+                  <p className="leading-normal">30</p>
+                </div>
+                <div className="flex gap-3 items-center pl-3 sm:pl-3.5 md:pl-4 w-full 2xl:w-[273px]">
+                  <div className="w-[5px] sm:w-[6px] md:w-[7px] h-full bg-secondary" />
+                  <p className="text-lg sm:text-xl md:text-2xl 2xl:text-2xl text-neutral-500 w-full 2xl:w-[238px]">Years in Business</p>
+                </div>
+              </motion.div>
             </div>
-          </motion.div>
+
+            {/* Right side content - Below stats on mobile, absolute on desktop */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ delay: 0.5, duration: 0.6 }}
+              className="flex flex-col gap-4 sm:gap-6 md:gap-8 2xl:contents"
+            >
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] 2xl:text-[60px] 2xl:absolute 2xl:right-[496px] 2xl:translate-x-full 2xl:top-[172px] 2xl:w-[359px] font-bold text-primary leading-normal">
+                30 Years Experience
+              </h2>
+              <p className="text-base sm:text-lg md:text-xl 2xl:text-xl 2xl:absolute 2xl:right-[496px] 2xl:translate-x-full 2xl:top-[352px] 2xl:w-[330px] 2xl:h-[74px] text-neutral-600 leading-normal">
+                Our company has been the leading provided construction services to clients throughout the USA since 1988.
+              </p>
+              <div className="2xl:absolute 2xl:right-[calc(16.667%+80px)] 2xl:top-[493px]">
+                <a href="https://www.instagram.com/rashinbantodai/" target="_blank" rel="noopener noreferrer">
+                  <Button>Contact Us</Button>
+                </a>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Illustrations - Desktop only (hidden on mobile/tablet) */}
+          <div className="hidden 2xl:block">
+            <div className="absolute left-[calc(12.5%+38.5px)] top-[172px] -translate-x-1/2">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ delay: 0.15, duration: 0.5, ease: "easeOut" }}
+              >
+                <Image
+                  src="/assets/6e9a91091bc241cbdb3b4d11e910890e1b8fcaef.png"
+                  alt="illus"
+                  width={79}
+                  height={79}
+                />
+              </motion.div>
+            </div>
+
+            <div className="absolute left-[calc(37.5%+51px)] top-[582px] -translate-x-1/2">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ delay: 0.45, duration: 0.5, ease: "easeOut" }}
+              >
+                <Image
+                  src="/assets/45ae3a838060ffdbf7a62dc788fd967a024d4335.png"
+                  alt="illus"
+                  width={84}
+                  height={84}
+                />
+              </motion.div>
+            </div>
+
+            <div className="absolute left-[calc(50%-11.5px)] top-[349px] -translate-x-1/2">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ delay: 0.35, duration: 0.5, ease: "easeOut" }}
+              >
+                <Image
+                  src="/assets/3de872771f4000bb313182245651d05a0d2ddd87.png"
+                  alt="illus"
+                  width={93}
+                  height={93}
+                />
+              </motion.div>
+            </div>
+
+            <div className="absolute left-[calc(54.167%-8.5px)] top-[103px] -translate-x-1/2">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ delay: 0.25, duration: 0.5, ease: "easeOut" }}
+              >
+                <Image
+                  src="/assets/98b21396e6c4886178eab4b6bc331d5494931d2e.png"
+                  alt="illus"
+                  width={97}
+                  height={97}
+                />
+              </motion.div>
+            </div>
+          </div>
         </div>
       </section>
 
