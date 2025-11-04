@@ -683,10 +683,10 @@ export default function Home() {
         <div className="hidden 2xl:block max-w-[1440px] mx-auto h-full px-28 relative">
           {/* Stat Box 1: Projects Completed */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true, margin: "-100px" }}
-            transition={{ delay: 0.1, duration: 0.6, ease: "easeOut" }}
+            transition={{ delay: 0.1, duration: 0.4, ease: "easeOut" }}
             className="absolute left-[360px] top-[221px] bg-white border border-white rounded-[4px] p-[30px] w-[361px] flex flex-col gap-[2px] shadow-sm"
           >
             <div className="flex flex-col h-[65px] justify-end leading-[0] text-[72px] font-semibold text-neutral-800 w-[115px]">
@@ -700,10 +700,10 @@ export default function Home() {
 
           {/* Stat Box 2: Happy Clients */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true, margin: "-100px" }}
-            transition={{ delay: 0.2, duration: 0.6, ease: "easeOut" }}
+            transition={{ delay: 0.2, duration: 0.4, ease: "easeOut" }}
             className="absolute left-[660px] top-[122px] bg-white border border-white rounded-[4px] p-[30px] w-[280px] flex flex-col gap-[2px] shadow-sm"
           >
             <div className="flex flex-col h-[65px] justify-end leading-[0] text-[72px] font-semibold text-neutral-800 w-[115px]">
@@ -717,10 +717,10 @@ export default function Home() {
 
           {/* Stat Box 3: Awards Win */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true, margin: "-100px" }}
-            transition={{ delay: 0.3, duration: 0.6, ease: "easeOut" }}
+            transition={{ delay: 0.3, duration: 0.4, ease: "easeOut" }}
             className="absolute left-[540px] top-[364px] bg-white border border-white rounded-[4px] p-[30px] w-[276px] flex flex-col gap-[2px] shadow-sm"
           >
             <div className="flex flex-col h-[65px] justify-end leading-[0] text-[72px] font-semibold text-neutral-800 w-[115px]">
@@ -734,10 +734,10 @@ export default function Home() {
 
           {/* Stat Box 4: Years in Business */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true, margin: "-100px" }}
-            transition={{ delay: 0.4, duration: 0.6, ease: "easeOut" }}
+            transition={{ delay: 0.4, duration: 0.4, ease: "easeOut" }}
             className="absolute left-[420px] top-[469px] bg-white border border-white rounded-[4px] p-[30px] flex flex-col gap-[2px] shadow-sm"
           >
             <div className="flex flex-col h-[65px] justify-end leading-[0] text-[72px] font-semibold text-neutral-800 w-[115px]">
@@ -751,10 +751,10 @@ export default function Home() {
 
           {/* Illustrations */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true, margin: "-100px" }}
-            transition={{ delay: 0.15, duration: 0.5, ease: "easeOut" }}
+            transition={{ delay: 0.15, duration: 0.4, ease: "easeOut" }}
           >
             <Image
               src="/assets/6e9a91091bc241cbdb3b4d11e910890e1b8fcaef.png"
@@ -766,10 +766,10 @@ export default function Home() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true, margin: "-100px" }}
-            transition={{ delay: 0.45, duration: 0.5, ease: "easeOut" }}
+            transition={{ delay: 0.45, duration: 0.4, ease: "easeOut" }}
           >
             <Image
               src="/assets/45ae3a838060ffdbf7a62dc788fd967a024d4335.png"
@@ -781,10 +781,10 @@ export default function Home() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true, margin: "-100px" }}
-            transition={{ delay: 0.35, duration: 0.5, ease: "easeOut" }}
+            transition={{ delay: 0.35, duration: 0.4, ease: "easeOut" }}
           >
             <Image
               src="/assets/3de872771f4000bb313182245651d05a0d2ddd87.png"
@@ -796,10 +796,10 @@ export default function Home() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true, margin: "-100px" }}
-            transition={{ delay: 0.25, duration: 0.5, ease: "easeOut" }}
+            transition={{ delay: 0.25, duration: 0.4, ease: "easeOut" }}
           >
             <Image
               src="/assets/98b21396e6c4886178eab4b6bc331d5494931d2e.png"
@@ -812,10 +812,10 @@ export default function Home() {
 
           {/* Right content */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true, margin: "-100px" }}
-            transition={{ delay: 0.5, duration: 0.6 }}
+            transition={{ delay: 0.5, duration: 0.4, ease: "easeOut" }}
             className="absolute right-[240px] top-[172px]"
           >
             <h2 className="text-[60px] font-bold text-primary leading-normal mb-[60px] w-[359px]">
