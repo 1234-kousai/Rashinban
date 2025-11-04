@@ -48,24 +48,24 @@ export default function Home() {
           initial={{ y: -100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="absolute top-0 w-full z-20 h-20 bg-black/30 backdrop-blur-sm"
+          className="absolute top-0 w-full z-20 h-20 bg-white/15 backdrop-blur-lg border-b border-white/20 shadow-lg"
         >
           <div className="max-w-[1440px] mx-auto h-full relative">
             {/* Nav Items - right side - Desktop only */}
             <div className="hidden md:flex absolute right-6 lg:right-20 2xl:right-28 top-[30px] gap-8 lg:gap-10 2xl:gap-[50px] text-base lg:text-lg leading-normal">
-              <a href="#" className="text-white hover:text-secondary transition-colors drop-shadow-lg" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>
+              <a href="#" className="text-white hover:bg-white/20 hover:text-white transition-all duration-300 px-3 py-1.5 rounded-md backdrop-blur-sm">
                 Home
               </a>
-              <a href="#" className="text-white hover:text-secondary transition-colors drop-shadow-lg" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>
+              <a href="#" className="text-white hover:bg-white/20 hover:text-white transition-all duration-300 px-3 py-1.5 rounded-md backdrop-blur-sm">
                 About Us
               </a>
-              <a href="#" className="text-white hover:text-secondary transition-colors drop-shadow-lg" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>
+              <a href="#" className="text-white hover:bg-white/20 hover:text-white transition-all duration-300 px-3 py-1.5 rounded-md backdrop-blur-sm">
                 Projects
               </a>
-              <a href="#" className="text-white hover:text-secondary transition-colors drop-shadow-lg" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>
+              <a href="#" className="text-white hover:bg-white/20 hover:text-white transition-all duration-300 px-3 py-1.5 rounded-md backdrop-blur-sm">
                 Services
               </a>
-              <a href="https://www.instagram.com/rashinbantodai/" target="_blank" rel="noopener noreferrer" className="font-semibold text-secondary hover:opacity-80 drop-shadow-lg" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>
+              <a href="https://www.instagram.com/rashinbantodai/" target="_blank" rel="noopener noreferrer" className="font-semibold text-secondary hover:bg-white/20 transition-all duration-300 px-3 py-1.5 rounded-md backdrop-blur-sm">
                 Contact Us
               </a>
             </div>
@@ -97,13 +97,13 @@ export default function Home() {
                 alt="Rashinban Logo"
                 width={48}
                 height={48}
-                className="w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12"
+                className="w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 drop-shadow-lg"
               />
               <div className="flex flex-col justify-center leading-none">
-                <p className="text-[13px] sm:text-[14px] md:text-[15px] font-medium text-white/95 mb-[2px] sm:mb-[2.5px] md:mb-[3px] tracking-wider drop-shadow-lg" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>
+                <p className="text-[13px] sm:text-[14px] md:text-[15px] font-medium text-white mb-[2px] sm:mb-[2.5px] md:mb-[3px] tracking-wider drop-shadow-[0_2px_8px_rgba(0,0,0,0.3)]">
                   東京大学
                 </p>
-                <p className="text-[22px] sm:text-[25px] md:text-[28px] font-bold text-white drop-shadow-lg" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>
+                <p className="text-[22px] sm:text-[25px] md:text-[28px] font-bold text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.3)]">
                   羅針盤
                 </p>
               </div>
@@ -118,34 +118,34 @@ export default function Home() {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: "100%" }}
                 transition={{ duration: 0.3, ease: "easeInOut" }}
-                className="md:hidden fixed inset-0 top-20 bg-neutral-900/95 backdrop-blur-md z-20"
+                className="md:hidden fixed inset-0 top-20 bg-white/10 backdrop-blur-xl z-20 border-l border-white/20"
               >
                 <div className="flex flex-col items-center justify-start pt-12 gap-8">
                   <a
                     href="#"
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="text-white text-2xl hover:text-secondary transition-colors"
+                    className="text-white text-2xl hover:bg-white/20 transition-all duration-300 px-8 py-3 rounded-lg backdrop-blur-sm"
                   >
                     Home
                   </a>
                   <a
                     href="#"
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="text-white text-2xl hover:text-secondary transition-colors"
+                    className="text-white text-2xl hover:bg-white/20 transition-all duration-300 px-8 py-3 rounded-lg backdrop-blur-sm"
                   >
                     About Us
                   </a>
                   <a
                     href="#"
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="text-white text-2xl hover:text-secondary transition-colors"
+                    className="text-white text-2xl hover:bg-white/20 transition-all duration-300 px-8 py-3 rounded-lg backdrop-blur-sm"
                   >
                     Projects
                   </a>
                   <a
                     href="#"
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="text-white text-2xl hover:text-secondary transition-colors"
+                    className="text-white text-2xl hover:bg-white/20 transition-all duration-300 px-8 py-3 rounded-lg backdrop-blur-sm"
                   >
                     Services
                   </a>
@@ -154,7 +154,7 @@ export default function Home() {
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="text-secondary text-2xl font-semibold hover:opacity-80 transition-opacity"
+                    className="text-secondary text-2xl font-semibold hover:bg-white/20 transition-all duration-300 px-8 py-3 rounded-lg backdrop-blur-sm"
                   >
                     Contact Us
                   </a>
