@@ -610,8 +610,16 @@ export default function Home() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ delay: 0.2, duration: 0.6, ease: "easeOut" }}
-                className="bg-white border border-white rounded-[4px] p-5 sm:p-6 md:p-[30px] w-full flex flex-col gap-[2px] shadow-sm"
+                className="bg-white border border-white rounded-[4px] p-5 sm:p-6 md:p-[30px] w-full flex flex-col gap-[2px] shadow-sm relative"
               >
+                {/* Handshake icon - Mobile/Tablet only */}
+                <Image
+                  src="/assets/98b21396e6c4886178eab4b6bc331d5494931d2e.png"
+                  alt="illus"
+                  width={45}
+                  height={45}
+                  className="absolute right-3 top-3 w-[40px] h-[40px] sm:w-[45px] sm:h-[45px] md:w-[50px] md:h-[50px] 2xl:hidden"
+                />
                 <div className="flex flex-col h-[50px] sm:h-[55px] md:h-[60px] justify-end leading-[0] text-5xl sm:text-6xl md:text-[64px] font-semibold text-neutral-800 w-full">
                   <p className="leading-normal">84</p>
                 </div>
@@ -627,8 +635,16 @@ export default function Home() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ delay: 0.3, duration: 0.6, ease: "easeOut" }}
-                className="bg-white border border-white rounded-[4px] p-5 sm:p-6 md:p-[30px] w-full flex flex-col gap-[2px] shadow-sm"
+                className="bg-white border border-white rounded-[4px] p-5 sm:p-6 md:p-[30px] w-full flex flex-col gap-[2px] shadow-sm relative"
               >
+                {/* Trophy icon - Mobile/Tablet only */}
+                <Image
+                  src="/assets/3de872771f4000bb313182245651d05a0d2ddd87.png"
+                  alt="illus"
+                  width={45}
+                  height={45}
+                  className="absolute right-3 top-3 w-[40px] h-[40px] sm:w-[45px] sm:h-[45px] md:w-[50px] md:h-[50px] 2xl:hidden"
+                />
                 <div className="flex flex-col h-[50px] sm:h-[55px] md:h-[60px] justify-end leading-[0] text-5xl sm:text-6xl md:text-[64px] font-semibold text-neutral-800 w-full">
                   <p className="leading-normal">37</p>
                 </div>
@@ -644,8 +660,16 @@ export default function Home() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ delay: 0.4, duration: 0.6, ease: "easeOut" }}
-                className="bg-white border border-white rounded-[4px] p-5 sm:p-6 md:p-[30px] w-full flex flex-col gap-[2px] shadow-sm"
+                className="bg-white border border-white rounded-[4px] p-5 sm:p-6 md:p-[30px] w-full flex flex-col gap-[2px] shadow-sm relative"
               >
+                {/* Building icon - Mobile/Tablet only */}
+                <Image
+                  src="/assets/45ae3a838060ffdbf7a62dc788fd967a024d4335.png"
+                  alt="illus"
+                  width={45}
+                  height={45}
+                  className="absolute right-3 top-3 w-[40px] h-[40px] sm:w-[45px] sm:h-[45px] md:w-[50px] md:h-[50px] 2xl:hidden"
+                />
                 <div className="flex flex-col h-[50px] sm:h-[55px] md:h-[60px] justify-end leading-[0] text-5xl sm:text-6xl md:text-[64px] font-semibold text-neutral-800 w-full">
                   <p className="leading-normal">30</p>
                 </div>
