@@ -584,7 +584,7 @@ export default function Home() {
       <section className="bg-white min-h-0 py-12 sm:py-16 md:py-20 lg:py-24 2xl:h-[723px] 2xl:py-0 relative overflow-hidden">
         <div className="max-w-[1440px] mx-auto h-full relative px-4 sm:px-6 md:px-12 lg:px-20 2xl:px-0">
           {/* Mobile/Tablet: Flex layout, Desktop (2xl): Absolute positioned scattered layout */}
-          <div className="flex flex-col gap-8 lg:gap-10 2xl:block 2xl:h-full">
+          <div className="flex flex-col gap-8 lg:gap-10 2xl:contents">
             {/* Stats Grid - Mobile/Tablet */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8 2xl:contents">
               {/* Stat Box 1: Projects Completed */}
