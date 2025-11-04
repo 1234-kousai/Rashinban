@@ -582,7 +582,7 @@ export default function Home() {
 
       {/* Stats */}
       <section className="bg-white min-h-0 py-12 sm:py-16 md:py-20 lg:py-24 2xl:h-[723px] 2xl:py-0 relative overflow-hidden">
-        <div className="max-w-[1440px] mx-auto h-full relative px-4 sm:px-6 md:px-12 lg:px-20 2xl:px-0">
+        <div className="max-w-[1440px] mx-auto h-full relative px-4 sm:px-6 md:px-12 lg:px-20 2xl:px-28">
           {/* Mobile/Tablet: Flex layout, Desktop (2xl): Absolute positioned scattered layout */}
           <div className="flex flex-col gap-8 lg:gap-10 2xl:contents">
             {/* Stats Grid - Mobile/Tablet */}
@@ -593,7 +593,7 @@ export default function Home() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ delay: 0.1, duration: 0.6, ease: "easeOut" }}
-                className="bg-white border border-white rounded-[4px] p-5 sm:p-6 md:p-[30px] 2xl:absolute 2xl:left-[calc(25%+32.5px)] 2xl:top-[221px] 2xl:-translate-x-1/2 w-full 2xl:w-[361px] flex flex-col gap-[2px] shadow-sm"
+                className="bg-white border border-white rounded-[4px] p-5 sm:p-6 md:p-[30px] 2xl:absolute 2xl:left-[25%] 2xl:top-[221px] 2xl:-translate-x-1/2 w-full 2xl:w-[361px] flex flex-col gap-[2px] shadow-sm"
               >
                 <div className="flex flex-col h-[50px] sm:h-[55px] md:h-[60px] 2xl:h-[65px] justify-end leading-[0] text-5xl sm:text-6xl md:text-[64px] 2xl:text-[72px] font-semibold text-neutral-800 w-full 2xl:w-[115px]">
                   <p className="leading-normal">123</p>
@@ -610,7 +610,7 @@ export default function Home() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ delay: 0.2, duration: 0.6, ease: "easeOut" }}
-                className="bg-white border border-white rounded-[4px] p-5 sm:p-6 md:p-[30px] 2xl:absolute 2xl:left-[calc(45.833%-8px)] 2xl:top-[122px] 2xl:-translate-x-1/2 w-full 2xl:w-[280px] flex flex-col gap-[2px] shadow-sm"
+                className="bg-white border border-white rounded-[4px] p-5 sm:p-6 md:p-[30px] 2xl:absolute 2xl:left-[45.833%] 2xl:top-[122px] 2xl:-translate-x-1/2 w-full 2xl:w-[280px] flex flex-col gap-[2px] shadow-sm"
               >
                 <div className="flex flex-col h-[50px] sm:h-[55px] md:h-[60px] 2xl:h-[65px] justify-end leading-[0] text-5xl sm:text-6xl md:text-[64px] 2xl:text-[72px] font-semibold text-neutral-800 w-full 2xl:w-[115px]">
                   <p className="leading-normal">84</p>
@@ -627,7 +627,7 @@ export default function Home() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ delay: 0.3, duration: 0.6, ease: "easeOut" }}
-                className="bg-white border border-white rounded-[4px] p-5 sm:p-6 md:p-[30px] 2xl:absolute 2xl:left-[calc(37.5%+56px)] 2xl:top-[364px] 2xl:-translate-x-1/2 w-full 2xl:w-[276px] flex flex-col gap-[2px] shadow-sm"
+                className="bg-white border border-white rounded-[4px] p-5 sm:p-6 md:p-[30px] 2xl:absolute 2xl:left-[37.5%] 2xl:top-[364px] 2xl:-translate-x-1/2 w-full 2xl:w-[276px] flex flex-col gap-[2px] shadow-sm"
               >
                 <div className="flex flex-col h-[50px] sm:h-[55px] md:h-[60px] 2xl:h-[65px] justify-end leading-[0] text-5xl sm:text-6xl md:text-[64px] 2xl:text-[72px] font-semibold text-neutral-800 w-full 2xl:w-[115px]">
                   <p className="leading-normal">37</p>
@@ -644,7 +644,7 @@ export default function Home() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ delay: 0.4, duration: 0.6, ease: "easeOut" }}
-                className="bg-white border border-white rounded-[4px] p-5 sm:p-6 md:p-[30px] 2xl:absolute 2xl:left-[calc(29.167%+7.5px)] 2xl:top-[469px] 2xl:-translate-x-1/2 w-full flex flex-col gap-[2px] shadow-sm"
+                className="bg-white border border-white rounded-[4px] p-5 sm:p-6 md:p-[30px] 2xl:absolute 2xl:left-[29.167%] 2xl:top-[469px] 2xl:-translate-x-1/2 w-full flex flex-col gap-[2px] shadow-sm"
               >
                 <div className="flex flex-col h-[50px] sm:h-[55px] md:h-[60px] 2xl:h-[65px] justify-end leading-[0] text-5xl sm:text-6xl md:text-[64px] 2xl:text-[72px] font-semibold text-neutral-800 w-full 2xl:w-[115px]">
                   <p className="leading-normal">30</p>
@@ -664,13 +664,13 @@ export default function Home() {
               transition={{ delay: 0.5, duration: 0.6 }}
               className="flex flex-col gap-4 sm:gap-6 md:gap-8 2xl:contents"
             >
-              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] 2xl:text-[60px] 2xl:absolute 2xl:right-[496px] 2xl:translate-x-full 2xl:top-[172px] 2xl:w-[359px] font-bold text-primary leading-normal">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] 2xl:text-[60px] 2xl:absolute 2xl:right-[16.667%] 2xl:top-[172px] 2xl:w-[359px] font-bold text-primary leading-normal">
                 30 Years Experience
               </h2>
-              <p className="text-base sm:text-lg md:text-xl 2xl:text-xl 2xl:absolute 2xl:right-[496px] 2xl:translate-x-full 2xl:top-[352px] 2xl:w-[330px] 2xl:h-[74px] text-neutral-600 leading-normal">
+              <p className="text-base sm:text-lg md:text-xl 2xl:text-xl 2xl:absolute 2xl:right-[16.667%] 2xl:top-[292px] 2xl:w-[330px] text-neutral-600 leading-normal">
                 Our company has been the leading provided construction services to clients throughout the USA since 1988.
               </p>
-              <div className="2xl:absolute 2xl:right-[calc(16.667%+80px)] 2xl:top-[493px]">
+              <div className="2xl:absolute 2xl:right-[16.667%] 2xl:top-[433px]">
                 <a href="https://www.instagram.com/rashinbantodai/" target="_blank" rel="noopener noreferrer">
                   <Button>Contact Us</Button>
                 </a>
@@ -680,69 +680,65 @@ export default function Home() {
 
           {/* Illustrations - Desktop only (hidden on mobile/tablet) */}
           <div className="hidden 2xl:block">
-            <div className="absolute left-[calc(12.5%+38.5px)] top-[172px] -translate-x-1/2">
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ delay: 0.15, duration: 0.5, ease: "easeOut" }}
-              >
-                <Image
-                  src="/assets/6e9a91091bc241cbdb3b4d11e910890e1b8fcaef.png"
-                  alt="illus"
-                  width={79}
-                  height={79}
-                />
-              </motion.div>
-            </div>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ delay: 0.15, duration: 0.5, ease: "easeOut" }}
+            >
+              <Image
+                src="/assets/6e9a91091bc241cbdb3b4d11e910890e1b8fcaef.png"
+                alt="illus"
+                width={79}
+                height={79}
+                className="absolute left-[12.5%] top-[172px] -translate-x-1/2"
+              />
+            </motion.div>
 
-            <div className="absolute left-[calc(37.5%+51px)] top-[582px] -translate-x-1/2">
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ delay: 0.45, duration: 0.5, ease: "easeOut" }}
-              >
-                <Image
-                  src="/assets/45ae3a838060ffdbf7a62dc788fd967a024d4335.png"
-                  alt="illus"
-                  width={84}
-                  height={84}
-                />
-              </motion.div>
-            </div>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ delay: 0.45, duration: 0.5, ease: "easeOut" }}
+            >
+              <Image
+                src="/assets/45ae3a838060ffdbf7a62dc788fd967a024d4335.png"
+                alt="illus"
+                width={84}
+                height={84}
+                className="absolute left-[37.5%] top-[582px] -translate-x-1/2"
+              />
+            </motion.div>
 
-            <div className="absolute left-[calc(50%-11.5px)] top-[349px] -translate-x-1/2">
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ delay: 0.35, duration: 0.5, ease: "easeOut" }}
-              >
-                <Image
-                  src="/assets/3de872771f4000bb313182245651d05a0d2ddd87.png"
-                  alt="illus"
-                  width={93}
-                  height={93}
-                />
-              </motion.div>
-            </div>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ delay: 0.35, duration: 0.5, ease: "easeOut" }}
+            >
+              <Image
+                src="/assets/3de872771f4000bb313182245651d05a0d2ddd87.png"
+                alt="illus"
+                width={93}
+                height={93}
+                className="absolute left-[50%] top-[349px] -translate-x-1/2"
+              />
+            </motion.div>
 
-            <div className="absolute left-[calc(54.167%-8.5px)] top-[103px] -translate-x-1/2">
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ delay: 0.25, duration: 0.5, ease: "easeOut" }}
-              >
-                <Image
-                  src="/assets/98b21396e6c4886178eab4b6bc331d5494931d2e.png"
-                  alt="illus"
-                  width={97}
-                  height={97}
-                />
-              </motion.div>
-            </div>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ delay: 0.25, duration: 0.5, ease: "easeOut" }}
+            >
+              <Image
+                src="/assets/98b21396e6c4886178eab4b6bc331d5494931d2e.png"
+                alt="illus"
+                width={97}
+                height={97}
+                className="absolute left-[54.167%] top-[103px] -translate-x-1/2"
+              />
+            </motion.div>
           </div>
         </div>
       </section>
