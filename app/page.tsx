@@ -750,6 +750,7 @@ export default function Home() {
           </motion.div>
 
           {/* Illustrations */}
+          {/* Document icon - Between boxes, left side */}
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -761,10 +762,11 @@ export default function Home() {
               alt="illus"
               width={79}
               height={79}
-              className="absolute left-[180px] top-[172px]"
+              className="absolute left-[250px] top-[300px]"
             />
           </motion.div>
 
+          {/* Building icon - Bottom right area */}
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -776,10 +778,11 @@ export default function Home() {
               alt="illus"
               width={84}
               height={84}
-              className="absolute left-[540px] top-[582px]"
+              className="absolute left-[600px] top-[600px]"
             />
           </motion.div>
 
+          {/* Trophy icon - Right of Box 3 */}
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -791,10 +794,11 @@ export default function Home() {
               alt="illus"
               width={93}
               height={93}
-              className="absolute left-[720px] top-[349px]"
+              className="absolute left-[760px] top-[380px]"
             />
           </motion.div>
 
+          {/* Handshake icon - Top right of Box 2 */}
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -806,7 +810,7 @@ export default function Home() {
               alt="illus"
               width={97}
               height={97}
-              className="absolute left-[780px] top-[103px]"
+              className="absolute left-[830px] top-[80px]"
             />
           </motion.div>
 
