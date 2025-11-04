@@ -1,0 +1,79 @@
+APPROACH 3: Figma正確座標方式
+=================================
+
+コンセプト: Figmaから取得した正確なピクセル値を使用し、1440px基準で計算
+
+Figmaデータ分析:
+- 1440px コンテナ内での配置
+- 全要素が max-w-[1440px] の親要素内に絶対配置
+
+変更点:
+1. px-0のまま維持
+2. Figmaの座標を直接ピクセル値で指定
+
+Figma座標 (node-id: 27-91):
+- Stat Box 1 (123): left-[calc(25%+32.5px)] → 360px + 32.5px = 392.5px
+- Stat Box 2 (84): left-[calc(45.833%-8px)] → 660px - 8px = 652px
+- Stat Box 3 (37): left-[calc(37.5%+56px)] → 540px + 56px = 596px
+- Stat Box 4 (30): left-[calc(29.167%+7.5px)] → 420px + 7.5px = 427.5px
+
+コード:
+
+```tsx
+{/* Stats */}
+<section className="bg-white min-h-0 py-12 sm:py-16 md:py-20 lg:py-24 2xl:h-[723px] 2xl:py-0 relative overflow-hidden">
+  <div className="max-w-[1440px] mx-auto h-full relative px-4 sm:px-6 md:px-12 lg:px-20 2xl:px-0">
+    <div className="flex flex-col gap-8 lg:gap-10 2xl:contents">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8 2xl:contents">
+        {/* Stat Box 1 */}
+        <motion.div className="... 2xl:absolute 2xl:left-[360px] 2xl:top-[221px] ...">
+          {/* translate-x-1/2 を削除して左端基準に */}
+        </motion.div>
+
+        {/* Stat Box 2 */}
+        <motion.div className="... 2xl:absolute 2xl:left-[660px] 2xl:top-[122px] ...">
+        </motion.div>
+
+        {/* Stat Box 3 */}
+        <motion.div className="... 2xl:absolute 2xl:left-[540px] 2xl:top-[364px] ...">
+        </motion.div>
+
+        {/* Stat Box 4 */}
+        <motion.div className="... 2xl:absolute 2xl:left-[420px] 2xl:top-[469px] ...">
+        </motion.div>
+      </div>
+
+      <motion.div className="... 2xl:contents">
+        {/* Figmaデータ: right-[496px] translate-x-full */}
+        {/* = 1440px - 496px = 944px (左端から) */}
+        <h2 className="... 2xl:absolute 2xl:left-[825px] 2xl:top-[172px] 2xl:w-[359px] ...">
+          30 Years Experience
+        </h2>
+        <p className="... 2xl:absolute 2xl:left-[825px] 2xl:top-[352px] ...">
+          Our company has been...
+        </p>
+        <div className="2xl:absolute 2xl:left-[1024px] 2xl:top-[493px]">
+          <Button>Contact Us</Button>
+        </div>
+      </motion.div>
+    </div>
+
+    {/* Illustrations */}
+    <div className="hidden 2xl:block">
+      {/* Figma: left-[calc(12.5%+38.5px)] = 180px + 38.5px = 218.5px */}
+      <Image className="absolute left-[180px] top-[172px]" />
+      <Image className="absolute left-[540px] top-[582px]" />
+      <Image className="absolute left-[709px] top-[349px]" />
+      <Image className="absolute left-[772px] top-[103px]" />
+    </div>
+  </div>
+</section>
+```
+
+利点:
+- ✅ Figmaデザインに完全に忠実
+- ✅ 計算がシンプル
+
+欠点:
+- ❓ ピクセル値の計算が正しいか要確認
+- ❌ calcを使わないため保守性が低い可能性

@@ -1,0 +1,94 @@
+APPROACH 1: 完全分離方式
+=================================
+
+コンセプト: モバイルとデスクトップを完全に分離。デスクトップは初回実装のようにシンプルに。
+
+変更点:
+1. 2xl:px-28 に戻す (初回実装と同じpadding)
+2. モバイル/タブレット用とデスクトップ用を完全分離
+3. デスクトップは Figma の正確な座標を使用
+
+コード:
+
+```tsx
+{/* Stats */}
+<section className="bg-white min-h-0 py-12 sm:py-16 md:py-20 lg:py-24 2xl:h-[723px] 2xl:py-0 relative overflow-hidden">
+  {/* Mobile/Tablet Layout */}
+  <div className="2xl:hidden max-w-[1440px] mx-auto px-4 sm:px-6 md:px-12 lg:px-20">
+    <div className="flex flex-col gap-8 lg:gap-10">
+      {/* Stats Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
+        {/* 4 Stat Boxes - モバイル用レイアウト */}
+      </div>
+
+      {/* Right content */}
+      <div className="flex flex-col gap-4 sm:gap-6 md:gap-8">
+        <h2>30 Years Experience</h2>
+        <p>Our company has been...</p>
+        <Button>Contact Us</Button>
+      </div>
+    </div>
+  </div>
+
+  {/* Desktop Layout (2xl) */}
+  <div className="hidden 2xl:block max-w-[1440px] mx-auto h-full px-28 relative">
+    {/* Stat Box 1: Projects Completed */}
+    <div className="absolute left-[360px] top-[221px] bg-white border border-white rounded p-[30px] w-[361px]">
+      <div className="text-[72px] font-semibold text-neutral-800 leading-none">123</div>
+      <div className="flex items-center gap-3">
+        <div className="w-[7px] h-full bg-secondary" />
+        <p className="text-2xl text-neutral-500">Projects Completed</p>
+      </div>
+    </div>
+
+    {/* Stat Box 2: Happy Clients */}
+    <div className="absolute left-[660px] top-[122px] bg-white border border-white rounded p-[30px] w-[280px]">
+      <div className="text-[72px] font-semibold text-neutral-800 leading-none">84</div>
+      <div className="flex items-center gap-3">
+        <div className="w-[7px] h-full bg-secondary" />
+        <p className="text-2xl text-neutral-500">Happy Clients</p>
+      </div>
+    </div>
+
+    {/* Stat Box 3: Awards Win */}
+    <div className="absolute left-[540px] top-[364px] bg-white border border-white rounded p-[30px] w-[276px]">
+      <div className="text-[72px] font-semibold text-neutral-800 leading-none">37</div>
+      <div className="flex items-center gap-3">
+        <div className="w-[7px] h-full bg-secondary" />
+        <p className="text-2xl text-neutral-500">Awards Win</p>
+      </div>
+    </div>
+
+    {/* Stat Box 4: Years in Business */}
+    <div className="absolute left-[420px] top-[469px] bg-white border border-white rounded p-[30px]">
+      <div className="text-[72px] font-semibold text-neutral-800 leading-none">30</div>
+      <div className="flex items-center gap-3">
+        <div className="w-[7px] h-full bg-secondary" />
+        <p className="text-2xl text-neutral-500">Years in Business</p>
+      </div>
+    </div>
+
+    {/* Illustrations */}
+    <Image src="/assets/6e9a91091bc241cbdb3b4d11e910890e1b8fcaef.png" alt="illus" width={79} height={79} className="absolute left-[180px] top-[172px]" />
+    <Image src="/assets/45ae3a838060ffdbf7a62dc788fd967a024d4335.png" alt="illus" width={84} height={84} className="absolute left-[540px] top-[582px]" />
+    <Image src="/assets/3de872771f4000bb313182245651d05a0d2ddd87.png" alt="illus" width={93} height={93} className="absolute left-[720px] top-[349px]" />
+    <Image src="/assets/98b21396e6c4886178eab4b6bc331d5494931d2e.png" alt="illus" width={97} height={97} className="absolute left-[780px] top-[103px]" />
+
+    {/* Right content */}
+    <div className="absolute right-[240px] top-[172px]">
+      <h2 className="text-[60px] font-bold text-primary leading-normal mb-[60px] w-[359px]">30 Years Experience</h2>
+      <p className="text-xl text-neutral-600 w-[330px] mb-[67px]">Our company has been...</p>
+      <Button>Contact Us</Button>
+    </div>
+  </div>
+</section>
+```
+
+利点:
+- ✅ 確実に動く
+- ✅ 保守しやすい
+- ✅ 各ブレークポイントが独立
+
+欠点:
+- ❌ コードの重複
+- ❌ ファイルサイズが少し大きくなる
