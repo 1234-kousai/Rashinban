@@ -73,7 +73,7 @@ export default function Home() {
             {/* Hamburger Button - Mobile only */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden absolute right-4 sm:right-6 top-[26px] z-30 w-8 h-8 flex flex-col justify-center items-center gap-1.5"
+              className="md:hidden absolute right-5 sm:right-6 top-6 z-30 w-8 h-8 flex flex-col justify-center items-center gap-1.5"
               aria-label="Toggle menu"
             >
               <motion.span
@@ -91,7 +91,7 @@ export default function Home() {
             </button>
 
             {/* Logo - left side */}
-            <div className="absolute left-4 sm:left-6 md:left-12 lg:left-20 2xl:left-28 top-[14px] sm:top-[16px] md:top-[18px] flex items-center gap-2 sm:gap-2.5 md:gap-3">
+            <div className="absolute left-5 sm:left-6 md:left-12 lg:left-20 2xl:left-28 top-5 sm:top-[18px] md:top-[18px] flex items-center gap-2 sm:gap-2.5 md:gap-3">
               <Image
                 src="/assets/rashinban-logo.png"
                 alt="Rashinban Logo"
@@ -100,10 +100,10 @@ export default function Home() {
                 className="w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 drop-shadow-lg"
               />
               <div className="flex flex-col justify-center leading-none">
-                <p className="text-[13px] sm:text-[14px] md:text-[15px] font-medium text-white mb-[2px] sm:mb-[2.5px] md:mb-[3px] tracking-wider drop-shadow-[0_2px_8px_rgba(0,0,0,0.3)]">
+                <p className="text-[14px] sm:text-[14px] md:text-[15px] font-medium text-white mb-[2px] sm:mb-[2.5px] md:mb-[3px] tracking-wider drop-shadow-[0_2px_8px_rgba(0,0,0,0.3)]">
                   東京大学
                 </p>
-                <p className="text-[22px] sm:text-[25px] md:text-[28px] font-bold text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.3)]">
+                <p className="text-[24px] sm:text-[25px] md:text-[28px] font-bold text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.3)]">
                   羅針盤
                 </p>
               </div>
