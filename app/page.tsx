@@ -19,6 +19,9 @@ export default function Home() {
   // Mobile menu state
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+  // Scroll detection state
+  const [isScrolled, setIsScrolled] = useState(false);
+
   // Preload all images on mount with priority
   useEffect(() => {
     heroImages.forEach((src) => {
@@ -39,6 +42,16 @@ export default function Home() {
     return () => clearInterval(timer);
   }, [heroImages.length]);
 
+  // Scroll detection
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <main className="bg-white">
       {/* Hero Section */}
@@ -48,7 +61,11 @@ export default function Home() {
           initial={{ y: -100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="absolute top-0 w-full z-20 h-20 bg-white/15 backdrop-blur-lg border-b border-white/20 shadow-lg"
+          className={`absolute top-0 w-full z-20 h-20 border-b transition-all duration-300 ${
+            isScrolled
+              ? 'bg-white/25 backdrop-blur-xl border-white/30 shadow-2xl'
+              : 'bg-white/15 backdrop-blur-lg border-white/20 shadow-lg'
+          }`}
         >
           <div className="max-w-[1440px] mx-auto h-full relative">
             {/* Nav Items - right side - Desktop only */}
@@ -71,8 +88,9 @@ export default function Home() {
             </div>
 
             {/* Hamburger Button - Mobile only */}
-            <button
+            <motion.button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              whileTap={{ scale: 0.9 }}
               className="md:hidden absolute right-5 sm:right-6 top-6 z-30 w-8 h-8 flex flex-col justify-center items-center gap-1.5"
               aria-label="Toggle menu"
             >
@@ -88,16 +106,20 @@ export default function Home() {
                 animate={isMobileMenuOpen ? { rotate: -45, y: -8 } : { rotate: 0, y: 0 }}
                 className="w-6 h-0.5 bg-white drop-shadow-lg"
               />
-            </button>
+            </motion.button>
 
             {/* Logo - left side */}
-            <div className="absolute left-5 sm:left-6 md:left-12 lg:left-20 2xl:left-28 top-5 sm:top-[18px] md:top-[18px] flex items-center gap-2 sm:gap-2.5 md:gap-3">
+            <a
+              href="#"
+              className="absolute left-5 sm:left-6 md:left-12 lg:left-20 2xl:left-28 top-5 sm:top-[18px] md:top-[18px] flex items-center gap-2 sm:gap-2.5 md:gap-3 cursor-pointer hover:-translate-y-0.5 transition-all duration-300 group"
+              aria-label="Home"
+            >
               <Image
                 src="/assets/rashinban-logo.png"
                 alt="Rashinban Logo"
                 width={48}
                 height={48}
-                className="w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 drop-shadow-lg"
+                className="w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 drop-shadow-lg group-hover:drop-shadow-[0_0_20px_rgba(255,255,255,0.3)]"
               />
               <div className="flex flex-col justify-center leading-none">
                 <p className="text-[14px] sm:text-[14px] md:text-[15px] font-medium text-white mb-[2px] sm:mb-[2.5px] md:mb-[3px] tracking-wider drop-shadow-[0_2px_8px_rgba(0,0,0,0.3)]">
@@ -107,7 +129,7 @@ export default function Home() {
                   羅針盤
                 </p>
               </div>
-            </div>
+            </a>
           </div>
 
           {/* Mobile Menu */}
