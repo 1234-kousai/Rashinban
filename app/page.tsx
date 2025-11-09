@@ -197,7 +197,7 @@ export default function Home() {
         </AnimatePresence>
 
         <div
-          className="absolute inset-0"
+          className="absolute inset-0 hidden md:block"
           style={{
             background:
               "linear-gradient(to right, rgba(255,255,255,0.9) 16.585%, rgba(255,255,255,0) 72.384%)",
